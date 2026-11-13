@@ -1,0 +1,13 @@
+market,score,n_pairs,n_cartel_pairs,auc
+japan,jaccard,32260,5124,0.482613072281476
+japan,excess co-bidding,32260,5124,0.5163523587609824
+japan,joint tenders,32260,5124,0.5952055841487248
+brazil,jaccard,309,102,0.4740219759401345
+brazil,excess co-bidding,309,102,0.38389220422468506
+brazil,joint tenders,309,102,0.6546604148905939
+italy,jaccard,51301,3256,0.5328655369671604
+italy,excess co-bidding,51301,3256,0.41567138442333573
+italy,joint tenders,51301,3256,0.7166800908137155
+usa,jaccard,341,3,0.9940828402366864
+usa,excess co-bidding,341,3,1.0
+usa,joint tenders,341,3,0.9940828402366864
