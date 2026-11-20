@@ -148,3 +148,13 @@ def test_group_price_needs_enough_awards(market):
     out = pricing.group_relative_price(market.bids, market.tenders, frozenset({"nobody"}))
     assert out["n_priced_awards"] == 0
     assert np.isnan(out["price_p_value"])
+
+
+def test_group_rotation_does_not_depend_on_row_order(market):
+    # Same-day tenders force the tie-breaking path.
+    tenders = market.tenders.assign(order=market.tenders["order"] // 86400 // 30)
+    cartel = frozenset(f for f in market.bids["firm"].unique() if f.startswith("Cartel"))
+    first = rotation.group_rotation(market.bids, tenders, cartel)
+    shuffled = market.bids.sample(frac=1.0, random_state=3)
+    second = rotation.group_rotation(shuffled, tenders, frozenset(sorted(cartel, reverse=True)))
+    assert first == second

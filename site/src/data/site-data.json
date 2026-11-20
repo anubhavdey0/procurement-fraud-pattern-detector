@@ -1,0 +1,8901 @@
+{
+ "meta": {
+  "generated": "2026-11-20",
+  "version": "0.1.0",
+  "market": "Assam, India",
+  "description": "India: Assam state tenders, fiscal years 2016-17 to 2022-23.",
+  "source": "CivicDataLab, Assam Public Procurement Data 2016-2022 (github.com/CivicDataLab/assam-tenders-data), Open Database License",
+  "licence": "Open Database License (ODbL) 1.0",
+  "notice": "Leads for review only. Not evidence of wrongdoing."
+ },
+ "summary": {
+  "tenders": 43669,
+  "with_bidders": 9994,
+  "with_winner": 5258,
+  "bidders": 12213,
+  "pairs": 2497449,
+  "links": 22070,
+  "groups": 335,
+  "leads": 8,
+  "priced": 4054,
+  "screens_fired": {
+   "closed": 46,
+   "rotation": 0,
+   "cover": 11,
+   "price": 17
+  }
+ },
+ "config": {
+  "min_joint": 3,
+  "fdr": 0.01,
+  "min_group": 3,
+  "max_group": 25,
+  "n_null": 20,
+  "exclusivity_min": 0.25,
+  "alpha": 0.05,
+  "outcome_fdr": 0.1,
+  "rotation_min_wins": 8,
+  "cover_min_bids": 10,
+  "price_min_awards": 5,
+  "min_screens": 2
+ },
+ "screens": [
+  {
+   "key": "closed",
+   "label": "Closed group",
+   "rule_out": [
+    "A small local market: few contractors are registered, eligible or near enough to bid.",
+    "A specialised trade or contractor class that only these firms hold.",
+    "Related firms that are openly part of one business group."
+   ]
+  },
+  {
+   "key": "rotation",
+   "label": "Winner rotation",
+   "rule_out": [
+    "Capacity limits: a firm busy with one contract bids high on the next.",
+    "Lots awarded together under a rule that caps awards per bidder."
+   ]
+  },
+  {
+   "key": "cover",
+   "label": "Persistent losing bidder",
+   "rule_out": [
+    "A small or new firm that bids often and is simply not competitive.",
+    "Bids rejected at the technical stage for paperwork reasons."
+   ]
+  },
+  {
+   "key": "price",
+   "label": "Awards near the estimate",
+   "rule_out": [
+    "An estimate that is out of date, so honest bids land at or above it.",
+    "A floor on bids below the estimate that piles awards at the same ratio.",
+    "Work that is harder than the buyer's schedule of rates assumes."
+   ]
+  }
+ ],
+ "groups": [
+  {
+   "id": "G001",
+   "size": 3,
+   "exclusivity": 0.7371,
+   "joint": 8,
+   "closed_share": 1.0,
+   "screens": [
+    "closed",
+    "price"
+   ]
+  },
+  {
+   "id": "G002",
+   "size": 7,
+   "exclusivity": 0.4439,
+   "joint": 20,
+   "closed_share": 0.7,
+   "screens": [
+    "closed",
+    "cover"
+   ]
+  },
+  {
+   "id": "G003",
+   "size": 3,
+   "exclusivity": 0.4395,
+   "joint": 7,
+   "closed_share": 0.571,
+   "screens": [
+    "closed",
+    "price"
+   ]
+  },
+  {
+   "id": "G004",
+   "size": 3,
+   "exclusivity": 0.3791,
+   "joint": 6,
+   "closed_share": 0.5,
+   "screens": [
+    "closed",
+    "price"
+   ]
+  },
+  {
+   "id": "G005",
+   "size": 4,
+   "exclusivity": 0.3205,
+   "joint": 37,
+   "closed_share": 0.622,
+   "screens": [
+    "closed",
+    "cover"
+   ]
+  },
+  {
+   "id": "G006",
+   "size": 5,
+   "exclusivity": 0.2544,
+   "joint": 30,
+   "closed_share": 0.533,
+   "screens": [
+    "closed",
+    "price"
+   ]
+  },
+  {
+   "id": "G007",
+   "size": 6,
+   "exclusivity": 0.0378,
+   "joint": 90,
+   "closed_share": 0.311,
+   "screens": [
+    "cover",
+    "price"
+   ]
+  },
+  {
+   "id": "G008",
+   "size": 6,
+   "exclusivity": 0.0124,
+   "joint": 25,
+   "closed_share": 0.4,
+   "screens": [
+    "cover",
+    "price"
+   ]
+  },
+  {
+   "id": "G009",
+   "size": 5,
+   "exclusivity": 0.891,
+   "joint": 8,
+   "closed_share": 0.875,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G010",
+   "size": 3,
+   "exclusivity": 0.8504,
+   "joint": 29,
+   "closed_share": 0.931,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G011",
+   "size": 9,
+   "exclusivity": 0.7265,
+   "joint": 9,
+   "closed_share": 0.667,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G012",
+   "size": 3,
+   "exclusivity": 0.632,
+   "joint": 11,
+   "closed_share": 0.364,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G013",
+   "size": 4,
+   "exclusivity": 0.6262,
+   "joint": 7,
+   "closed_share": 0.286,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G014",
+   "size": 3,
+   "exclusivity": 0.6186,
+   "joint": 6,
+   "closed_share": 0.667,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G015",
+   "size": 18,
+   "exclusivity": 0.6043,
+   "joint": 15,
+   "closed_share": 0.333,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G016",
+   "size": 4,
+   "exclusivity": 0.5182,
+   "joint": 6,
+   "closed_share": 0.167,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G017",
+   "size": 3,
+   "exclusivity": 0.4978,
+   "joint": 4,
+   "closed_share": 0.75,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G018",
+   "size": 3,
+   "exclusivity": 0.4696,
+   "joint": 4,
+   "closed_share": 0.0,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G019",
+   "size": 3,
+   "exclusivity": 0.4661,
+   "joint": 6,
+   "closed_share": 1.0,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G020",
+   "size": 3,
+   "exclusivity": 0.4319,
+   "joint": 5,
+   "closed_share": 0.4,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G021",
+   "size": 4,
+   "exclusivity": 0.4264,
+   "joint": 17,
+   "closed_share": 0.353,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G022",
+   "size": 3,
+   "exclusivity": 0.4064,
+   "joint": 10,
+   "closed_share": 0.6,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G023",
+   "size": 5,
+   "exclusivity": 0.4061,
+   "joint": 9,
+   "closed_share": 0.444,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G024",
+   "size": 3,
+   "exclusivity": 0.3997,
+   "joint": 10,
+   "closed_share": 0.4,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G025",
+   "size": 4,
+   "exclusivity": 0.3711,
+   "joint": 5,
+   "closed_share": 0.6,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G026",
+   "size": 3,
+   "exclusivity": 0.3677,
+   "joint": 4,
+   "closed_share": 1.0,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G027",
+   "size": 3,
+   "exclusivity": 0.3624,
+   "joint": 3,
+   "closed_share": 0.0,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G028",
+   "size": 3,
+   "exclusivity": 0.3569,
+   "joint": 5,
+   "closed_share": 0.4,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G029",
+   "size": 5,
+   "exclusivity": 0.354,
+   "joint": 11,
+   "closed_share": 0.091,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G030",
+   "size": 3,
+   "exclusivity": 0.3535,
+   "joint": 5,
+   "closed_share": 0.8,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G031",
+   "size": 4,
+   "exclusivity": 0.3494,
+   "joint": 8,
+   "closed_share": 0.5,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G032",
+   "size": 5,
+   "exclusivity": 0.3383,
+   "joint": 11,
+   "closed_share": 0.182,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G033",
+   "size": 3,
+   "exclusivity": 0.3198,
+   "joint": 6,
+   "closed_share": 0.333,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G034",
+   "size": 5,
+   "exclusivity": 0.3187,
+   "joint": 14,
+   "closed_share": 0.214,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G035",
+   "size": 5,
+   "exclusivity": 0.3092,
+   "joint": 20,
+   "closed_share": 0.85,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G036",
+   "size": 3,
+   "exclusivity": 0.3045,
+   "joint": 5,
+   "closed_share": 0.0,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G037",
+   "size": 5,
+   "exclusivity": 0.298,
+   "joint": 94,
+   "closed_share": 0.33,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G038",
+   "size": 4,
+   "exclusivity": 0.2872,
+   "joint": 3,
+   "closed_share": 0.333,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G039",
+   "size": 3,
+   "exclusivity": 0.2848,
+   "joint": 11,
+   "closed_share": 0.364,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G040",
+   "size": 4,
+   "exclusivity": 0.2827,
+   "joint": 9,
+   "closed_share": 0.556,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G041",
+   "size": 7,
+   "exclusivity": 0.2793,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G042",
+   "size": 13,
+   "exclusivity": 0.2743,
+   "joint": 21,
+   "closed_share": 0.095,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G043",
+   "size": 5,
+   "exclusivity": 0.2742,
+   "joint": 6,
+   "closed_share": 0.167,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G044",
+   "size": 3,
+   "exclusivity": 0.2726,
+   "joint": 7,
+   "closed_share": 0.429,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G045",
+   "size": 5,
+   "exclusivity": 0.2693,
+   "joint": 66,
+   "closed_share": 0.152,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G046",
+   "size": 3,
+   "exclusivity": 0.2676,
+   "joint": 3,
+   "closed_share": 0.0,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G047",
+   "size": 4,
+   "exclusivity": 0.2602,
+   "joint": 17,
+   "closed_share": 0.412,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G048",
+   "size": 9,
+   "exclusivity": 0.2576,
+   "joint": 27,
+   "closed_share": 0.074,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G049",
+   "size": 7,
+   "exclusivity": 0.2491,
+   "joint": 20,
+   "closed_share": 0.35,
+   "screens": [
+    "price"
+   ]
+  },
+  {
+   "id": "G050",
+   "size": 4,
+   "exclusivity": 0.2342,
+   "joint": 15,
+   "closed_share": 0.267,
+   "screens": [
+    "price"
+   ]
+  },
+  {
+   "id": "G051",
+   "size": 3,
+   "exclusivity": 0.1884,
+   "joint": 13,
+   "closed_share": 0.769,
+   "screens": [
+    "price"
+   ]
+  },
+  {
+   "id": "G052",
+   "size": 4,
+   "exclusivity": 0.1877,
+   "joint": 103,
+   "closed_share": 0.068,
+   "screens": [
+    "cover"
+   ]
+  },
+  {
+   "id": "G053",
+   "size": 4,
+   "exclusivity": 0.1427,
+   "joint": 13,
+   "closed_share": 0.231,
+   "screens": [
+    "cover"
+   ]
+  },
+  {
+   "id": "G054",
+   "size": 3,
+   "exclusivity": 0.113,
+   "joint": 10,
+   "closed_share": 0.7,
+   "screens": [
+    "price"
+   ]
+  },
+  {
+   "id": "G055",
+   "size": 5,
+   "exclusivity": 0.1062,
+   "joint": 20,
+   "closed_share": 0.45,
+   "screens": [
+    "price"
+   ]
+  },
+  {
+   "id": "G056",
+   "size": 4,
+   "exclusivity": 0.0895,
+   "joint": 14,
+   "closed_share": 0.143,
+   "screens": [
+    "price"
+   ]
+  },
+  {
+   "id": "G057",
+   "size": 3,
+   "exclusivity": 0.0831,
+   "joint": 78,
+   "closed_share": 0.09,
+   "screens": [
+    "price"
+   ]
+  },
+  {
+   "id": "G058",
+   "size": 5,
+   "exclusivity": 0.0772,
+   "joint": 51,
+   "closed_share": 0.569,
+   "screens": [
+    "cover"
+   ]
+  },
+  {
+   "id": "G059",
+   "size": 8,
+   "exclusivity": 0.0403,
+   "joint": 24,
+   "closed_share": 0.292,
+   "screens": [
+    "price"
+   ]
+  },
+  {
+   "id": "G060",
+   "size": 8,
+   "exclusivity": 0.0381,
+   "joint": 23,
+   "closed_share": 0.304,
+   "screens": [
+    "cover"
+   ]
+  },
+  {
+   "id": "G061",
+   "size": 16,
+   "exclusivity": 0.0289,
+   "joint": 65,
+   "closed_share": 0.308,
+   "screens": [
+    "cover"
+   ]
+  },
+  {
+   "id": "G062",
+   "size": 7,
+   "exclusivity": 0.0244,
+   "joint": 48,
+   "closed_share": 0.375,
+   "screens": [
+    "cover"
+   ]
+  },
+  {
+   "id": "G063",
+   "size": 12,
+   "exclusivity": 0.023,
+   "joint": 78,
+   "closed_share": 0.103,
+   "screens": [
+    "price"
+   ]
+  },
+  {
+   "id": "G064",
+   "size": 16,
+   "exclusivity": 0.0172,
+   "joint": 58,
+   "closed_share": 0.155,
+   "screens": [
+    "cover"
+   ]
+  },
+  {
+   "id": "G065",
+   "size": 3,
+   "exclusivity": 0.0111,
+   "joint": 16,
+   "closed_share": 0.0,
+   "screens": [
+    "price"
+   ]
+  },
+  {
+   "id": "G066",
+   "size": 7,
+   "exclusivity": 0.0052,
+   "joint": 37,
+   "closed_share": 0.73,
+   "screens": [
+    "price"
+   ]
+  },
+  {
+   "id": "G067",
+   "size": 6,
+   "exclusivity": 0.2465,
+   "joint": 18,
+   "closed_share": 0.667,
+   "screens": []
+  },
+  {
+   "id": "G068",
+   "size": 3,
+   "exclusivity": 0.2434,
+   "joint": 12,
+   "closed_share": 0.583,
+   "screens": []
+  },
+  {
+   "id": "G069",
+   "size": 4,
+   "exclusivity": 0.2393,
+   "joint": 4,
+   "closed_share": 0.5,
+   "screens": []
+  },
+  {
+   "id": "G070",
+   "size": 5,
+   "exclusivity": 0.2389,
+   "joint": 15,
+   "closed_share": 0.4,
+   "screens": []
+  },
+  {
+   "id": "G071",
+   "size": 3,
+   "exclusivity": 0.2384,
+   "joint": 5,
+   "closed_share": 0.4,
+   "screens": []
+  },
+  {
+   "id": "G072",
+   "size": 8,
+   "exclusivity": 0.2361,
+   "joint": 10,
+   "closed_share": 0.3,
+   "screens": []
+  },
+  {
+   "id": "G073",
+   "size": 5,
+   "exclusivity": 0.2269,
+   "joint": 8,
+   "closed_share": 0.5,
+   "screens": []
+  },
+  {
+   "id": "G074",
+   "size": 3,
+   "exclusivity": 0.2208,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G075",
+   "size": 3,
+   "exclusivity": 0.2197,
+   "joint": 8,
+   "closed_share": 0.25,
+   "screens": []
+  },
+  {
+   "id": "G076",
+   "size": 3,
+   "exclusivity": 0.2099,
+   "joint": 5,
+   "closed_share": 0.6,
+   "screens": []
+  },
+  {
+   "id": "G077",
+   "size": 3,
+   "exclusivity": 0.2093,
+   "joint": 5,
+   "closed_share": 0.4,
+   "screens": []
+  },
+  {
+   "id": "G078",
+   "size": 4,
+   "exclusivity": 0.2092,
+   "joint": 9,
+   "closed_share": 0.444,
+   "screens": []
+  },
+  {
+   "id": "G079",
+   "size": 3,
+   "exclusivity": 0.1829,
+   "joint": 5,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G080",
+   "size": 3,
+   "exclusivity": 0.1767,
+   "joint": 11,
+   "closed_share": 0.273,
+   "screens": []
+  },
+  {
+   "id": "G081",
+   "size": 8,
+   "exclusivity": 0.1759,
+   "joint": 30,
+   "closed_share": 0.767,
+   "screens": []
+  },
+  {
+   "id": "G082",
+   "size": 11,
+   "exclusivity": 0.1664,
+   "joint": 37,
+   "closed_share": 0.297,
+   "screens": []
+  },
+  {
+   "id": "G083",
+   "size": 3,
+   "exclusivity": 0.1607,
+   "joint": 10,
+   "closed_share": 1.0,
+   "screens": []
+  },
+  {
+   "id": "G084",
+   "size": 4,
+   "exclusivity": 0.1601,
+   "joint": 6,
+   "closed_share": 0.167,
+   "screens": []
+  },
+  {
+   "id": "G085",
+   "size": 3,
+   "exclusivity": 0.1561,
+   "joint": 9,
+   "closed_share": 0.556,
+   "screens": []
+  },
+  {
+   "id": "G086",
+   "size": 3,
+   "exclusivity": 0.1547,
+   "joint": 7,
+   "closed_share": 0.714,
+   "screens": []
+  },
+  {
+   "id": "G087",
+   "size": 3,
+   "exclusivity": 0.1514,
+   "joint": 8,
+   "closed_share": 0.5,
+   "screens": []
+  },
+  {
+   "id": "G088",
+   "size": 3,
+   "exclusivity": 0.1513,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G089",
+   "size": 7,
+   "exclusivity": 0.1512,
+   "joint": 19,
+   "closed_share": 0.158,
+   "screens": []
+  },
+  {
+   "id": "G090",
+   "size": 7,
+   "exclusivity": 0.1466,
+   "joint": 11,
+   "closed_share": 0.091,
+   "screens": []
+  },
+  {
+   "id": "G091",
+   "size": 4,
+   "exclusivity": 0.1456,
+   "joint": 7,
+   "closed_share": 0.429,
+   "screens": []
+  },
+  {
+   "id": "G092",
+   "size": 3,
+   "exclusivity": 0.1399,
+   "joint": 7,
+   "closed_share": 0.143,
+   "screens": []
+  },
+  {
+   "id": "G093",
+   "size": 6,
+   "exclusivity": 0.1383,
+   "joint": 32,
+   "closed_share": 0.5,
+   "screens": []
+  },
+  {
+   "id": "G094",
+   "size": 3,
+   "exclusivity": 0.1376,
+   "joint": 4,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G095",
+   "size": 4,
+   "exclusivity": 0.1375,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G096",
+   "size": 3,
+   "exclusivity": 0.1282,
+   "joint": 6,
+   "closed_share": 0.5,
+   "screens": []
+  },
+  {
+   "id": "G097",
+   "size": 3,
+   "exclusivity": 0.128,
+   "joint": 5,
+   "closed_share": 0.6,
+   "screens": []
+  },
+  {
+   "id": "G098",
+   "size": 3,
+   "exclusivity": 0.1244,
+   "joint": 6,
+   "closed_share": 0.5,
+   "screens": []
+  },
+  {
+   "id": "G099",
+   "size": 11,
+   "exclusivity": 0.121,
+   "joint": 16,
+   "closed_share": 0.062,
+   "screens": []
+  },
+  {
+   "id": "G100",
+   "size": 3,
+   "exclusivity": 0.121,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G101",
+   "size": 4,
+   "exclusivity": 0.1208,
+   "joint": 7,
+   "closed_share": 0.429,
+   "screens": []
+  },
+  {
+   "id": "G102",
+   "size": 3,
+   "exclusivity": 0.1191,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G103",
+   "size": 6,
+   "exclusivity": 0.1184,
+   "joint": 27,
+   "closed_share": 0.556,
+   "screens": []
+  },
+  {
+   "id": "G104",
+   "size": 3,
+   "exclusivity": 0.1178,
+   "joint": 7,
+   "closed_share": 0.429,
+   "screens": []
+  },
+  {
+   "id": "G105",
+   "size": 3,
+   "exclusivity": 0.1155,
+   "joint": 3,
+   "closed_share": 0.667,
+   "screens": []
+  },
+  {
+   "id": "G106",
+   "size": 5,
+   "exclusivity": 0.114,
+   "joint": 17,
+   "closed_share": 0.294,
+   "screens": []
+  },
+  {
+   "id": "G107",
+   "size": 4,
+   "exclusivity": 0.113,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G108",
+   "size": 15,
+   "exclusivity": 0.1127,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G109",
+   "size": 8,
+   "exclusivity": 0.1122,
+   "joint": 55,
+   "closed_share": 0.091,
+   "screens": []
+  },
+  {
+   "id": "G110",
+   "size": 3,
+   "exclusivity": 0.1083,
+   "joint": 3,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G111",
+   "size": 3,
+   "exclusivity": 0.1064,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G112",
+   "size": 4,
+   "exclusivity": 0.1061,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G113",
+   "size": 21,
+   "exclusivity": 0.1054,
+   "joint": 39,
+   "closed_share": 0.077,
+   "screens": []
+  },
+  {
+   "id": "G114",
+   "size": 5,
+   "exclusivity": 0.1013,
+   "joint": 14,
+   "closed_share": 0.143,
+   "screens": []
+  },
+  {
+   "id": "G115",
+   "size": 4,
+   "exclusivity": 0.101,
+   "joint": 10,
+   "closed_share": 0.5,
+   "screens": []
+  },
+  {
+   "id": "G116",
+   "size": 3,
+   "exclusivity": 0.0965,
+   "joint": 5,
+   "closed_share": 0.2,
+   "screens": []
+  },
+  {
+   "id": "G117",
+   "size": 5,
+   "exclusivity": 0.0954,
+   "joint": 19,
+   "closed_share": 0.053,
+   "screens": []
+  },
+  {
+   "id": "G118",
+   "size": 5,
+   "exclusivity": 0.0948,
+   "joint": 10,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G119",
+   "size": 5,
+   "exclusivity": 0.094,
+   "joint": 22,
+   "closed_share": 0.455,
+   "screens": []
+  },
+  {
+   "id": "G120",
+   "size": 5,
+   "exclusivity": 0.0935,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G121",
+   "size": 6,
+   "exclusivity": 0.0925,
+   "joint": 14,
+   "closed_share": 0.071,
+   "screens": []
+  },
+  {
+   "id": "G122",
+   "size": 4,
+   "exclusivity": 0.0921,
+   "joint": 10,
+   "closed_share": 0.3,
+   "screens": []
+  },
+  {
+   "id": "G123",
+   "size": 6,
+   "exclusivity": 0.0911,
+   "joint": 34,
+   "closed_share": 0.088,
+   "screens": []
+  },
+  {
+   "id": "G124",
+   "size": 3,
+   "exclusivity": 0.0906,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G125",
+   "size": 7,
+   "exclusivity": 0.0902,
+   "joint": 49,
+   "closed_share": 0.224,
+   "screens": []
+  },
+  {
+   "id": "G126",
+   "size": 3,
+   "exclusivity": 0.0885,
+   "joint": 7,
+   "closed_share": 0.429,
+   "screens": []
+  },
+  {
+   "id": "G127",
+   "size": 4,
+   "exclusivity": 0.0882,
+   "joint": 10,
+   "closed_share": 0.2,
+   "screens": []
+  },
+  {
+   "id": "G128",
+   "size": 3,
+   "exclusivity": 0.087,
+   "joint": 9,
+   "closed_share": 0.111,
+   "screens": []
+  },
+  {
+   "id": "G129",
+   "size": 4,
+   "exclusivity": 0.0858,
+   "joint": 14,
+   "closed_share": 0.286,
+   "screens": []
+  },
+  {
+   "id": "G130",
+   "size": 10,
+   "exclusivity": 0.0846,
+   "joint": 29,
+   "closed_share": 0.034,
+   "screens": []
+  },
+  {
+   "id": "G131",
+   "size": 11,
+   "exclusivity": 0.0831,
+   "joint": 30,
+   "closed_share": 0.167,
+   "screens": []
+  },
+  {
+   "id": "G132",
+   "size": 22,
+   "exclusivity": 0.0824,
+   "joint": 40,
+   "closed_share": 0.025,
+   "screens": []
+  },
+  {
+   "id": "G133",
+   "size": 3,
+   "exclusivity": 0.0811,
+   "joint": 7,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G134",
+   "size": 4,
+   "exclusivity": 0.0801,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G135",
+   "size": 3,
+   "exclusivity": 0.0801,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G136",
+   "size": 4,
+   "exclusivity": 0.0797,
+   "joint": 11,
+   "closed_share": 0.182,
+   "screens": []
+  },
+  {
+   "id": "G137",
+   "size": 12,
+   "exclusivity": 0.0744,
+   "joint": 12,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G138",
+   "size": 5,
+   "exclusivity": 0.0743,
+   "joint": 29,
+   "closed_share": 0.379,
+   "screens": []
+  },
+  {
+   "id": "G139",
+   "size": 3,
+   "exclusivity": 0.0741,
+   "joint": 5,
+   "closed_share": 0.2,
+   "screens": []
+  },
+  {
+   "id": "G140",
+   "size": 3,
+   "exclusivity": 0.0731,
+   "joint": 10,
+   "closed_share": 0.1,
+   "screens": []
+  },
+  {
+   "id": "G141",
+   "size": 7,
+   "exclusivity": 0.072,
+   "joint": 5,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G142",
+   "size": 3,
+   "exclusivity": 0.0705,
+   "joint": 17,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G143",
+   "size": 4,
+   "exclusivity": 0.0703,
+   "joint": 17,
+   "closed_share": 0.118,
+   "screens": []
+  },
+  {
+   "id": "G144",
+   "size": 3,
+   "exclusivity": 0.0701,
+   "joint": 5,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G145",
+   "size": 3,
+   "exclusivity": 0.07,
+   "joint": 7,
+   "closed_share": 0.429,
+   "screens": []
+  },
+  {
+   "id": "G146",
+   "size": 5,
+   "exclusivity": 0.0699,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G147",
+   "size": 3,
+   "exclusivity": 0.0695,
+   "joint": 10,
+   "closed_share": 0.2,
+   "screens": []
+  },
+  {
+   "id": "G148",
+   "size": 4,
+   "exclusivity": 0.0681,
+   "joint": 20,
+   "closed_share": 0.85,
+   "screens": []
+  },
+  {
+   "id": "G149",
+   "size": 9,
+   "exclusivity": 0.0677,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G150",
+   "size": 6,
+   "exclusivity": 0.066,
+   "joint": 4,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G151",
+   "size": 15,
+   "exclusivity": 0.0647,
+   "joint": 26,
+   "closed_share": 0.385,
+   "screens": []
+  },
+  {
+   "id": "G152",
+   "size": 8,
+   "exclusivity": 0.0647,
+   "joint": 38,
+   "closed_share": 0.316,
+   "screens": []
+  },
+  {
+   "id": "G153",
+   "size": 5,
+   "exclusivity": 0.0647,
+   "joint": 13,
+   "closed_share": 0.077,
+   "screens": []
+  },
+  {
+   "id": "G154",
+   "size": 5,
+   "exclusivity": 0.0623,
+   "joint": 5,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G155",
+   "size": 4,
+   "exclusivity": 0.0619,
+   "joint": 9,
+   "closed_share": 0.111,
+   "screens": []
+  },
+  {
+   "id": "G156",
+   "size": 4,
+   "exclusivity": 0.0616,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G157",
+   "size": 4,
+   "exclusivity": 0.0609,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G158",
+   "size": 4,
+   "exclusivity": 0.0608,
+   "joint": 9,
+   "closed_share": 0.111,
+   "screens": []
+  },
+  {
+   "id": "G159",
+   "size": 4,
+   "exclusivity": 0.0607,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G160",
+   "size": 6,
+   "exclusivity": 0.0588,
+   "joint": 12,
+   "closed_share": 0.083,
+   "screens": []
+  },
+  {
+   "id": "G161",
+   "size": 4,
+   "exclusivity": 0.0586,
+   "joint": 6,
+   "closed_share": 0.167,
+   "screens": []
+  },
+  {
+   "id": "G162",
+   "size": 5,
+   "exclusivity": 0.0563,
+   "joint": 14,
+   "closed_share": 0.214,
+   "screens": []
+  },
+  {
+   "id": "G163",
+   "size": 3,
+   "exclusivity": 0.0543,
+   "joint": 7,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G164",
+   "size": 4,
+   "exclusivity": 0.0535,
+   "joint": 9,
+   "closed_share": 0.444,
+   "screens": []
+  },
+  {
+   "id": "G165",
+   "size": 4,
+   "exclusivity": 0.0519,
+   "joint": 10,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G166",
+   "size": 3,
+   "exclusivity": 0.0518,
+   "joint": 7,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G167",
+   "size": 4,
+   "exclusivity": 0.051,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G168",
+   "size": 3,
+   "exclusivity": 0.051,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G169",
+   "size": 3,
+   "exclusivity": 0.0507,
+   "joint": 8,
+   "closed_share": 0.375,
+   "screens": []
+  },
+  {
+   "id": "G170",
+   "size": 5,
+   "exclusivity": 0.047,
+   "joint": 12,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G171",
+   "size": 4,
+   "exclusivity": 0.047,
+   "joint": 7,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G172",
+   "size": 3,
+   "exclusivity": 0.0452,
+   "joint": 5,
+   "closed_share": 0.2,
+   "screens": []
+  },
+  {
+   "id": "G173",
+   "size": 4,
+   "exclusivity": 0.045,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G174",
+   "size": 9,
+   "exclusivity": 0.0446,
+   "joint": 39,
+   "closed_share": 0.513,
+   "screens": []
+  },
+  {
+   "id": "G175",
+   "size": 3,
+   "exclusivity": 0.0444,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G176",
+   "size": 3,
+   "exclusivity": 0.0444,
+   "joint": 10,
+   "closed_share": 0.1,
+   "screens": []
+  },
+  {
+   "id": "G177",
+   "size": 4,
+   "exclusivity": 0.0443,
+   "joint": 10,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G178",
+   "size": 3,
+   "exclusivity": 0.0442,
+   "joint": 4,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G179",
+   "size": 5,
+   "exclusivity": 0.0432,
+   "joint": 15,
+   "closed_share": 0.133,
+   "screens": []
+  },
+  {
+   "id": "G180",
+   "size": 5,
+   "exclusivity": 0.0431,
+   "joint": 17,
+   "closed_share": 0.059,
+   "screens": []
+  },
+  {
+   "id": "G181",
+   "size": 8,
+   "exclusivity": 0.0428,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G182",
+   "size": 5,
+   "exclusivity": 0.0418,
+   "joint": 13,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G183",
+   "size": 3,
+   "exclusivity": 0.0414,
+   "joint": 8,
+   "closed_share": 0.25,
+   "screens": []
+  },
+  {
+   "id": "G184",
+   "size": 4,
+   "exclusivity": 0.0411,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G185",
+   "size": 19,
+   "exclusivity": 0.0407,
+   "joint": 88,
+   "closed_share": 0.125,
+   "screens": []
+  },
+  {
+   "id": "G186",
+   "size": 4,
+   "exclusivity": 0.0404,
+   "joint": 9,
+   "closed_share": 0.111,
+   "screens": []
+  },
+  {
+   "id": "G187",
+   "size": 4,
+   "exclusivity": 0.0394,
+   "joint": 7,
+   "closed_share": 0.143,
+   "screens": []
+  },
+  {
+   "id": "G188",
+   "size": 5,
+   "exclusivity": 0.0383,
+   "joint": 13,
+   "closed_share": 0.154,
+   "screens": []
+  },
+  {
+   "id": "G189",
+   "size": 3,
+   "exclusivity": 0.0382,
+   "joint": 15,
+   "closed_share": 0.2,
+   "screens": []
+  },
+  {
+   "id": "G190",
+   "size": 3,
+   "exclusivity": 0.0379,
+   "joint": 5,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G191",
+   "size": 7,
+   "exclusivity": 0.0348,
+   "joint": 17,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G192",
+   "size": 4,
+   "exclusivity": 0.0346,
+   "joint": 15,
+   "closed_share": 0.667,
+   "screens": []
+  },
+  {
+   "id": "G193",
+   "size": 5,
+   "exclusivity": 0.0319,
+   "joint": 20,
+   "closed_share": 0.05,
+   "screens": []
+  },
+  {
+   "id": "G194",
+   "size": 9,
+   "exclusivity": 0.0311,
+   "joint": 34,
+   "closed_share": 0.029,
+   "screens": []
+  },
+  {
+   "id": "G195",
+   "size": 4,
+   "exclusivity": 0.03,
+   "joint": 11,
+   "closed_share": 0.182,
+   "screens": []
+  },
+  {
+   "id": "G196",
+   "size": 3,
+   "exclusivity": 0.0298,
+   "joint": 6,
+   "closed_share": 0.333,
+   "screens": []
+  },
+  {
+   "id": "G197",
+   "size": 3,
+   "exclusivity": 0.0267,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G198",
+   "size": 17,
+   "exclusivity": 0.0266,
+   "joint": 34,
+   "closed_share": 0.176,
+   "screens": []
+  },
+  {
+   "id": "G199",
+   "size": 3,
+   "exclusivity": 0.0264,
+   "joint": 9,
+   "closed_share": 0.222,
+   "screens": []
+  },
+  {
+   "id": "G200",
+   "size": 8,
+   "exclusivity": 0.0239,
+   "joint": 15,
+   "closed_share": 0.067,
+   "screens": []
+  },
+  {
+   "id": "G201",
+   "size": 4,
+   "exclusivity": 0.0239,
+   "joint": 4,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G202",
+   "size": 22,
+   "exclusivity": 0.0238,
+   "joint": 57,
+   "closed_share": 0.123,
+   "screens": []
+  },
+  {
+   "id": "G203",
+   "size": 4,
+   "exclusivity": 0.0234,
+   "joint": 7,
+   "closed_share": 0.286,
+   "screens": []
+  },
+  {
+   "id": "G204",
+   "size": 5,
+   "exclusivity": 0.0227,
+   "joint": 10,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G205",
+   "size": 10,
+   "exclusivity": 0.0219,
+   "joint": 19,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G206",
+   "size": 12,
+   "exclusivity": 0.0219,
+   "joint": 38,
+   "closed_share": 0.053,
+   "screens": []
+  },
+  {
+   "id": "G207",
+   "size": 3,
+   "exclusivity": 0.0216,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G208",
+   "size": 3,
+   "exclusivity": 0.0212,
+   "joint": 15,
+   "closed_share": 0.2,
+   "screens": []
+  },
+  {
+   "id": "G209",
+   "size": 4,
+   "exclusivity": 0.0208,
+   "joint": 17,
+   "closed_share": 0.176,
+   "screens": []
+  },
+  {
+   "id": "G210",
+   "size": 5,
+   "exclusivity": 0.0198,
+   "joint": 27,
+   "closed_share": 0.259,
+   "screens": []
+  },
+  {
+   "id": "G211",
+   "size": 3,
+   "exclusivity": 0.0197,
+   "joint": 5,
+   "closed_share": 1.0,
+   "screens": []
+  },
+  {
+   "id": "G212",
+   "size": 13,
+   "exclusivity": 0.0197,
+   "joint": 88,
+   "closed_share": 0.477,
+   "screens": []
+  },
+  {
+   "id": "G213",
+   "size": 11,
+   "exclusivity": 0.0192,
+   "joint": 27,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G214",
+   "size": 11,
+   "exclusivity": 0.0186,
+   "joint": 3,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G215",
+   "size": 7,
+   "exclusivity": 0.0183,
+   "joint": 21,
+   "closed_share": 0.333,
+   "screens": []
+  },
+  {
+   "id": "G216",
+   "size": 17,
+   "exclusivity": 0.0182,
+   "joint": 54,
+   "closed_share": 0.111,
+   "screens": []
+  },
+  {
+   "id": "G217",
+   "size": 3,
+   "exclusivity": 0.0168,
+   "joint": 7,
+   "closed_share": 0.286,
+   "screens": []
+  },
+  {
+   "id": "G218",
+   "size": 3,
+   "exclusivity": 0.0164,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G219",
+   "size": 3,
+   "exclusivity": 0.0163,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G220",
+   "size": 9,
+   "exclusivity": 0.0162,
+   "joint": 30,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G221",
+   "size": 3,
+   "exclusivity": 0.0162,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G222",
+   "size": 15,
+   "exclusivity": 0.0161,
+   "joint": 3,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G223",
+   "size": 3,
+   "exclusivity": 0.0155,
+   "joint": 22,
+   "closed_share": 0.045,
+   "screens": []
+  },
+  {
+   "id": "G224",
+   "size": 6,
+   "exclusivity": 0.0149,
+   "joint": 21,
+   "closed_share": 0.143,
+   "screens": []
+  },
+  {
+   "id": "G225",
+   "size": 3,
+   "exclusivity": 0.0132,
+   "joint": 6,
+   "closed_share": 0.5,
+   "screens": []
+  },
+  {
+   "id": "G226",
+   "size": 20,
+   "exclusivity": 0.0131,
+   "joint": 28,
+   "closed_share": 0.143,
+   "screens": []
+  },
+  {
+   "id": "G227",
+   "size": 11,
+   "exclusivity": 0.0131,
+   "joint": 30,
+   "closed_share": 0.133,
+   "screens": []
+  },
+  {
+   "id": "G228",
+   "size": 4,
+   "exclusivity": 0.0131,
+   "joint": 11,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G229",
+   "size": 3,
+   "exclusivity": 0.0129,
+   "joint": 3,
+   "closed_share": 0.667,
+   "screens": []
+  },
+  {
+   "id": "G230",
+   "size": 8,
+   "exclusivity": 0.0128,
+   "joint": 22,
+   "closed_share": 0.136,
+   "screens": []
+  },
+  {
+   "id": "G231",
+   "size": 4,
+   "exclusivity": 0.0126,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G232",
+   "size": 4,
+   "exclusivity": 0.0126,
+   "joint": 10,
+   "closed_share": 0.3,
+   "screens": []
+  },
+  {
+   "id": "G233",
+   "size": 6,
+   "exclusivity": 0.0122,
+   "joint": 29,
+   "closed_share": 0.207,
+   "screens": []
+  },
+  {
+   "id": "G234",
+   "size": 3,
+   "exclusivity": 0.0121,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G235",
+   "size": 23,
+   "exclusivity": 0.0119,
+   "joint": 110,
+   "closed_share": 0.273,
+   "screens": []
+  },
+  {
+   "id": "G236",
+   "size": 6,
+   "exclusivity": 0.0114,
+   "joint": 4,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G237",
+   "size": 17,
+   "exclusivity": 0.0107,
+   "joint": 39,
+   "closed_share": 0.154,
+   "screens": []
+  },
+  {
+   "id": "G238",
+   "size": 5,
+   "exclusivity": 0.0106,
+   "joint": 20,
+   "closed_share": 0.45,
+   "screens": []
+  },
+  {
+   "id": "G239",
+   "size": 4,
+   "exclusivity": 0.0102,
+   "joint": 8,
+   "closed_share": 0.125,
+   "screens": []
+  },
+  {
+   "id": "G240",
+   "size": 3,
+   "exclusivity": 0.01,
+   "joint": 15,
+   "closed_share": 0.467,
+   "screens": []
+  },
+  {
+   "id": "G241",
+   "size": 6,
+   "exclusivity": 0.0098,
+   "joint": 19,
+   "closed_share": 0.316,
+   "screens": []
+  },
+  {
+   "id": "G242",
+   "size": 11,
+   "exclusivity": 0.0094,
+   "joint": 8,
+   "closed_share": 0.25,
+   "screens": []
+  },
+  {
+   "id": "G243",
+   "size": 5,
+   "exclusivity": 0.0093,
+   "joint": 13,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G244",
+   "size": 3,
+   "exclusivity": 0.0091,
+   "joint": 4,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G245",
+   "size": 3,
+   "exclusivity": 0.0087,
+   "joint": 5,
+   "closed_share": 0.2,
+   "screens": []
+  },
+  {
+   "id": "G246",
+   "size": 4,
+   "exclusivity": 0.0084,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G247",
+   "size": 5,
+   "exclusivity": 0.0082,
+   "joint": 23,
+   "closed_share": 0.087,
+   "screens": []
+  },
+  {
+   "id": "G248",
+   "size": 23,
+   "exclusivity": 0.0079,
+   "joint": 86,
+   "closed_share": 0.14,
+   "screens": []
+  },
+  {
+   "id": "G249",
+   "size": 14,
+   "exclusivity": 0.0073,
+   "joint": 48,
+   "closed_share": 0.146,
+   "screens": []
+  },
+  {
+   "id": "G250",
+   "size": 10,
+   "exclusivity": 0.0072,
+   "joint": 29,
+   "closed_share": 0.241,
+   "screens": []
+  },
+  {
+   "id": "G251",
+   "size": 5,
+   "exclusivity": 0.0071,
+   "joint": 15,
+   "closed_share": 0.067,
+   "screens": []
+  },
+  {
+   "id": "G252",
+   "size": 3,
+   "exclusivity": 0.0071,
+   "joint": 5,
+   "closed_share": 0.4,
+   "screens": []
+  },
+  {
+   "id": "G253",
+   "size": 3,
+   "exclusivity": 0.0066,
+   "joint": 6,
+   "closed_share": 0.333,
+   "screens": []
+  },
+  {
+   "id": "G254",
+   "size": 12,
+   "exclusivity": 0.0064,
+   "joint": 52,
+   "closed_share": 0.25,
+   "screens": []
+  },
+  {
+   "id": "G255",
+   "size": 3,
+   "exclusivity": 0.0063,
+   "joint": 13,
+   "closed_share": 0.154,
+   "screens": []
+  },
+  {
+   "id": "G256",
+   "size": 3,
+   "exclusivity": 0.0062,
+   "joint": 7,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G257",
+   "size": 8,
+   "exclusivity": 0.0062,
+   "joint": 12,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G258",
+   "size": 20,
+   "exclusivity": 0.0061,
+   "joint": 68,
+   "closed_share": 0.118,
+   "screens": []
+  },
+  {
+   "id": "G259",
+   "size": 23,
+   "exclusivity": 0.0061,
+   "joint": 58,
+   "closed_share": 0.224,
+   "screens": []
+  },
+  {
+   "id": "G260",
+   "size": 4,
+   "exclusivity": 0.0061,
+   "joint": 15,
+   "closed_share": 0.067,
+   "screens": []
+  },
+  {
+   "id": "G261",
+   "size": 12,
+   "exclusivity": 0.006,
+   "joint": 19,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G262",
+   "size": 3,
+   "exclusivity": 0.0059,
+   "joint": 7,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G263",
+   "size": 8,
+   "exclusivity": 0.0058,
+   "joint": 23,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G264",
+   "size": 3,
+   "exclusivity": 0.0058,
+   "joint": 7,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G265",
+   "size": 7,
+   "exclusivity": 0.0058,
+   "joint": 7,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G266",
+   "size": 16,
+   "exclusivity": 0.0058,
+   "joint": 59,
+   "closed_share": 0.051,
+   "screens": []
+  },
+  {
+   "id": "G267",
+   "size": 3,
+   "exclusivity": 0.0057,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G268",
+   "size": 6,
+   "exclusivity": 0.0054,
+   "joint": 19,
+   "closed_share": 0.368,
+   "screens": []
+  },
+  {
+   "id": "G269",
+   "size": 5,
+   "exclusivity": 0.0052,
+   "joint": 33,
+   "closed_share": 0.212,
+   "screens": []
+  },
+  {
+   "id": "G270",
+   "size": 21,
+   "exclusivity": 0.0051,
+   "joint": 32,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G271",
+   "size": 3,
+   "exclusivity": 0.005,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G272",
+   "size": 10,
+   "exclusivity": 0.005,
+   "joint": 31,
+   "closed_share": 0.032,
+   "screens": []
+  },
+  {
+   "id": "G273",
+   "size": 3,
+   "exclusivity": 0.0049,
+   "joint": 3,
+   "closed_share": 0.667,
+   "screens": []
+  },
+  {
+   "id": "G274",
+   "size": 8,
+   "exclusivity": 0.0049,
+   "joint": 15,
+   "closed_share": 0.067,
+   "screens": []
+  },
+  {
+   "id": "G275",
+   "size": 8,
+   "exclusivity": 0.0049,
+   "joint": 3,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G276",
+   "size": 13,
+   "exclusivity": 0.0049,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G277",
+   "size": 3,
+   "exclusivity": 0.0048,
+   "joint": 4,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G278",
+   "size": 11,
+   "exclusivity": 0.0047,
+   "joint": 28,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G279",
+   "size": 3,
+   "exclusivity": 0.0046,
+   "joint": 8,
+   "closed_share": 0.375,
+   "screens": []
+  },
+  {
+   "id": "G280",
+   "size": 6,
+   "exclusivity": 0.0043,
+   "joint": 19,
+   "closed_share": 0.105,
+   "screens": []
+  },
+  {
+   "id": "G281",
+   "size": 3,
+   "exclusivity": 0.004,
+   "joint": 7,
+   "closed_share": 0.286,
+   "screens": []
+  },
+  {
+   "id": "G282",
+   "size": 9,
+   "exclusivity": 0.004,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G283",
+   "size": 3,
+   "exclusivity": 0.0038,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G284",
+   "size": 3,
+   "exclusivity": 0.0038,
+   "joint": 5,
+   "closed_share": 0.6,
+   "screens": []
+  },
+  {
+   "id": "G285",
+   "size": 25,
+   "exclusivity": 0.0038,
+   "joint": 46,
+   "closed_share": 0.109,
+   "screens": []
+  },
+  {
+   "id": "G286",
+   "size": 4,
+   "exclusivity": 0.0037,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G287",
+   "size": 24,
+   "exclusivity": 0.0037,
+   "joint": 64,
+   "closed_share": 0.25,
+   "screens": []
+  },
+  {
+   "id": "G288",
+   "size": 3,
+   "exclusivity": 0.0037,
+   "joint": 10,
+   "closed_share": 0.9,
+   "screens": []
+  },
+  {
+   "id": "G289",
+   "size": 13,
+   "exclusivity": 0.0037,
+   "joint": 34,
+   "closed_share": 0.235,
+   "screens": []
+  },
+  {
+   "id": "G290",
+   "size": 5,
+   "exclusivity": 0.0035,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G291",
+   "size": 5,
+   "exclusivity": 0.0034,
+   "joint": 5,
+   "closed_share": 0.2,
+   "screens": []
+  },
+  {
+   "id": "G292",
+   "size": 3,
+   "exclusivity": 0.0032,
+   "joint": 10,
+   "closed_share": 0.4,
+   "screens": []
+  },
+  {
+   "id": "G293",
+   "size": 4,
+   "exclusivity": 0.0032,
+   "joint": 11,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G294",
+   "size": 3,
+   "exclusivity": 0.0031,
+   "joint": 5,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G295",
+   "size": 4,
+   "exclusivity": 0.0031,
+   "joint": 7,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G296",
+   "size": 11,
+   "exclusivity": 0.0031,
+   "joint": 44,
+   "closed_share": 0.341,
+   "screens": []
+  },
+  {
+   "id": "G297",
+   "size": 5,
+   "exclusivity": 0.003,
+   "joint": 3,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G298",
+   "size": 3,
+   "exclusivity": 0.0029,
+   "joint": 13,
+   "closed_share": 0.538,
+   "screens": []
+  },
+  {
+   "id": "G299",
+   "size": 4,
+   "exclusivity": 0.0028,
+   "joint": 9,
+   "closed_share": 0.111,
+   "screens": []
+  },
+  {
+   "id": "G300",
+   "size": 3,
+   "exclusivity": 0.0028,
+   "joint": 4,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G301",
+   "size": 18,
+   "exclusivity": 0.0027,
+   "joint": 44,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G302",
+   "size": 6,
+   "exclusivity": 0.0027,
+   "joint": 17,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G303",
+   "size": 3,
+   "exclusivity": 0.0027,
+   "joint": 3,
+   "closed_share": 0.333,
+   "screens": []
+  },
+  {
+   "id": "G304",
+   "size": 3,
+   "exclusivity": 0.0026,
+   "joint": 5,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G305",
+   "size": 6,
+   "exclusivity": 0.0025,
+   "joint": 13,
+   "closed_share": 0.308,
+   "screens": []
+  },
+  {
+   "id": "G306",
+   "size": 3,
+   "exclusivity": 0.0025,
+   "joint": 6,
+   "closed_share": 0.5,
+   "screens": []
+  },
+  {
+   "id": "G307",
+   "size": 8,
+   "exclusivity": 0.0024,
+   "joint": 14,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G308",
+   "size": 5,
+   "exclusivity": 0.0022,
+   "joint": 16,
+   "closed_share": 0.125,
+   "screens": []
+  },
+  {
+   "id": "G309",
+   "size": 4,
+   "exclusivity": 0.0022,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G310",
+   "size": 4,
+   "exclusivity": 0.0022,
+   "joint": 10,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G311",
+   "size": 3,
+   "exclusivity": 0.002,
+   "joint": 10,
+   "closed_share": 0.1,
+   "screens": []
+  },
+  {
+   "id": "G312",
+   "size": 5,
+   "exclusivity": 0.002,
+   "joint": 5,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G313",
+   "size": 7,
+   "exclusivity": 0.002,
+   "joint": 12,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G314",
+   "size": 4,
+   "exclusivity": 0.0019,
+   "joint": 10,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G315",
+   "size": 4,
+   "exclusivity": 0.0019,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G316",
+   "size": 5,
+   "exclusivity": 0.0018,
+   "joint": 11,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G317",
+   "size": 5,
+   "exclusivity": 0.0017,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G318",
+   "size": 3,
+   "exclusivity": 0.0017,
+   "joint": 7,
+   "closed_share": 0.571,
+   "screens": []
+  },
+  {
+   "id": "G319",
+   "size": 4,
+   "exclusivity": 0.0017,
+   "joint": 12,
+   "closed_share": 0.417,
+   "screens": []
+  },
+  {
+   "id": "G320",
+   "size": 3,
+   "exclusivity": 0.0016,
+   "joint": 8,
+   "closed_share": 0.125,
+   "screens": []
+  },
+  {
+   "id": "G321",
+   "size": 6,
+   "exclusivity": 0.0015,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G322",
+   "size": 4,
+   "exclusivity": 0.0015,
+   "joint": 12,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G323",
+   "size": 3,
+   "exclusivity": 0.0013,
+   "joint": 7,
+   "closed_share": 0.143,
+   "screens": []
+  },
+  {
+   "id": "G324",
+   "size": 3,
+   "exclusivity": 0.0013,
+   "joint": 3,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G325",
+   "size": 4,
+   "exclusivity": 0.0013,
+   "joint": 10,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G326",
+   "size": 5,
+   "exclusivity": 0.0013,
+   "joint": 8,
+   "closed_share": 0.125,
+   "screens": []
+  },
+  {
+   "id": "G327",
+   "size": 5,
+   "exclusivity": 0.0012,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G328",
+   "size": 3,
+   "exclusivity": 0.0012,
+   "joint": 4,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G329",
+   "size": 3,
+   "exclusivity": 0.0011,
+   "joint": 5,
+   "closed_share": 0.4,
+   "screens": []
+  },
+  {
+   "id": "G330",
+   "size": 3,
+   "exclusivity": 0.0011,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G331",
+   "size": 4,
+   "exclusivity": 0.001,
+   "joint": 5,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G332",
+   "size": 4,
+   "exclusivity": 0.0009,
+   "joint": 6,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G333",
+   "size": 3,
+   "exclusivity": 0.0009,
+   "joint": 4,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G334",
+   "size": 4,
+   "exclusivity": 0.0007,
+   "joint": 8,
+   "closed_share": 0.125,
+   "screens": []
+  },
+  {
+   "id": "G335",
+   "size": 3,
+   "exclusivity": 0.0007,
+   "joint": 4,
+   "closed_share": 0.0,
+   "screens": []
+  }
+ ],
+ "price": {
+  "n": 4012,
+  "median": 0.95,
+  "bins": [
+   {
+    "at": 0.6,
+    "count": 2
+   },
+   {
+    "at": 0.61,
+    "count": 1
+   },
+   {
+    "at": 0.62,
+    "count": 2
+   },
+   {
+    "at": 0.63,
+    "count": 0
+   },
+   {
+    "at": 0.64,
+    "count": 0
+   },
+   {
+    "at": 0.65,
+    "count": 2
+   },
+   {
+    "at": 0.66,
+    "count": 1
+   },
+   {
+    "at": 0.67,
+    "count": 4
+   },
+   {
+    "at": 0.68,
+    "count": 9
+   },
+   {
+    "at": 0.69,
+    "count": 2
+   },
+   {
+    "at": 0.7,
+    "count": 5
+   },
+   {
+    "at": 0.71,
+    "count": 13
+   },
+   {
+    "at": 0.72,
+    "count": 12
+   },
+   {
+    "at": 0.73,
+    "count": 20
+   },
+   {
+    "at": 0.74,
+    "count": 27
+   },
+   {
+    "at": 0.75,
+    "count": 26
+   },
+   {
+    "at": 0.76,
+    "count": 28
+   },
+   {
+    "at": 0.77,
+    "count": 32
+   },
+   {
+    "at": 0.78,
+    "count": 26
+   },
+   {
+    "at": 0.79,
+    "count": 35
+   },
+   {
+    "at": 0.8,
+    "count": 44
+   },
+   {
+    "at": 0.81,
+    "count": 22
+   },
+   {
+    "at": 0.82,
+    "count": 41
+   },
+   {
+    "at": 0.83,
+    "count": 43
+   },
+   {
+    "at": 0.84,
+    "count": 57
+   },
+   {
+    "at": 0.85,
+    "count": 67
+   },
+   {
+    "at": 0.86,
+    "count": 37
+   },
+   {
+    "at": 0.87,
+    "count": 52
+   },
+   {
+    "at": 0.88,
+    "count": 67
+   },
+   {
+    "at": 0.89,
+    "count": 43
+   },
+   {
+    "at": 0.9,
+    "count": 1029
+   },
+   {
+    "at": 0.91,
+    "count": 22
+   },
+   {
+    "at": 0.92,
+    "count": 23
+   },
+   {
+    "at": 0.93,
+    "count": 43
+   },
+   {
+    "at": 0.94,
+    "count": 36
+   },
+   {
+    "at": 0.95,
+    "count": 205
+   },
+   {
+    "at": 0.96,
+    "count": 49
+   },
+   {
+    "at": 0.97,
+    "count": 52
+   },
+   {
+    "at": 0.98,
+    "count": 56
+   },
+   {
+    "at": 0.99,
+    "count": 87
+   },
+   {
+    "at": 1.0,
+    "count": 1290
+   },
+   {
+    "at": 1.01,
+    "count": 25
+   },
+   {
+    "at": 1.02,
+    "count": 17
+   },
+   {
+    "at": 1.03,
+    "count": 43
+   },
+   {
+    "at": 1.04,
+    "count": 47
+   },
+   {
+    "at": 1.05,
+    "count": 54
+   },
+   {
+    "at": 1.06,
+    "count": 29
+   },
+   {
+    "at": 1.07,
+    "count": 32
+   },
+   {
+    "at": 1.08,
+    "count": 12
+   },
+   {
+    "at": 1.09,
+    "count": 19
+   },
+   {
+    "at": 1.1,
+    "count": 23
+   },
+   {
+    "at": 1.11,
+    "count": 4
+   },
+   {
+    "at": 1.12,
+    "count": 9
+   },
+   {
+    "at": 1.13,
+    "count": 14
+   },
+   {
+    "at": 1.14,
+    "count": 1
+   },
+   {
+    "at": 1.15,
+    "count": 7
+   },
+   {
+    "at": 1.16,
+    "count": 8
+   },
+   {
+    "at": 1.17,
+    "count": 14
+   },
+   {
+    "at": 1.18,
+    "count": 5
+   },
+   {
+    "at": 1.19,
+    "count": 4
+   },
+   {
+    "at": 1.2,
+    "count": 7
+   },
+   {
+    "at": 1.21,
+    "count": 4
+   },
+   {
+    "at": 1.22,
+    "count": 6
+   },
+   {
+    "at": 1.23,
+    "count": 6
+   },
+   {
+    "at": 1.24,
+    "count": 0
+   },
+   {
+    "at": 1.25,
+    "count": 1
+   },
+   {
+    "at": 1.26,
+    "count": 5
+   },
+   {
+    "at": 1.27,
+    "count": 2
+   },
+   {
+    "at": 1.28,
+    "count": 1
+   },
+   {
+    "at": 1.29,
+    "count": 0
+   },
+   {
+    "at": 1.3,
+    "count": 1
+   }
+  ]
+ },
+ "leads": [
+  {
+   "id": "G001",
+   "members": [
+    "FIRM-02438",
+    "FIRM-09241",
+    "FIRM-10971"
+   ],
+   "size": 3,
+   "period": "Feb 2022 to Mar 2023",
+   "joint": 8,
+   "closed": 8,
+   "closed_share": 1.0,
+   "wins": 7,
+   "decided": 7,
+   "segments": 3,
+   "exclusivity": 0.7371,
+   "screens": [
+    {
+     "key": "closed",
+     "label": "Closed group",
+     "fired": true,
+     "text": "Exclusivity 0.74: 74% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.020 (p 0.048). The threshold for this screen is 0.25."
+    },
+    {
+     "key": "rotation",
+     "label": "Winner rotation",
+     "fired": false,
+     "text": "Not tested. The test needs at least 8 tenders won by members with more than one winner among them. This group has 7."
+    },
+    {
+     "key": "cover",
+     "label": "Persistent losing bidder",
+     "fired": false,
+     "text": "No member with at least 10 bids on decided tenders won a quarter or less of what equal odds would give."
+    },
+    {
+     "key": "price",
+     "label": "Awards near the estimate",
+     "fired": true,
+     "text": "Median award 1.000 of the estimate over 7 awards, against 0.999 for other contested tenders in the same segments. 100% of the group's awards are at 0.99 of the estimate or above (others: 54%). Adjusted p 0.025."
+    }
+   ],
+   "rule_out": [
+    "A small local market: few contractors are registered, eligible or near enough to bid.",
+    "A specialised trade or contractor class that only these firms hold.",
+    "Related firms that are openly part of one business group.",
+    "An estimate that is out of date, so honest bids land at or above it.",
+    "A floor on bids below the estimate that piles awards at the same ratio.",
+    "Work that is harder than the buyer's schedule of rates assumes."
+   ],
+   "graph": {
+    "firms": [
+     {
+      "label": "FIRM-02438",
+      "member": true
+     },
+     {
+      "label": "FIRM-09241",
+      "member": true
+     },
+     {
+      "label": "FIRM-10971",
+      "member": true
+     }
+    ],
+    "tenders": [
+     {
+      "label": "TENDER-36547",
+      "month": "Feb 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-20534",
+      "month": "Jun 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-10330",
+      "month": "Jun 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-40587",
+      "month": "Jun 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-20678",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-21212",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-07971",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-41399",
+      "month": "Mar 2023",
+      "bidders": 3
+     }
+    ],
+    "edges": [
+     [
+      1,
+      0,
+      false
+     ],
+     [
+      0,
+      0,
+      false
+     ],
+     [
+      2,
+      1,
+      false
+     ],
+     [
+      1,
+      1,
+      false
+     ],
+     [
+      0,
+      1,
+      true
+     ],
+     [
+      1,
+      2,
+      false
+     ],
+     [
+      0,
+      2,
+      false
+     ],
+     [
+      2,
+      2,
+      true
+     ],
+     [
+      2,
+      3,
+      false
+     ],
+     [
+      1,
+      3,
+      false
+     ],
+     [
+      0,
+      3,
+      true
+     ],
+     [
+      2,
+      4,
+      false
+     ],
+     [
+      1,
+      4,
+      false
+     ],
+     [
+      0,
+      4,
+      true
+     ],
+     [
+      2,
+      5,
+      false
+     ],
+     [
+      0,
+      5,
+      false
+     ],
+     [
+      1,
+      5,
+      true
+     ],
+     [
+      2,
+      6,
+      false
+     ],
+     [
+      1,
+      6,
+      false
+     ],
+     [
+      0,
+      6,
+      true
+     ],
+     [
+      2,
+      7,
+      false
+     ],
+     [
+      0,
+      7,
+      false
+     ],
+     [
+      1,
+      7,
+      true
+     ]
+    ],
+    "total": 8
+   }
+  },
+  {
+   "id": "G002",
+   "members": [
+    "FIRM-00332",
+    "FIRM-00391",
+    "FIRM-03011",
+    "FIRM-04742",
+    "FIRM-07059",
+    "FIRM-08569",
+    "FIRM-11964"
+   ],
+   "size": 7,
+   "period": "Jul 2021 to Mar 2023",
+   "joint": 20,
+   "closed": 14,
+   "closed_share": 0.7,
+   "wins": 16,
+   "decided": 16,
+   "segments": 6,
+   "exclusivity": 0.4439,
+   "screens": [
+    {
+     "key": "closed",
+     "label": "Closed group",
+     "fired": true,
+     "text": "Exclusivity 0.44: 44% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.006 (p 0.048). The threshold for this screen is 0.25."
+    },
+    {
+     "key": "rotation",
+     "label": "Winner rotation",
+     "fired": false,
+     "text": "16 wins by 5 members changed hands in 8.0 runs. Chance predicts about 11.0. p 0.995, adjusted for the groups tested: 1.000."
+    },
+    {
+     "key": "cover",
+     "label": "Persistent losing bidder",
+     "fired": true,
+     "text": "FIRM-00332 bid on 11 decided tenders alongside other members and won 0. Equal odds would give about 3.5. Adjusted p 0.044."
+    },
+    {
+     "key": "price",
+     "label": "Awards near the estimate",
+     "fired": false,
+     "text": "Median award 1.000 of the estimate over 16 awards, against 1.000 for other contested tenders in the same segments. 100% of the group's awards are at 0.99 of the estimate or above (others: 75%). Adjusted p 0.316."
+    }
+   ],
+   "rule_out": [
+    "A small local market: few contractors are registered, eligible or near enough to bid.",
+    "A specialised trade or contractor class that only these firms hold.",
+    "Related firms that are openly part of one business group.",
+    "A small or new firm that bids often and is simply not competitive.",
+    "Bids rejected at the technical stage for paperwork reasons."
+   ],
+   "graph": {
+    "firms": [
+     {
+      "label": "FIRM-00332",
+      "member": true
+     },
+     {
+      "label": "FIRM-00391",
+      "member": true
+     },
+     {
+      "label": "FIRM-03011",
+      "member": true
+     },
+     {
+      "label": "FIRM-04742",
+      "member": true
+     },
+     {
+      "label": "FIRM-07059",
+      "member": true
+     },
+     {
+      "label": "FIRM-08569",
+      "member": true
+     },
+     {
+      "label": "FIRM-11964",
+      "member": true
+     },
+     {
+      "label": "Other bidders",
+      "member": false
+     }
+    ],
+    "tenders": [
+     {
+      "label": "TENDER-43035",
+      "month": "Jul 2021",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-39383",
+      "month": "Dec 2021",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-14127",
+      "month": "Jan 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-04153",
+      "month": "Apr 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-02590",
+      "month": "Jun 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-26792",
+      "month": "Jun 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-09369",
+      "month": "Jul 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-26501",
+      "month": "Jul 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-28220",
+      "month": "Jul 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-00359",
+      "month": "Jul 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-38158",
+      "month": "Jul 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-01582",
+      "month": "Aug 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-36632",
+      "month": "Aug 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-38682",
+      "month": "Aug 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-02365",
+      "month": "Sep 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-27161",
+      "month": "Oct 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-09422",
+      "month": "Oct 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-27165",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-37818",
+      "month": "Feb 2023",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-38047",
+      "month": "Mar 2023",
+      "bidders": 3
+     }
+    ],
+    "edges": [
+     [
+      1,
+      0,
+      false
+     ],
+     [
+      0,
+      0,
+      false
+     ],
+     [
+      7,
+      0,
+      false
+     ],
+     [
+      0,
+      1,
+      false
+     ],
+     [
+      6,
+      1,
+      true
+     ],
+     [
+      7,
+      1,
+      false
+     ],
+     [
+      1,
+      2,
+      false
+     ],
+     [
+      0,
+      2,
+      false
+     ],
+     [
+      5,
+      2,
+      true
+     ],
+     [
+      5,
+      3,
+      false
+     ],
+     [
+      1,
+      3,
+      false
+     ],
+     [
+      0,
+      3,
+      false
+     ],
+     [
+      0,
+      4,
+      false
+     ],
+     [
+      6,
+      4,
+      false
+     ],
+     [
+      4,
+      4,
+      false
+     ],
+     [
+      7,
+      4,
+      false
+     ],
+     [
+      0,
+      5,
+      false
+     ],
+     [
+      4,
+      5,
+      false
+     ],
+     [
+      6,
+      5,
+      true
+     ],
+     [
+      2,
+      6,
+      false
+     ],
+     [
+      4,
+      6,
+      false
+     ],
+     [
+      3,
+      6,
+      true
+     ],
+     [
+      2,
+      7,
+      false
+     ],
+     [
+      3,
+      7,
+      false
+     ],
+     [
+      4,
+      7,
+      true
+     ],
+     [
+      2,
+      8,
+      false
+     ],
+     [
+      3,
+      8,
+      false
+     ],
+     [
+      4,
+      8,
+      true
+     ],
+     [
+      2,
+      9,
+      false
+     ],
+     [
+      3,
+      9,
+      false
+     ],
+     [
+      4,
+      9,
+      true
+     ],
+     [
+      0,
+      10,
+      false
+     ],
+     [
+      4,
+      10,
+      false
+     ],
+     [
+      6,
+      10,
+      true
+     ],
+     [
+      0,
+      11,
+      false
+     ],
+     [
+      4,
+      11,
+      false
+     ],
+     [
+      6,
+      11,
+      true
+     ],
+     [
+      7,
+      11,
+      false
+     ],
+     [
+      0,
+      12,
+      false
+     ],
+     [
+      4,
+      12,
+      false
+     ],
+     [
+      6,
+      12,
+      true
+     ],
+     [
+      0,
+      13,
+      false
+     ],
+     [
+      4,
+      13,
+      false
+     ],
+     [
+      6,
+      13,
+      true
+     ],
+     [
+      0,
+      14,
+      false
+     ],
+     [
+      4,
+      14,
+      false
+     ],
+     [
+      6,
+      14,
+      true
+     ],
+     [
+      0,
+      15,
+      false
+     ],
+     [
+      4,
+      15,
+      false
+     ],
+     [
+      6,
+      15,
+      true
+     ],
+     [
+      0,
+      16,
+      false
+     ],
+     [
+      4,
+      16,
+      false
+     ],
+     [
+      6,
+      16,
+      true
+     ],
+     [
+      0,
+      17,
+      false
+     ],
+     [
+      5,
+      17,
+      true
+     ],
+     [
+      7,
+      17,
+      false
+     ],
+     [
+      4,
+      18,
+      false
+     ],
+     [
+      2,
+      18,
+      true
+     ],
+     [
+      7,
+      18,
+      false
+     ],
+     [
+      0,
+      19,
+      false
+     ],
+     [
+      6,
+      19,
+      false
+     ],
+     [
+      4,
+      19,
+      false
+     ]
+    ],
+    "total": 20
+   }
+  },
+  {
+   "id": "G003",
+   "members": [
+    "FIRM-01018",
+    "FIRM-03673",
+    "FIRM-11272"
+   ],
+   "size": 3,
+   "period": "Feb 2022 to Mar 2023",
+   "joint": 7,
+   "closed": 4,
+   "closed_share": 0.571,
+   "wins": 6,
+   "decided": 6,
+   "segments": 4,
+   "exclusivity": 0.4395,
+   "screens": [
+    {
+     "key": "closed",
+     "label": "Closed group",
+     "fired": true,
+     "text": "Exclusivity 0.44: 44% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.005 (p 0.048). The threshold for this screen is 0.25."
+    },
+    {
+     "key": "rotation",
+     "label": "Winner rotation",
+     "fired": false,
+     "text": "Not tested. The test needs at least 8 tenders won by members with more than one winner among them. This group has 6."
+    },
+    {
+     "key": "cover",
+     "label": "Persistent losing bidder",
+     "fired": false,
+     "text": "No member with at least 10 bids on decided tenders won a quarter or less of what equal odds would give."
+    },
+    {
+     "key": "price",
+     "label": "Awards near the estimate",
+     "fired": true,
+     "text": "Median award 1.000 of the estimate over 6 awards, against 1.000 for other contested tenders in the same segments. 100% of the group's awards are at 0.99 of the estimate or above (others: 67%). Adjusted p 0.025."
+    }
+   ],
+   "rule_out": [
+    "A small local market: few contractors are registered, eligible or near enough to bid.",
+    "A specialised trade or contractor class that only these firms hold.",
+    "Related firms that are openly part of one business group.",
+    "An estimate that is out of date, so honest bids land at or above it.",
+    "A floor on bids below the estimate that piles awards at the same ratio.",
+    "Work that is harder than the buyer's schedule of rates assumes."
+   ],
+   "graph": {
+    "firms": [
+     {
+      "label": "FIRM-01018",
+      "member": true
+     },
+     {
+      "label": "FIRM-03673",
+      "member": true
+     },
+     {
+      "label": "FIRM-11272",
+      "member": true
+     },
+     {
+      "label": "Other bidders",
+      "member": false
+     }
+    ],
+    "tenders": [
+     {
+      "label": "TENDER-32185",
+      "month": "Feb 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-06065",
+      "month": "Jun 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-30353",
+      "month": "Nov 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-16316",
+      "month": "Nov 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-41461",
+      "month": "Nov 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-10802",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-14158",
+      "month": "Mar 2023",
+      "bidders": 2
+     }
+    ],
+    "edges": [
+     [
+      0,
+      0,
+      false
+     ],
+     [
+      1,
+      0,
+      true
+     ],
+     [
+      3,
+      0,
+      false
+     ],
+     [
+      0,
+      1,
+      false
+     ],
+     [
+      1,
+      1,
+      true
+     ],
+     [
+      3,
+      1,
+      false
+     ],
+     [
+      2,
+      2,
+      false
+     ],
+     [
+      0,
+      2,
+      false
+     ],
+     [
+      0,
+      3,
+      false
+     ],
+     [
+      2,
+      3,
+      true
+     ],
+     [
+      0,
+      4,
+      false
+     ],
+     [
+      2,
+      4,
+      true
+     ],
+     [
+      1,
+      5,
+      false
+     ],
+     [
+      0,
+      5,
+      true
+     ],
+     [
+      3,
+      5,
+      false
+     ],
+     [
+      0,
+      6,
+      false
+     ],
+     [
+      2,
+      6,
+      true
+     ]
+    ],
+    "total": 7
+   }
+  },
+  {
+   "id": "G004",
+   "members": [
+    "FIRM-04950",
+    "FIRM-05360",
+    "FIRM-09700"
+   ],
+   "size": 3,
+   "period": "Apr 2022 to Jul 2022",
+   "joint": 6,
+   "closed": 3,
+   "closed_share": 0.5,
+   "wins": 6,
+   "decided": 6,
+   "segments": 6,
+   "exclusivity": 0.3791,
+   "screens": [
+    {
+     "key": "closed",
+     "label": "Closed group",
+     "fired": true,
+     "text": "Exclusivity 0.38: 38% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.027 (p 0.048). The threshold for this screen is 0.25."
+    },
+    {
+     "key": "rotation",
+     "label": "Winner rotation",
+     "fired": false,
+     "text": "Not tested. The test needs at least 8 tenders won by members with more than one winner among them. This group has 6."
+    },
+    {
+     "key": "cover",
+     "label": "Persistent losing bidder",
+     "fired": false,
+     "text": "No member with at least 10 bids on decided tenders won a quarter or less of what equal odds would give."
+    },
+    {
+     "key": "price",
+     "label": "Awards near the estimate",
+     "fired": true,
+     "text": "Median award 1.159 of the estimate over 6 awards, against 0.914 for other contested tenders in the same segments. 100% of the group's awards are at 0.99 of the estimate or above (others: 38%). Adjusted p 0.003."
+    }
+   ],
+   "rule_out": [
+    "A small local market: few contractors are registered, eligible or near enough to bid.",
+    "A specialised trade or contractor class that only these firms hold.",
+    "Related firms that are openly part of one business group.",
+    "An estimate that is out of date, so honest bids land at or above it.",
+    "A floor on bids below the estimate that piles awards at the same ratio.",
+    "Work that is harder than the buyer's schedule of rates assumes."
+   ],
+   "graph": {
+    "firms": [
+     {
+      "label": "FIRM-04950",
+      "member": true
+     },
+     {
+      "label": "FIRM-05360",
+      "member": true
+     },
+     {
+      "label": "FIRM-09700",
+      "member": true
+     },
+     {
+      "label": "Other bidders",
+      "member": false
+     }
+    ],
+    "tenders": [
+     {
+      "label": "TENDER-28464",
+      "month": "Apr 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-27297",
+      "month": "Apr 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-07137",
+      "month": "Apr 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-12035",
+      "month": "May 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-02618",
+      "month": "May 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-18303",
+      "month": "Jul 2022",
+      "bidders": 3
+     }
+    ],
+    "edges": [
+     [
+      0,
+      0,
+      false
+     ],
+     [
+      2,
+      0,
+      false
+     ],
+     [
+      1,
+      0,
+      true
+     ],
+     [
+      0,
+      1,
+      false
+     ],
+     [
+      2,
+      1,
+      false
+     ],
+     [
+      1,
+      1,
+      true
+     ],
+     [
+      3,
+      1,
+      false
+     ],
+     [
+      0,
+      2,
+      false
+     ],
+     [
+      2,
+      2,
+      false
+     ],
+     [
+      1,
+      2,
+      true
+     ],
+     [
+      2,
+      3,
+      false
+     ],
+     [
+      0,
+      3,
+      true
+     ],
+     [
+      3,
+      3,
+      false
+     ],
+     [
+      0,
+      4,
+      false
+     ],
+     [
+      2,
+      4,
+      true
+     ],
+     [
+      3,
+      4,
+      false
+     ],
+     [
+      0,
+      5,
+      false
+     ],
+     [
+      2,
+      5,
+      false
+     ],
+     [
+      1,
+      5,
+      true
+     ]
+    ],
+    "total": 6
+   }
+  },
+  {
+   "id": "G005",
+   "members": [
+    "FIRM-07282",
+    "FIRM-08408",
+    "FIRM-09198",
+    "FIRM-11494"
+   ],
+   "size": 4,
+   "period": "Dec 2022",
+   "joint": 37,
+   "closed": 23,
+   "closed_share": 0.622,
+   "wins": 32,
+   "decided": 35,
+   "segments": 1,
+   "exclusivity": 0.3205,
+   "screens": [
+    {
+     "key": "closed",
+     "label": "Closed group",
+     "fired": true,
+     "text": "Exclusivity 0.32: 32% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.044 (p 0.048). The threshold for this screen is 0.25."
+    },
+    {
+     "key": "rotation",
+     "label": "Winner rotation",
+     "fired": false,
+     "text": "32 wins by 3 members changed hands in 15.2 runs. Chance predicts about 15.1. p 0.437, adjusted for the groups tested: 1.000."
+    },
+    {
+     "key": "cover",
+     "label": "Persistent losing bidder",
+     "fired": true,
+     "text": "FIRM-09198 bid on 12 decided tenders alongside other members and won 0. Equal odds would give about 5.6. Adjusted p 0.004."
+    },
+    {
+     "key": "price",
+     "label": "Awards near the estimate",
+     "fired": false,
+     "text": "Not tested. Fewer than 5 of the group's awards have both an award value and an estimate."
+    }
+   ],
+   "rule_out": [
+    "A small local market: few contractors are registered, eligible or near enough to bid.",
+    "A specialised trade or contractor class that only these firms hold.",
+    "Related firms that are openly part of one business group.",
+    "A small or new firm that bids often and is simply not competitive.",
+    "Bids rejected at the technical stage for paperwork reasons."
+   ],
+   "graph": {
+    "firms": [
+     {
+      "label": "FIRM-07282",
+      "member": true
+     },
+     {
+      "label": "FIRM-08408",
+      "member": true
+     },
+     {
+      "label": "FIRM-09198",
+      "member": true
+     },
+     {
+      "label": "FIRM-11494",
+      "member": true
+     },
+     {
+      "label": "Other bidders",
+      "member": false
+     }
+    ],
+    "tenders": [
+     {
+      "label": "TENDER-36560",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-23671",
+      "month": "Dec 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-42363",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-01401",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-21367",
+      "month": "Dec 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-43022",
+      "month": "Dec 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-12296",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-37994",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-25884",
+      "month": "Dec 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-31684",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-23549",
+      "month": "Dec 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-43397",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-06196",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-12264",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-36241",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-14445",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-38435",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-30633",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-23007",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-35949",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-31695",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-31911",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-02035",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-39332",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-32091",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-30875",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-39512",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-26567",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-31851",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-42358",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-33349",
+      "month": "Dec 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-12303",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-07150",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-09238",
+      "month": "Dec 2022",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-25451",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-07119",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-42579",
+      "month": "Dec 2022",
+      "bidders": 2
+     }
+    ],
+    "edges": [
+     [
+      0,
+      0,
+      false
+     ],
+     [
+      3,
+      0,
+      true
+     ],
+     [
+      4,
+      0,
+      false
+     ],
+     [
+      3,
+      1,
+      true
+     ],
+     [
+      0,
+      1,
+      true
+     ],
+     [
+      4,
+      1,
+      false
+     ],
+     [
+      2,
+      2,
+      false
+     ],
+     [
+      0,
+      2,
+      false
+     ],
+     [
+      3,
+      2,
+      true
+     ],
+     [
+      1,
+      3,
+      false
+     ],
+     [
+      3,
+      3,
+      false
+     ],
+     [
+      0,
+      3,
+      true
+     ],
+     [
+      3,
+      4,
+      false
+     ],
+     [
+      0,
+      4,
+      true
+     ],
+     [
+      4,
+      4,
+      true
+     ],
+     [
+      1,
+      5,
+      false
+     ],
+     [
+      3,
+      5,
+      false
+     ],
+     [
+      0,
+      5,
+      false
+     ],
+     [
+      4,
+      5,
+      true
+     ],
+     [
+      3,
+      6,
+      false
+     ],
+     [
+      0,
+      6,
+      false
+     ],
+     [
+      4,
+      6,
+      true
+     ],
+     [
+      1,
+      7,
+      false
+     ],
+     [
+      3,
+      7,
+      true
+     ],
+     [
+      4,
+      7,
+      false
+     ],
+     [
+      3,
+      8,
+      false
+     ],
+     [
+      1,
+      8,
+      true
+     ],
+     [
+      4,
+      8,
+      false
+     ],
+     [
+      0,
+      9,
+      false
+     ],
+     [
+      3,
+      9,
+      true
+     ],
+     [
+      4,
+      9,
+      false
+     ],
+     [
+      2,
+      10,
+      false
+     ],
+     [
+      0,
+      10,
+      false
+     ],
+     [
+      3,
+      10,
+      true
+     ],
+     [
+      4,
+      10,
+      false
+     ],
+     [
+      1,
+      11,
+      false
+     ],
+     [
+      0,
+      11,
+      false
+     ],
+     [
+      3,
+      11,
+      true
+     ],
+     [
+      1,
+      12,
+      false
+     ],
+     [
+      3,
+      12,
+      true
+     ],
+     [
+      4,
+      12,
+      false
+     ],
+     [
+      3,
+      13,
+      false
+     ],
+     [
+      0,
+      13,
+      true
+     ],
+     [
+      3,
+      14,
+      false
+     ],
+     [
+      1,
+      14,
+      true
+     ],
+     [
+      3,
+      15,
+      false
+     ],
+     [
+      0,
+      15,
+      true
+     ],
+     [
+      1,
+      16,
+      false
+     ],
+     [
+      3,
+      16,
+      true
+     ],
+     [
+      1,
+      17,
+      false
+     ],
+     [
+      3,
+      17,
+      true
+     ],
+     [
+      2,
+      18,
+      false
+     ],
+     [
+      3,
+      18,
+      true
+     ],
+     [
+      2,
+      19,
+      false
+     ],
+     [
+      3,
+      19,
+      true
+     ],
+     [
+      2,
+      20,
+      false
+     ],
+     [
+      3,
+      20,
+      true
+     ],
+     [
+      2,
+      21,
+      false
+     ],
+     [
+      3,
+      21,
+      true
+     ],
+     [
+      0,
+      22,
+      false
+     ],
+     [
+      3,
+      22,
+      true
+     ],
+     [
+      4,
+      22,
+      false
+     ],
+     [
+      2,
+      23,
+      false
+     ],
+     [
+      3,
+      23,
+      true
+     ],
+     [
+      3,
+      24,
+      false
+     ],
+     [
+      0,
+      24,
+      true
+     ],
+     [
+      3,
+      25,
+      false
+     ],
+     [
+      0,
+      25,
+      true
+     ],
+     [
+      4,
+      25,
+      false
+     ],
+     [
+      2,
+      26,
+      false
+     ],
+     [
+      3,
+      26,
+      true
+     ],
+     [
+      1,
+      27,
+      false
+     ],
+     [
+      3,
+      27,
+      true
+     ],
+     [
+      3,
+      28,
+      false
+     ],
+     [
+      0,
+      28,
+      true
+     ],
+     [
+      2,
+      29,
+      false
+     ],
+     [
+      3,
+      29,
+      true
+     ],
+     [
+      0,
+      30,
+      false
+     ],
+     [
+      3,
+      30,
+      true
+     ],
+     [
+      4,
+      30,
+      false
+     ],
+     [
+      3,
+      31,
+      false
+     ],
+     [
+      1,
+      31,
+      true
+     ],
+     [
+      0,
+      32,
+      false
+     ],
+     [
+      3,
+      32,
+      true
+     ],
+     [
+      1,
+      33,
+      false
+     ],
+     [
+      3,
+      33,
+      false
+     ],
+     [
+      4,
+      33,
+      true
+     ],
+     [
+      2,
+      34,
+      false
+     ],
+     [
+      3,
+      34,
+      true
+     ],
+     [
+      2,
+      35,
+      false
+     ],
+     [
+      3,
+      35,
+      true
+     ],
+     [
+      2,
+      36,
+      false
+     ],
+     [
+      3,
+      36,
+      true
+     ]
+    ],
+    "total": 37
+   }
+  },
+  {
+   "id": "G006",
+   "members": [
+    "FIRM-01375",
+    "FIRM-03856",
+    "FIRM-06068",
+    "FIRM-06673",
+    "FIRM-08007"
+   ],
+   "size": 5,
+   "period": "Sep 2021 to Apr 2023",
+   "joint": 30,
+   "closed": 16,
+   "closed_share": 0.533,
+   "wins": 21,
+   "decided": 24,
+   "segments": 3,
+   "exclusivity": 0.2544,
+   "screens": [
+    {
+     "key": "closed",
+     "label": "Closed group",
+     "fired": true,
+     "text": "Exclusivity 0.25: 25% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.014 (p 0.048). The threshold for this screen is 0.25."
+    },
+    {
+     "key": "rotation",
+     "label": "Winner rotation",
+     "fired": false,
+     "text": "21 wins by 5 members changed hands in 19.7 runs. Chance predicts about 17.2. p 0.073, adjusted for the groups tested: 1.000."
+    },
+    {
+     "key": "cover",
+     "label": "Persistent losing bidder",
+     "fired": false,
+     "text": "No member with at least 10 bids on decided tenders won a quarter or less of what equal odds would give."
+    },
+    {
+     "key": "price",
+     "label": "Awards near the estimate",
+     "fired": true,
+     "text": "Median award 1.131 of the estimate over 21 awards, against 1.000 for other contested tenders in the same segments. 90% of the group's awards are at 0.99 of the estimate or above (others: 70%). Adjusted p 0.002."
+    }
+   ],
+   "rule_out": [
+    "A small local market: few contractors are registered, eligible or near enough to bid.",
+    "A specialised trade or contractor class that only these firms hold.",
+    "Related firms that are openly part of one business group.",
+    "An estimate that is out of date, so honest bids land at or above it.",
+    "A floor on bids below the estimate that piles awards at the same ratio.",
+    "Work that is harder than the buyer's schedule of rates assumes."
+   ],
+   "graph": {
+    "firms": [
+     {
+      "label": "FIRM-01375",
+      "member": true
+     },
+     {
+      "label": "FIRM-03856",
+      "member": true
+     },
+     {
+      "label": "FIRM-06068",
+      "member": true
+     },
+     {
+      "label": "FIRM-06673",
+      "member": true
+     },
+     {
+      "label": "FIRM-08007",
+      "member": true
+     },
+     {
+      "label": "Other bidders",
+      "member": false
+     }
+    ],
+    "tenders": [
+     {
+      "label": "TENDER-24033",
+      "month": "Sep 2021",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-11848",
+      "month": "Jan 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-22509",
+      "month": "Jan 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-05632",
+      "month": "Feb 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-01482",
+      "month": "Feb 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-29007",
+      "month": "Mar 2022",
+      "bidders": 7
+     },
+     {
+      "label": "TENDER-04110",
+      "month": "Mar 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-37707",
+      "month": "Mar 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-43367",
+      "month": "Mar 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-02863",
+      "month": "Mar 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-33256",
+      "month": "Mar 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-32934",
+      "month": "Mar 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-39603",
+      "month": "Mar 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-02292",
+      "month": "Mar 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-05138",
+      "month": "May 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-03462",
+      "month": "May 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-34957",
+      "month": "May 2022",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-05834",
+      "month": "May 2022",
+      "bidders": 7
+     },
+     {
+      "label": "TENDER-37436",
+      "month": "May 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-16632",
+      "month": "May 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-04399",
+      "month": "May 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-30973",
+      "month": "Sep 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-16209",
+      "month": "Oct 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-35293",
+      "month": "Oct 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-26572",
+      "month": "Oct 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-31920",
+      "month": "Oct 2022",
+      "bidders": 9
+     },
+     {
+      "label": "TENDER-35939",
+      "month": "Nov 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-26815",
+      "month": "Mar 2023",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-10716",
+      "month": "Mar 2023",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-39338",
+      "month": "Apr 2023",
+      "bidders": 3
+     }
+    ],
+    "edges": [
+     [
+      3,
+      0,
+      false
+     ],
+     [
+      1,
+      0,
+      true
+     ],
+     [
+      4,
+      1,
+      false
+     ],
+     [
+      0,
+      1,
+      false
+     ],
+     [
+      5,
+      1,
+      true
+     ],
+     [
+      4,
+      2,
+      false
+     ],
+     [
+      0,
+      2,
+      false
+     ],
+     [
+      5,
+      2,
+      true
+     ],
+     [
+      0,
+      3,
+      false
+     ],
+     [
+      4,
+      3,
+      true
+     ],
+     [
+      5,
+      3,
+      false
+     ],
+     [
+      4,
+      4,
+      false
+     ],
+     [
+      0,
+      4,
+      false
+     ],
+     [
+      5,
+      4,
+      false
+     ],
+     [
+      2,
+      5,
+      false
+     ],
+     [
+      3,
+      5,
+      false
+     ],
+     [
+      5,
+      5,
+      false
+     ],
+     [
+      1,
+      6,
+      false
+     ],
+     [
+      4,
+      6,
+      false
+     ],
+     [
+      3,
+      6,
+      true
+     ],
+     [
+      3,
+      7,
+      false
+     ],
+     [
+      4,
+      7,
+      false
+     ],
+     [
+      1,
+      7,
+      true
+     ],
+     [
+      1,
+      8,
+      false
+     ],
+     [
+      4,
+      8,
+      false
+     ],
+     [
+      2,
+      8,
+      true
+     ],
+     [
+      1,
+      9,
+      false
+     ],
+     [
+      4,
+      9,
+      false
+     ],
+     [
+      2,
+      9,
+      true
+     ],
+     [
+      3,
+      10,
+      false
+     ],
+     [
+      4,
+      10,
+      false
+     ],
+     [
+      1,
+      10,
+      true
+     ],
+     [
+      2,
+      11,
+      false
+     ],
+     [
+      1,
+      11,
+      false
+     ],
+     [
+      3,
+      11,
+      true
+     ],
+     [
+      1,
+      12,
+      false
+     ],
+     [
+      3,
+      12,
+      false
+     ],
+     [
+      2,
+      12,
+      true
+     ],
+     [
+      2,
+      13,
+      false
+     ],
+     [
+      1,
+      13,
+      false
+     ],
+     [
+      4,
+      13,
+      false
+     ],
+     [
+      3,
+      13,
+      true
+     ],
+     [
+      3,
+      14,
+      false
+     ],
+     [
+      4,
+      14,
+      false
+     ],
+     [
+      5,
+      14,
+      false
+     ],
+     [
+      4,
+      15,
+      false
+     ],
+     [
+      0,
+      15,
+      true
+     ],
+     [
+      5,
+      15,
+      false
+     ],
+     [
+      3,
+      16,
+      false
+     ],
+     [
+      4,
+      16,
+      false
+     ],
+     [
+      5,
+      16,
+      false
+     ],
+     [
+      3,
+      17,
+      false
+     ],
+     [
+      4,
+      17,
+      false
+     ],
+     [
+      5,
+      17,
+      false
+     ],
+     [
+      4,
+      18,
+      false
+     ],
+     [
+      3,
+      18,
+      true
+     ],
+     [
+      3,
+      19,
+      false
+     ],
+     [
+      0,
+      19,
+      false
+     ],
+     [
+      4,
+      19,
+      true
+     ],
+     [
+      4,
+      20,
+      false
+     ],
+     [
+      3,
+      20,
+      true
+     ],
+     [
+      0,
+      21,
+      false
+     ],
+     [
+      4,
+      21,
+      true
+     ],
+     [
+      5,
+      21,
+      false
+     ],
+     [
+      3,
+      22,
+      false
+     ],
+     [
+      1,
+      22,
+      true
+     ],
+     [
+      5,
+      22,
+      false
+     ],
+     [
+      3,
+      23,
+      false
+     ],
+     [
+      4,
+      23,
+      false
+     ],
+     [
+      1,
+      23,
+      true
+     ],
+     [
+      3,
+      24,
+      false
+     ],
+     [
+      4,
+      24,
+      false
+     ],
+     [
+      2,
+      24,
+      true
+     ],
+     [
+      3,
+      25,
+      false
+     ],
+     [
+      4,
+      25,
+      false
+     ],
+     [
+      5,
+      25,
+      true
+     ],
+     [
+      4,
+      26,
+      false
+     ],
+     [
+      0,
+      26,
+      true
+     ],
+     [
+      5,
+      26,
+      false
+     ],
+     [
+      3,
+      27,
+      false
+     ],
+     [
+      4,
+      27,
+      false
+     ],
+     [
+      2,
+      28,
+      false
+     ],
+     [
+      3,
+      28,
+      true
+     ],
+     [
+      5,
+      28,
+      false
+     ],
+     [
+      2,
+      29,
+      false
+     ],
+     [
+      4,
+      29,
+      false
+     ],
+     [
+      1,
+      29,
+      true
+     ]
+    ],
+    "total": 30
+   }
+  },
+  {
+   "id": "G007",
+   "members": [
+    "FIRM-00794",
+    "FIRM-02885",
+    "FIRM-03473",
+    "FIRM-05214",
+    "FIRM-06535",
+    "FIRM-10145"
+   ],
+   "size": 6,
+   "period": "Aug 2021 to Feb 2023",
+   "joint": 90,
+   "closed": 28,
+   "closed_share": 0.311,
+   "wins": 44,
+   "decided": 64,
+   "segments": 12,
+   "exclusivity": 0.0378,
+   "screens": [
+    {
+     "key": "closed",
+     "label": "Closed group",
+     "fired": false,
+     "text": "Exclusivity 0.04: 4% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.020 (p 0.048). The threshold for this screen is 0.25."
+    },
+    {
+     "key": "rotation",
+     "label": "Winner rotation",
+     "fired": false,
+     "text": "44 wins by 4 members changed hands in 30.5 runs. Chance predicts about 30.4. p 0.499, adjusted for the groups tested: 1.000."
+    },
+    {
+     "key": "cover",
+     "label": "Persistent losing bidder",
+     "fired": true,
+     "text": "FIRM-05214 bid on 43 decided tenders alongside other members and won 0. Equal odds would give about 10.8. Adjusted p below 0.001."
+    },
+    {
+     "key": "price",
+     "label": "Awards near the estimate",
+     "fired": true,
+     "text": "Median award 1.011 of the estimate over 44 awards, against 0.900 for other contested tenders in the same segments. 75% of the group's awards are at 0.99 of the estimate or above (others: 22%). Adjusted p below 0.001."
+    }
+   ],
+   "rule_out": [
+    "A small or new firm that bids often and is simply not competitive.",
+    "Bids rejected at the technical stage for paperwork reasons.",
+    "An estimate that is out of date, so honest bids land at or above it.",
+    "A floor on bids below the estimate that piles awards at the same ratio.",
+    "Work that is harder than the buyer's schedule of rates assumes."
+   ],
+   "graph": {
+    "firms": [
+     {
+      "label": "FIRM-00794",
+      "member": true
+     },
+     {
+      "label": "FIRM-02885",
+      "member": true
+     },
+     {
+      "label": "FIRM-03473",
+      "member": true
+     },
+     {
+      "label": "FIRM-05214",
+      "member": true
+     },
+     {
+      "label": "FIRM-06535",
+      "member": true
+     },
+     {
+      "label": "FIRM-10145",
+      "member": true
+     },
+     {
+      "label": "Other bidders",
+      "member": false
+     }
+    ],
+    "tenders": [
+     {
+      "label": "TENDER-28119",
+      "month": "Aug 2021",
+      "bidders": 8
+     },
+     {
+      "label": "TENDER-00116",
+      "month": "Sep 2021",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-32528",
+      "month": "Oct 2021",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-06529",
+      "month": "Oct 2021",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-27482",
+      "month": "Oct 2021",
+      "bidders": 8
+     },
+     {
+      "label": "TENDER-15013",
+      "month": "Oct 2021",
+      "bidders": 6
+     },
+     {
+      "label": "TENDER-05765",
+      "month": "Oct 2021",
+      "bidders": 6
+     },
+     {
+      "label": "TENDER-08535",
+      "month": "Oct 2021",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-25635",
+      "month": "Oct 2021",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-32095",
+      "month": "Oct 2021",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-12871",
+      "month": "Oct 2021",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-26366",
+      "month": "Oct 2021",
+      "bidders": 6
+     },
+     {
+      "label": "TENDER-27510",
+      "month": "Oct 2021",
+      "bidders": 7
+     },
+     {
+      "label": "TENDER-39785",
+      "month": "Oct 2021",
+      "bidders": 6
+     },
+     {
+      "label": "TENDER-25526",
+      "month": "Oct 2021",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-13704",
+      "month": "Oct 2021",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-03344",
+      "month": "Oct 2021",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-32911",
+      "month": "Oct 2021",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-09453",
+      "month": "Oct 2021",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-05969",
+      "month": "Oct 2021",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-20654",
+      "month": "Oct 2021",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-31595",
+      "month": "Oct 2021",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-39974",
+      "month": "Oct 2021",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-18365",
+      "month": "Oct 2021",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-03319",
+      "month": "Oct 2021",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-07448",
+      "month": "Oct 2021",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-09306",
+      "month": "Oct 2021",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-34352",
+      "month": "Oct 2021",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-36440",
+      "month": "Oct 2021",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-07372",
+      "month": "Oct 2021",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-41982",
+      "month": "Oct 2021",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-33626",
+      "month": "Oct 2021",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-15261",
+      "month": "Oct 2021",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-18695",
+      "month": "Oct 2021",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-21583",
+      "month": "Oct 2021",
+      "bidders": 6
+     },
+     {
+      "label": "TENDER-39194",
+      "month": "Oct 2021",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-03174",
+      "month": "Oct 2021",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-31837",
+      "month": "Oct 2021",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-07114",
+      "month": "Oct 2021",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-01932",
+      "month": "Oct 2021",
+      "bidders": 7
+     }
+    ],
+    "edges": [
+     [
+      1,
+      0,
+      false
+     ],
+     [
+      2,
+      0,
+      false
+     ],
+     [
+      4,
+      0,
+      false
+     ],
+     [
+      6,
+      0,
+      true
+     ],
+     [
+      1,
+      1,
+      false
+     ],
+     [
+      2,
+      1,
+      false
+     ],
+     [
+      6,
+      1,
+      true
+     ],
+     [
+      3,
+      2,
+      false
+     ],
+     [
+      4,
+      2,
+      false
+     ],
+     [
+      6,
+      2,
+      false
+     ],
+     [
+      5,
+      3,
+      false
+     ],
+     [
+      3,
+      3,
+      false
+     ],
+     [
+      2,
+      3,
+      false
+     ],
+     [
+      4,
+      3,
+      false
+     ],
+     [
+      6,
+      3,
+      true
+     ],
+     [
+      3,
+      4,
+      false
+     ],
+     [
+      0,
+      4,
+      false
+     ],
+     [
+      6,
+      4,
+      false
+     ],
+     [
+      5,
+      5,
+      false
+     ],
+     [
+      1,
+      5,
+      false
+     ],
+     [
+      2,
+      5,
+      false
+     ],
+     [
+      4,
+      5,
+      false
+     ],
+     [
+      6,
+      5,
+      true
+     ],
+     [
+      3,
+      6,
+      false
+     ],
+     [
+      0,
+      6,
+      false
+     ],
+     [
+      1,
+      6,
+      false
+     ],
+     [
+      4,
+      6,
+      false
+     ],
+     [
+      6,
+      6,
+      true
+     ],
+     [
+      5,
+      7,
+      false
+     ],
+     [
+      3,
+      7,
+      false
+     ],
+     [
+      2,
+      7,
+      false
+     ],
+     [
+      6,
+      7,
+      true
+     ],
+     [
+      5,
+      8,
+      false
+     ],
+     [
+      3,
+      8,
+      false
+     ],
+     [
+      2,
+      8,
+      false
+     ],
+     [
+      4,
+      8,
+      false
+     ],
+     [
+      6,
+      8,
+      true
+     ],
+     [
+      3,
+      9,
+      false
+     ],
+     [
+      2,
+      9,
+      true
+     ],
+     [
+      6,
+      9,
+      false
+     ],
+     [
+      5,
+      10,
+      false
+     ],
+     [
+      1,
+      10,
+      false
+     ],
+     [
+      2,
+      10,
+      false
+     ],
+     [
+      4,
+      10,
+      false
+     ],
+     [
+      6,
+      10,
+      true
+     ],
+     [
+      5,
+      11,
+      false
+     ],
+     [
+      3,
+      11,
+      false
+     ],
+     [
+      2,
+      11,
+      false
+     ],
+     [
+      4,
+      11,
+      false
+     ],
+     [
+      0,
+      11,
+      true
+     ],
+     [
+      6,
+      11,
+      false
+     ],
+     [
+      5,
+      12,
+      false
+     ],
+     [
+      3,
+      12,
+      false
+     ],
+     [
+      0,
+      12,
+      false
+     ],
+     [
+      2,
+      12,
+      false
+     ],
+     [
+      4,
+      12,
+      false
+     ],
+     [
+      6,
+      12,
+      true
+     ],
+     [
+      5,
+      13,
+      false
+     ],
+     [
+      3,
+      13,
+      false
+     ],
+     [
+      0,
+      13,
+      false
+     ],
+     [
+      2,
+      13,
+      false
+     ],
+     [
+      4,
+      13,
+      false
+     ],
+     [
+      6,
+      13,
+      true
+     ],
+     [
+      3,
+      14,
+      false
+     ],
+     [
+      2,
+      14,
+      false
+     ],
+     [
+      4,
+      14,
+      true
+     ],
+     [
+      5,
+      15,
+      false
+     ],
+     [
+      3,
+      15,
+      false
+     ],
+     [
+      2,
+      15,
+      false
+     ],
+     [
+      1,
+      15,
+      true
+     ],
+     [
+      1,
+      16,
+      false
+     ],
+     [
+      4,
+      16,
+      false
+     ],
+     [
+      2,
+      16,
+      true
+     ],
+     [
+      3,
+      17,
+      false
+     ],
+     [
+      2,
+      17,
+      false
+     ],
+     [
+      4,
+      17,
+      true
+     ],
+     [
+      6,
+      17,
+      false
+     ],
+     [
+      3,
+      18,
+      false
+     ],
+     [
+      4,
+      18,
+      false
+     ],
+     [
+      2,
+      18,
+      true
+     ],
+     [
+      1,
+      19,
+      false
+     ],
+     [
+      4,
+      19,
+      false
+     ],
+     [
+      2,
+      19,
+      true
+     ],
+     [
+      6,
+      19,
+      false
+     ],
+     [
+      3,
+      20,
+      false
+     ],
+     [
+      1,
+      20,
+      false
+     ],
+     [
+      2,
+      20,
+      false
+     ],
+     [
+      0,
+      20,
+      true
+     ],
+     [
+      6,
+      20,
+      false
+     ],
+     [
+      3,
+      21,
+      false
+     ],
+     [
+      0,
+      21,
+      false
+     ],
+     [
+      1,
+      21,
+      false
+     ],
+     [
+      4,
+      21,
+      false
+     ],
+     [
+      6,
+      21,
+      false
+     ],
+     [
+      3,
+      22,
+      false
+     ],
+     [
+      2,
+      22,
+      false
+     ],
+     [
+      4,
+      22,
+      true
+     ],
+     [
+      3,
+      23,
+      false
+     ],
+     [
+      2,
+      23,
+      false
+     ],
+     [
+      4,
+      23,
+      true
+     ],
+     [
+      3,
+      24,
+      false
+     ],
+     [
+      2,
+      24,
+      false
+     ],
+     [
+      4,
+      24,
+      true
+     ],
+     [
+      5,
+      25,
+      false
+     ],
+     [
+      3,
+      25,
+      false
+     ],
+     [
+      4,
+      25,
+      false
+     ],
+     [
+      2,
+      25,
+      true
+     ],
+     [
+      6,
+      25,
+      false
+     ],
+     [
+      5,
+      26,
+      false
+     ],
+     [
+      1,
+      26,
+      false
+     ],
+     [
+      2,
+      26,
+      false
+     ],
+     [
+      6,
+      26,
+      true
+     ],
+     [
+      5,
+      27,
+      false
+     ],
+     [
+      3,
+      27,
+      false
+     ],
+     [
+      2,
+      27,
+      false
+     ],
+     [
+      1,
+      27,
+      true
+     ],
+     [
+      6,
+      27,
+      false
+     ],
+     [
+      3,
+      28,
+      false
+     ],
+     [
+      2,
+      28,
+      false
+     ],
+     [
+      4,
+      28,
+      true
+     ],
+     [
+      5,
+      29,
+      false
+     ],
+     [
+      3,
+      29,
+      false
+     ],
+     [
+      4,
+      29,
+      false
+     ],
+     [
+      2,
+      29,
+      true
+     ],
+     [
+      6,
+      29,
+      false
+     ],
+     [
+      1,
+      30,
+      false
+     ],
+     [
+      4,
+      30,
+      false
+     ],
+     [
+      2,
+      30,
+      true
+     ],
+     [
+      3,
+      31,
+      false
+     ],
+     [
+      2,
+      31,
+      false
+     ],
+     [
+      4,
+      31,
+      true
+     ],
+     [
+      6,
+      31,
+      false
+     ],
+     [
+      3,
+      32,
+      false
+     ],
+     [
+      2,
+      32,
+      false
+     ],
+     [
+      4,
+      32,
+      true
+     ],
+     [
+      3,
+      33,
+      false
+     ],
+     [
+      0,
+      33,
+      false
+     ],
+     [
+      1,
+      33,
+      false
+     ],
+     [
+      4,
+      33,
+      false
+     ],
+     [
+      6,
+      33,
+      false
+     ],
+     [
+      3,
+      34,
+      false
+     ],
+     [
+      0,
+      34,
+      false
+     ],
+     [
+      1,
+      34,
+      false
+     ],
+     [
+      4,
+      34,
+      false
+     ],
+     [
+      6,
+      34,
+      false
+     ],
+     [
+      3,
+      35,
+      false
+     ],
+     [
+      1,
+      35,
+      false
+     ],
+     [
+      4,
+      35,
+      false
+     ],
+     [
+      6,
+      35,
+      false
+     ],
+     [
+      3,
+      36,
+      false
+     ],
+     [
+      1,
+      36,
+      false
+     ],
+     [
+      4,
+      36,
+      false
+     ],
+     [
+      3,
+      37,
+      false
+     ],
+     [
+      2,
+      37,
+      false
+     ],
+     [
+      4,
+      37,
+      true
+     ],
+     [
+      1,
+      38,
+      false
+     ],
+     [
+      2,
+      38,
+      false
+     ],
+     [
+      4,
+      38,
+      false
+     ],
+     [
+      6,
+      38,
+      true
+     ],
+     [
+      5,
+      39,
+      false
+     ],
+     [
+      3,
+      39,
+      false
+     ],
+     [
+      1,
+      39,
+      false
+     ],
+     [
+      4,
+      39,
+      false
+     ],
+     [
+      6,
+      39,
+      true
+     ]
+    ],
+    "total": 90
+   }
+  },
+  {
+   "id": "G008",
+   "members": [
+    "FIRM-01275",
+    "FIRM-05705",
+    "FIRM-06169",
+    "FIRM-08176",
+    "FIRM-08392",
+    "FIRM-09021"
+   ],
+   "size": 6,
+   "period": "Jun 2021 to Apr 2023",
+   "joint": 25,
+   "closed": 10,
+   "closed_share": 0.4,
+   "wins": 12,
+   "decided": 17,
+   "segments": 15,
+   "exclusivity": 0.0124,
+   "screens": [
+    {
+     "key": "closed",
+     "label": "Closed group",
+     "fired": false,
+     "text": "Exclusivity 0.01: 1% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.000 (p 0.048). The threshold for this screen is 0.25."
+    },
+    {
+     "key": "rotation",
+     "label": "Winner rotation",
+     "fired": false,
+     "text": "12 wins by 4 members changed hands in 6.0 runs. Chance predicts about 9.2. p 0.998, adjusted for the groups tested: 1.000."
+    },
+    {
+     "key": "cover",
+     "label": "Persistent losing bidder",
+     "fired": true,
+     "text": "FIRM-01275 bid on 10 decided tenders alongside other members and won 1. Equal odds would give about 4.4. Adjusted p 0.038."
+    },
+    {
+     "key": "price",
+     "label": "Awards near the estimate",
+     "fired": true,
+     "text": "Median award 1.000 of the estimate over 12 awards, against 1.000 for other contested tenders in the same segments. 92% of the group's awards are at 0.99 of the estimate or above (others: 58%). Adjusted p 0.012."
+    }
+   ],
+   "rule_out": [
+    "A small or new firm that bids often and is simply not competitive.",
+    "Bids rejected at the technical stage for paperwork reasons.",
+    "An estimate that is out of date, so honest bids land at or above it.",
+    "A floor on bids below the estimate that piles awards at the same ratio.",
+    "Work that is harder than the buyer's schedule of rates assumes."
+   ],
+   "graph": {
+    "firms": [
+     {
+      "label": "FIRM-01275",
+      "member": true
+     },
+     {
+      "label": "FIRM-05705",
+      "member": true
+     },
+     {
+      "label": "FIRM-06169",
+      "member": true
+     },
+     {
+      "label": "FIRM-08176",
+      "member": true
+     },
+     {
+      "label": "FIRM-08392",
+      "member": true
+     },
+     {
+      "label": "FIRM-09021",
+      "member": true
+     },
+     {
+      "label": "Other bidders",
+      "member": false
+     }
+    ],
+    "tenders": [
+     {
+      "label": "TENDER-22530",
+      "month": "Jun 2021",
+      "bidders": 6
+     },
+     {
+      "label": "TENDER-06228",
+      "month": "Jun 2021",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-02190",
+      "month": "Jul 2021",
+      "bidders": 4
+     },
+     {
+      "label": "TENDER-11114",
+      "month": "Dec 2021",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-24277",
+      "month": "Jan 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-21881",
+      "month": "Jan 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-23679",
+      "month": "Jan 2022",
+      "bidders": 11
+     },
+     {
+      "label": "TENDER-09352",
+      "month": "Feb 2022",
+      "bidders": 10
+     },
+     {
+      "label": "TENDER-43443",
+      "month": "Mar 2022",
+      "bidders": 9
+     },
+     {
+      "label": "TENDER-32205",
+      "month": "Mar 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-34903",
+      "month": "May 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-17151",
+      "month": "May 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-19847",
+      "month": "Aug 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-04247",
+      "month": "Aug 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-19548",
+      "month": "Dec 2022",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-03185",
+      "month": "Dec 2022",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-16525",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-42173",
+      "month": "Dec 2022",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-39371",
+      "month": "Dec 2022",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-04326",
+      "month": "Dec 2022",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-34162",
+      "month": "Jan 2023",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-27980",
+      "month": "Mar 2023",
+      "bidders": 5
+     },
+     {
+      "label": "TENDER-03685",
+      "month": "Mar 2023",
+      "bidders": 2
+     },
+     {
+      "label": "TENDER-03251",
+      "month": "Mar 2023",
+      "bidders": 3
+     },
+     {
+      "label": "TENDER-35590",
+      "month": "Apr 2023",
+      "bidders": 3
+     }
+    ],
+    "edges": [
+     [
+      4,
+      0,
+      false
+     ],
+     [
+      1,
+      0,
+      false
+     ],
+     [
+      6,
+      0,
+      true
+     ],
+     [
+      4,
+      1,
+      false
+     ],
+     [
+      1,
+      1,
+      false
+     ],
+     [
+      6,
+      1,
+      true
+     ],
+     [
+      0,
+      2,
+      false
+     ],
+     [
+      2,
+      2,
+      false
+     ],
+     [
+      6,
+      2,
+      true
+     ],
+     [
+      0,
+      3,
+      false
+     ],
+     [
+      2,
+      3,
+      true
+     ],
+     [
+      0,
+      4,
+      false
+     ],
+     [
+      2,
+      4,
+      false
+     ],
+     [
+      4,
+      4,
+      true
+     ],
+     [
+      0,
+      5,
+      false
+     ],
+     [
+      2,
+      5,
+      false
+     ],
+     [
+      4,
+      5,
+      true
+     ],
+     [
+      4,
+      6,
+      false
+     ],
+     [
+      1,
+      6,
+      false
+     ],
+     [
+      6,
+      6,
+      true
+     ],
+     [
+      1,
+      7,
+      false
+     ],
+     [
+      5,
+      7,
+      true
+     ],
+     [
+      6,
+      7,
+      false
+     ],
+     [
+      4,
+      8,
+      false
+     ],
+     [
+      0,
+      8,
+      false
+     ],
+     [
+      6,
+      8,
+      true
+     ],
+     [
+      4,
+      9,
+      false
+     ],
+     [
+      0,
+      9,
+      false
+     ],
+     [
+      2,
+      9,
+      false
+     ],
+     [
+      4,
+      10,
+      false
+     ],
+     [
+      3,
+      10,
+      true
+     ],
+     [
+      6,
+      10,
+      false
+     ],
+     [
+      4,
+      11,
+      false
+     ],
+     [
+      3,
+      11,
+      true
+     ],
+     [
+      4,
+      12,
+      true
+     ],
+     [
+      0,
+      12,
+      true
+     ],
+     [
+      0,
+      13,
+      false
+     ],
+     [
+      2,
+      13,
+      true
+     ],
+     [
+      4,
+      14,
+      false
+     ],
+     [
+      0,
+      14,
+      false
+     ],
+     [
+      2,
+      14,
+      false
+     ],
+     [
+      6,
+      14,
+      false
+     ],
+     [
+      4,
+      15,
+      false
+     ],
+     [
+      0,
+      15,
+      false
+     ],
+     [
+      2,
+      15,
+      false
+     ],
+     [
+      6,
+      15,
+      false
+     ],
+     [
+      0,
+      16,
+      false
+     ],
+     [
+      2,
+      16,
+      true
+     ],
+     [
+      5,
+      17,
+      false
+     ],
+     [
+      1,
+      17,
+      false
+     ],
+     [
+      6,
+      17,
+      false
+     ],
+     [
+      5,
+      18,
+      false
+     ],
+     [
+      1,
+      18,
+      false
+     ],
+     [
+      6,
+      18,
+      false
+     ],
+     [
+      0,
+      19,
+      false
+     ],
+     [
+      2,
+      19,
+      true
+     ],
+     [
+      0,
+      20,
+      false
+     ],
+     [
+      2,
+      20,
+      true
+     ],
+     [
+      6,
+      20,
+      false
+     ],
+     [
+      4,
+      21,
+      false
+     ],
+     [
+      0,
+      21,
+      false
+     ],
+     [
+      6,
+      21,
+      false
+     ],
+     [
+      4,
+      22,
+      false
+     ],
+     [
+      3,
+      22,
+      true
+     ],
+     [
+      4,
+      23,
+      false
+     ],
+     [
+      3,
+      23,
+      true
+     ],
+     [
+      6,
+      23,
+      false
+     ],
+     [
+      0,
+      24,
+      false
+     ],
+     [
+      2,
+      24,
+      false
+     ],
+     [
+      6,
+      24,
+      false
+     ]
+    ],
+    "total": 25
+   }
+  }
+ ],
+ "validation": {
+  "cases": [
+   {
+    "key": "switzerland_ticino",
+    "title": "Switzerland: Ticino",
+    "description": "Road construction cartel in the canton of Ticino, sanctioned by the Swiss Competition Commission.",
+    "identifies_bidders": false,
+    "lowest_bid_wins": true,
+    "tenders": 220,
+    "cartel_tenders": 181
+   },
+   {
+    "key": "switzerland_gr_sg",
+    "title": "Switzerland: Graubunden and See-Gaster",
+    "description": "Construction cartels in Graubunden and See-Gaster, sanctioned by the Swiss Competition Commission.",
+    "identifies_bidders": false,
+    "lowest_bid_wins": true,
+    "tenders": 3812,
+    "cartel_tenders": 2947
+   },
+   {
+    "key": "japan",
+    "title": "Japan: Okinawa",
+    "description": "Building works in Okinawa before and after the Japan Fair Trade Commission inspection.",
+    "identifies_bidders": true,
+    "lowest_bid_wins": true,
+    "tenders": 1080,
+    "cartel_tenders": 123
+   },
+   {
+    "key": "brazil",
+    "title": "Brazil: Petrobras",
+    "description": "Infrastructure tenders examined in Operation Car Wash.",
+    "identifies_bidders": true,
+    "lowest_bid_wins": true,
+    "tenders": 100,
+    "cartel_tenders": 32
+   },
+   {
+    "key": "italy",
+    "title": "Italy: Turin",
+    "description": "Road works awarded by average-bid auctions, where the winner is the bid closest to a trimmed mean and not the lowest bid.",
+    "identifies_bidders": true,
+    "lowest_bid_wins": false,
+    "tenders": 278,
+    "cartel_tenders": 143
+   },
+   {
+    "key": "usa",
+    "title": "USA: Ohio school milk",
+    "description": "School milk contracts in Ohio, 1980 to 1990, with the Cincinnati dairy cartel.",
+    "identifies_bidders": true,
+    "lowest_bid_wins": true,
+    "tenders": 917,
+    "cartel_tenders": 272
+   }
+  ],
+  "screens": [
+   {
+    "key": "cv",
+    "label": "Coefficient of variation",
+    "expected": "low",
+    "why": "cover bids sit close together",
+    "cells": {
+     "switzerland_ticino": {
+      "auc": 0.818,
+      "low": 0.709,
+      "high": 0.914
+     },
+     "switzerland_gr_sg": {
+      "auc": 0.526,
+      "low": 0.503,
+      "high": 0.55
+     },
+     "japan": {
+      "auc": 0.739,
+      "low": 0.692,
+      "high": 0.782
+     },
+     "brazil": {
+      "auc": 0.9,
+      "low": 0.834,
+      "high": 0.956
+     },
+     "italy": {
+      "auc": 0.63,
+      "low": 0.563,
+      "high": 0.692
+     },
+     "usa": {
+      "auc": 0.457,
+      "low": 0.416,
+      "high": 0.5
+     }
+    }
+   },
+   {
+    "key": "spd",
+    "label": "Spread",
+    "expected": "low",
+    "why": "cover bids sit close together",
+    "cells": {
+     "switzerland_ticino": {
+      "auc": 0.792,
+      "low": 0.679,
+      "high": 0.9
+     },
+     "switzerland_gr_sg": {
+      "auc": 0.49,
+      "low": 0.466,
+      "high": 0.514
+     },
+     "japan": {
+      "auc": 0.719,
+      "low": 0.675,
+      "high": 0.763
+     },
+     "brazil": {
+      "auc": 0.899,
+      "low": 0.836,
+      "high": 0.953
+     },
+     "italy": {
+      "auc": 0.676,
+      "low": 0.609,
+      "high": 0.732
+     },
+     "usa": {
+      "auc": 0.447,
+      "low": 0.406,
+      "high": 0.491
+     }
+    }
+   },
+   {
+    "key": "diffp",
+    "label": "Gap between two lowest bids",
+    "expected": "high",
+    "why": "the designated winner is kept clear of the cover bids",
+    "cells": {
+     "switzerland_ticino": {
+      "auc": 0.548,
+      "low": 0.452,
+      "high": 0.654
+     },
+     "switzerland_gr_sg": {
+      "auc": 0.435,
+      "low": 0.414,
+      "high": 0.457
+     },
+     "japan": {
+      "auc": 0.428,
+      "low": 0.381,
+      "high": 0.473
+     },
+     "brazil": {
+      "auc": 0.383,
+      "low": 0.273,
+      "high": 0.485
+     },
+     "italy": {
+      "auc": 0.481,
+      "low": 0.421,
+      "high": 0.547
+     },
+     "usa": {
+      "auc": 0.526,
+      "low": 0.485,
+      "high": 0.563
+     }
+    }
+   },
+   {
+    "key": "rd",
+    "label": "Relative distance",
+    "expected": "high",
+    "why": "the gap to the runner-up is large next to the spread of losing bids",
+    "cells": {
+     "switzerland_ticino": {
+      "auc": 0.683,
+      "low": 0.623,
+      "high": 0.748
+     },
+     "switzerland_gr_sg": {
+      "auc": 0.422,
+      "low": 0.4,
+      "high": 0.443
+     },
+     "japan": {
+      "auc": 0.62,
+      "low": 0.57,
+      "high": 0.663
+     },
+     "brazil": {
+      "auc": 0.763,
+      "low": 0.645,
+      "high": 0.852
+     },
+     "italy": {
+      "auc": 0.519,
+      "low": 0.455,
+      "high": 0.588
+     },
+     "usa": {
+      "auc": 0.5,
+      "low": 0.454,
+      "high": 0.541
+     }
+    }
+   },
+   {
+    "key": "skew",
+    "label": "Skewness",
+    "expected": "low",
+    "why": "cover bids bunch at the top, leaving a tail below",
+    "cells": {
+     "switzerland_ticino": {
+      "auc": 0.819,
+      "low": 0.749,
+      "high": 0.883
+     },
+     "switzerland_gr_sg": {
+      "auc": 0.462,
+      "low": 0.438,
+      "high": 0.485
+     },
+     "japan": {
+      "auc": 0.586,
+      "low": 0.537,
+      "high": 0.632
+     },
+     "brazil": {
+      "auc": 0.718,
+      "low": 0.607,
+      "high": 0.809
+     },
+     "italy": {
+      "auc": 0.58,
+      "low": 0.505,
+      "high": 0.649
+     },
+     "usa": {
+      "auc": 0.51,
+      "low": 0.473,
+      "high": 0.547
+     }
+    }
+   },
+   {
+    "key": "kurt",
+    "label": "Kurtosis",
+    "expected": "high",
+    "why": "bids bunch around one value",
+    "cells": {
+     "switzerland_ticino": {
+      "auc": 0.687,
+      "low": 0.609,
+      "high": 0.763
+     },
+     "switzerland_gr_sg": {
+      "auc": 0.472,
+      "low": 0.44,
+      "high": 0.502
+     },
+     "japan": {
+      "auc": 0.561,
+      "low": 0.506,
+      "high": 0.609
+     },
+     "brazil": {
+      "auc": 0.491,
+      "low": 0.328,
+      "high": 0.649
+     },
+     "italy": {
+      "auc": 0.396,
+      "low": 0.333,
+      "high": 0.464
+     },
+     "usa": {
+      "auc": 0.447,
+      "low": 0.352,
+      "high": 0.533
+     }
+    }
+   },
+   {
+    "key": "ks",
+    "label": "Kolmogorov-Smirnov distance",
+    "expected": "high",
+    "why": "bids are not spread evenly",
+    "cells": {
+     "switzerland_ticino": {
+      "auc": 0.705,
+      "low": 0.623,
+      "high": 0.783
+     },
+     "switzerland_gr_sg": {
+      "auc": 0.406,
+      "low": 0.387,
+      "high": 0.427
+     },
+     "japan": {
+      "auc": 0.511,
+      "low": 0.465,
+      "high": 0.562
+     },
+     "brazil": {
+      "auc": 0.579,
+      "low": 0.46,
+      "high": 0.705
+     },
+     "italy": {
+      "auc": 0.458,
+      "low": 0.397,
+      "high": 0.528
+     },
+     "usa": {
+      "auc": 0.451,
+      "low": 0.413,
+      "high": 0.493
+     }
+    }
+   },
+   {
+    "key": "composite",
+    "label": "All seven averaged",
+    "expected": null,
+    "why": "the seven screens, each ranked within the market",
+    "cells": {
+     "switzerland_ticino": {
+      "auc": 0.861,
+      "low": 0.802,
+      "high": 0.922
+     },
+     "switzerland_gr_sg": {
+      "auc": 0.425,
+      "low": 0.402,
+      "high": 0.446
+     },
+     "japan": {
+      "auc": 0.656,
+      "low": 0.605,
+      "high": 0.703
+     },
+     "brazil": {
+      "auc": 0.795,
+      "low": 0.695,
+      "high": 0.873
+     },
+     "italy": {
+      "auc": 0.566,
+      "low": 0.501,
+      "high": 0.635
+     },
+     "usa": {
+      "auc": 0.462,
+      "low": 0.422,
+      "high": 0.502
+     }
+    }
+   }
+  ],
+  "rule": [
+   {
+    "case": "switzerland_ticino",
+    "n_tenders": 220,
+    "n_collusive": 181,
+    "base_rate": 0.8227272727272728,
+    "n_flagged": 106,
+    "precision": 0.9811320754716981,
+    "recall": 0.574585635359116,
+    "lift": 1.1925362243302409
+   },
+   {
+    "case": "switzerland_gr_sg",
+    "n_tenders": 3812,
+    "n_collusive": 2947,
+    "base_rate": 0.7730849947534103,
+    "n_flagged": 820,
+    "precision": 0.723170731707317,
+    "recall": 0.2012215812690872,
+    "lift": 0.935434960728976
+   },
+   {
+    "case": "japan",
+    "n_tenders": 1080,
+    "n_collusive": 123,
+    "base_rate": 0.11388888888888889,
+    "n_flagged": 481,
+    "precision": 0.1683991683991684,
+    "recall": 0.6585365853658537,
+    "lift": 1.478626844480503
+   },
+   {
+    "case": "brazil",
+    "n_tenders": 100,
+    "n_collusive": 32,
+    "base_rate": 0.32,
+    "n_flagged": 17,
+    "precision": 0.8235294117647058,
+    "recall": 0.4375,
+    "lift": 2.5735294117647056
+   },
+   {
+    "case": "italy",
+    "n_tenders": 278,
+    "n_collusive": 143,
+    "base_rate": 0.5143884892086331,
+    "n_flagged": 38,
+    "precision": 0.5,
+    "recall": 0.13286713286713286,
+    "lift": 0.972027972027972
+   },
+   {
+    "case": "usa",
+    "n_tenders": 892,
+    "n_collusive": 268,
+    "base_rate": 0.3004484304932735,
+    "n_flagged": 316,
+    "precision": 0.2848101265822785,
+    "recall": 0.3358208955223881,
+    "lift": 0.9479501228037032
+   }
+  ],
+  "cobid": [
+   {
+    "case": "japan",
+    "score": "jaccard",
+    "n_pairs": 32260,
+    "n_cartel_pairs": 5124,
+    "auc": 0.482613072281476
+   },
+   {
+    "case": "japan",
+    "score": "excess co-bidding",
+    "n_pairs": 32260,
+    "n_cartel_pairs": 5124,
+    "auc": 0.5163523587609824
+   },
+   {
+    "case": "japan",
+    "score": "joint tenders",
+    "n_pairs": 32260,
+    "n_cartel_pairs": 5124,
+    "auc": 0.5952055841487248
+   },
+   {
+    "case": "brazil",
+    "score": "jaccard",
+    "n_pairs": 309,
+    "n_cartel_pairs": 102,
+    "auc": 0.4740219759401345
+   },
+   {
+    "case": "brazil",
+    "score": "excess co-bidding",
+    "n_pairs": 309,
+    "n_cartel_pairs": 102,
+    "auc": 0.38389220422468506
+   },
+   {
+    "case": "brazil",
+    "score": "joint tenders",
+    "n_pairs": 309,
+    "n_cartel_pairs": 102,
+    "auc": 0.6546604148905939
+   },
+   {
+    "case": "italy",
+    "score": "jaccard",
+    "n_pairs": 51301,
+    "n_cartel_pairs": 3256,
+    "auc": 0.5328655369671604
+   },
+   {
+    "case": "italy",
+    "score": "excess co-bidding",
+    "n_pairs": 51301,
+    "n_cartel_pairs": 3256,
+    "auc": 0.41567138442333573
+   },
+   {
+    "case": "italy",
+    "score": "joint tenders",
+    "n_pairs": 51301,
+    "n_cartel_pairs": 3256,
+    "auc": 0.7166800908137155
+   },
+   {
+    "case": "usa",
+    "score": "jaccard",
+    "n_pairs": 341,
+    "n_cartel_pairs": 3,
+    "auc": 0.9940828402366864
+   },
+   {
+    "case": "usa",
+    "score": "excess co-bidding",
+    "n_pairs": 341,
+    "n_cartel_pairs": 3,
+    "auc": 1.0
+   },
+   {
+    "case": "usa",
+    "score": "joint tenders",
+    "n_pairs": 341,
+    "n_cartel_pairs": 3,
+    "auc": 0.9940828402366864
+   }
+  ],
+  "leads": [
+   {
+    "case": "japan",
+    "n_tenders": 1080,
+    "n_collusive": 123,
+    "base_rate": 0.11388888888888889,
+    "n_flagged": 43,
+    "precision": 0.0,
+    "recall": 0.0,
+    "lift": 0.0,
+    "groups": 131,
+    "leads": 1,
+    "lead_firms": 23.0,
+    "lead_firm_precision": 0.0,
+    "firm_base_rate": 0.08708708708708708
+   },
+   {
+    "case": "brazil",
+    "n_tenders": 101,
+    "n_collusive": 33,
+    "base_rate": 0.32673267326732675,
+    "n_flagged": 0,
+    "precision": null,
+    "recall": 0.0,
+    "lift": null,
+    "groups": 1,
+    "leads": 0,
+    "lead_firms": null,
+    "lead_firm_precision": null,
+    "firm_base_rate": null
+   },
+   {
+    "case": "italy",
+    "n_tenders": 278,
+    "n_collusive": 143,
+    "base_rate": 0.5143884892086331,
+    "n_flagged": 0,
+    "precision": null,
+    "recall": 0.0,
+    "lift": null,
+    "groups": 23,
+    "leads": 0,
+    "lead_firms": null,
+    "lead_firm_precision": null,
+    "firm_base_rate": null
+   },
+   {
+    "case": "usa",
+    "n_tenders": 3754,
+    "n_collusive": 487,
+    "base_rate": 0.12972828982418752,
+    "n_flagged": 319,
+    "precision": 0.02821316614420063,
+    "recall": 0.018480492813141684,
+    "lift": 0.2174789028856862,
+    "groups": 10,
+    "leads": 3,
+    "lead_firms": 21.0,
+    "lead_firm_precision": 0.0,
+    "firm_base_rate": 0.025
+   }
+  ]
+ },
+ "demo": {
+  "members": [
+   "FIRM-0027",
+   "FIRM-0041",
+   "FIRM-0044",
+   "FIRM-0057"
+  ],
+  "joint": 48,
+  "screens": [
+   "Closed group",
+   "Winner rotation",
+   "Persistent losing bidder",
+   "Awards near the estimate"
+  ],
+  "graph": {
+   "firms": [
+    {
+     "label": "FIRM-0027",
+     "member": true
+    },
+    {
+     "label": "FIRM-0041",
+     "member": true
+    },
+    {
+     "label": "FIRM-0044",
+     "member": true
+    },
+    {
+     "label": "FIRM-0057",
+     "member": true
+    }
+   ],
+   "tenders": [
+    {
+     "label": "TENDER-0272",
+     "month": "Apr 2022",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0333",
+     "month": "Apr 2022",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0208",
+     "month": "Apr 2022",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0051",
+     "month": "May 2022",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0553",
+     "month": "Jun 2022",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0286",
+     "month": "Jun 2022",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0327",
+     "month": "Jun 2022",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0196",
+     "month": "Jul 2022",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0201",
+     "month": "Jul 2022",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0031",
+     "month": "Aug 2022",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0090",
+     "month": "Aug 2022",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0029",
+     "month": "Aug 2022",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0503",
+     "month": "Aug 2022",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0050",
+     "month": "Aug 2022",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0166",
+     "month": "Sep 2022",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0100",
+     "month": "Sep 2022",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0401",
+     "month": "Sep 2022",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0627",
+     "month": "Sep 2022",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0005",
+     "month": "Oct 2022",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0123",
+     "month": "Oct 2022",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0284",
+     "month": "Oct 2022",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0408",
+     "month": "Oct 2022",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0329",
+     "month": "Oct 2022",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0033",
+     "month": "Dec 2022",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0534",
+     "month": "Jan 2023",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0606",
+     "month": "Jan 2023",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0504",
+     "month": "Feb 2023",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0139",
+     "month": "Feb 2023",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0378",
+     "month": "Feb 2023",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0013",
+     "month": "Mar 2023",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0464",
+     "month": "Mar 2023",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0332",
+     "month": "Mar 2023",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0096",
+     "month": "Mar 2023",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0546",
+     "month": "Apr 2023",
+     "bidders": 4
+    },
+    {
+     "label": "TENDER-0419",
+     "month": "Apr 2023",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0489",
+     "month": "Apr 2023",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0292",
+     "month": "May 2023",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0181",
+     "month": "May 2023",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0587",
+     "month": "May 2023",
+     "bidders": 3
+    },
+    {
+     "label": "TENDER-0061",
+     "month": "May 2023",
+     "bidders": 3
+    }
+   ],
+   "edges": [
+    [
+     2,
+     0,
+     true
+    ],
+    [
+     1,
+     0,
+     false
+    ],
+    [
+     3,
+     0,
+     false
+    ],
+    [
+     0,
+     0,
+     false
+    ],
+    [
+     1,
+     1,
+     true
+    ],
+    [
+     0,
+     1,
+     false
+    ],
+    [
+     2,
+     1,
+     false
+    ],
+    [
+     3,
+     2,
+     true
+    ],
+    [
+     1,
+     2,
+     false
+    ],
+    [
+     0,
+     2,
+     false
+    ],
+    [
+     2,
+     3,
+     true
+    ],
+    [
+     3,
+     3,
+     false
+    ],
+    [
+     0,
+     3,
+     false
+    ],
+    [
+     1,
+     3,
+     false
+    ],
+    [
+     1,
+     4,
+     true
+    ],
+    [
+     2,
+     4,
+     false
+    ],
+    [
+     0,
+     4,
+     false
+    ],
+    [
+     3,
+     5,
+     true
+    ],
+    [
+     2,
+     5,
+     false
+    ],
+    [
+     0,
+     5,
+     false
+    ],
+    [
+     2,
+     6,
+     true
+    ],
+    [
+     3,
+     6,
+     false
+    ],
+    [
+     1,
+     6,
+     false
+    ],
+    [
+     0,
+     6,
+     false
+    ],
+    [
+     1,
+     7,
+     true
+    ],
+    [
+     3,
+     7,
+     false
+    ],
+    [
+     0,
+     7,
+     false
+    ],
+    [
+     2,
+     7,
+     false
+    ],
+    [
+     3,
+     8,
+     true
+    ],
+    [
+     1,
+     8,
+     false
+    ],
+    [
+     0,
+     8,
+     false
+    ],
+    [
+     2,
+     8,
+     false
+    ],
+    [
+     2,
+     9,
+     true
+    ],
+    [
+     0,
+     9,
+     false
+    ],
+    [
+     3,
+     9,
+     false
+    ],
+    [
+     1,
+     9,
+     false
+    ],
+    [
+     1,
+     10,
+     true
+    ],
+    [
+     2,
+     10,
+     false
+    ],
+    [
+     0,
+     10,
+     false
+    ],
+    [
+     3,
+     11,
+     true
+    ],
+    [
+     1,
+     11,
+     false
+    ],
+    [
+     0,
+     11,
+     false
+    ],
+    [
+     2,
+     11,
+     false
+    ],
+    [
+     2,
+     12,
+     true
+    ],
+    [
+     1,
+     12,
+     false
+    ],
+    [
+     0,
+     12,
+     false
+    ],
+    [
+     3,
+     12,
+     false
+    ],
+    [
+     1,
+     13,
+     true
+    ],
+    [
+     2,
+     13,
+     false
+    ],
+    [
+     3,
+     13,
+     false
+    ],
+    [
+     3,
+     14,
+     true
+    ],
+    [
+     1,
+     14,
+     false
+    ],
+    [
+     2,
+     14,
+     false
+    ],
+    [
+     0,
+     14,
+     false
+    ],
+    [
+     2,
+     15,
+     true
+    ],
+    [
+     1,
+     15,
+     false
+    ],
+    [
+     0,
+     15,
+     false
+    ],
+    [
+     3,
+     15,
+     false
+    ],
+    [
+     1,
+     16,
+     true
+    ],
+    [
+     2,
+     16,
+     false
+    ],
+    [
+     0,
+     16,
+     false
+    ],
+    [
+     3,
+     17,
+     true
+    ],
+    [
+     2,
+     17,
+     false
+    ],
+    [
+     1,
+     17,
+     false
+    ],
+    [
+     2,
+     18,
+     true
+    ],
+    [
+     1,
+     18,
+     false
+    ],
+    [
+     3,
+     18,
+     false
+    ],
+    [
+     0,
+     18,
+     false
+    ],
+    [
+     1,
+     19,
+     true
+    ],
+    [
+     3,
+     19,
+     false
+    ],
+    [
+     2,
+     19,
+     false
+    ],
+    [
+     3,
+     20,
+     true
+    ],
+    [
+     2,
+     20,
+     false
+    ],
+    [
+     1,
+     20,
+     false
+    ],
+    [
+     0,
+     20,
+     false
+    ],
+    [
+     2,
+     21,
+     true
+    ],
+    [
+     0,
+     21,
+     false
+    ],
+    [
+     3,
+     21,
+     false
+    ],
+    [
+     1,
+     22,
+     true
+    ],
+    [
+     3,
+     22,
+     false
+    ],
+    [
+     2,
+     22,
+     false
+    ],
+    [
+     3,
+     23,
+     true
+    ],
+    [
+     0,
+     23,
+     false
+    ],
+    [
+     1,
+     23,
+     false
+    ],
+    [
+     2,
+     24,
+     true
+    ],
+    [
+     3,
+     24,
+     false
+    ],
+    [
+     1,
+     24,
+     false
+    ],
+    [
+     1,
+     25,
+     true
+    ],
+    [
+     3,
+     25,
+     false
+    ],
+    [
+     0,
+     25,
+     false
+    ],
+    [
+     2,
+     25,
+     false
+    ],
+    [
+     3,
+     26,
+     true
+    ],
+    [
+     1,
+     26,
+     false
+    ],
+    [
+     2,
+     26,
+     false
+    ],
+    [
+     1,
+     27,
+     true
+    ],
+    [
+     3,
+     27,
+     false
+    ],
+    [
+     2,
+     27,
+     false
+    ],
+    [
+     0,
+     27,
+     false
+    ],
+    [
+     2,
+     28,
+     true
+    ],
+    [
+     0,
+     28,
+     false
+    ],
+    [
+     1,
+     28,
+     false
+    ],
+    [
+     3,
+     29,
+     true
+    ],
+    [
+     1,
+     29,
+     false
+    ],
+    [
+     2,
+     29,
+     false
+    ],
+    [
+     0,
+     29,
+     false
+    ],
+    [
+     2,
+     30,
+     true
+    ],
+    [
+     3,
+     30,
+     false
+    ],
+    [
+     0,
+     30,
+     false
+    ],
+    [
+     1,
+     31,
+     true
+    ],
+    [
+     2,
+     31,
+     false
+    ],
+    [
+     0,
+     31,
+     false
+    ],
+    [
+     3,
+     31,
+     false
+    ],
+    [
+     3,
+     32,
+     true
+    ],
+    [
+     0,
+     32,
+     false
+    ],
+    [
+     2,
+     32,
+     false
+    ],
+    [
+     1,
+     32,
+     false
+    ],
+    [
+     2,
+     33,
+     true
+    ],
+    [
+     1,
+     33,
+     false
+    ],
+    [
+     0,
+     33,
+     false
+    ],
+    [
+     3,
+     33,
+     false
+    ],
+    [
+     1,
+     34,
+     true
+    ],
+    [
+     2,
+     34,
+     false
+    ],
+    [
+     3,
+     34,
+     false
+    ],
+    [
+     3,
+     35,
+     true
+    ],
+    [
+     1,
+     35,
+     false
+    ],
+    [
+     2,
+     35,
+     false
+    ],
+    [
+     2,
+     36,
+     true
+    ],
+    [
+     3,
+     36,
+     false
+    ],
+    [
+     1,
+     36,
+     false
+    ],
+    [
+     3,
+     37,
+     true
+    ],
+    [
+     0,
+     37,
+     false
+    ],
+    [
+     1,
+     37,
+     false
+    ],
+    [
+     2,
+     38,
+     true
+    ],
+    [
+     3,
+     38,
+     false
+    ],
+    [
+     0,
+     38,
+     false
+    ],
+    [
+     1,
+     39,
+     true
+    ],
+    [
+     0,
+     39,
+     false
+    ],
+    [
+     2,
+     39,
+     false
+    ]
+   ],
+   "total": 48
+  }
+ }
+}

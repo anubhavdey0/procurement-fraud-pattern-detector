@@ -23,6 +23,7 @@ from bidscreen import __version__, charts
 from bidscreen import leads as leads_module
 from bidscreen.anonymize import Pseudonymizer, assert_no_leak
 from bidscreen.leads import RULE_OUT, SCREEN_LABELS, SCREENS, ScreenResult
+from bidscreen.screens import price as price_module
 from bidscreen.screens.price import PRICE_SCREENS
 from bidscreen.screens.pricing import NEAR_ESTIMATE, priced_tenders
 from bidscreen.validate import BENCHMARK_CV, BENCHMARK_RD
@@ -105,20 +106,7 @@ def build_report(
         generated=date.today().strftime("%d %B %Y"),
     )
 
-    # The page's own wording: an identifier that occurs here is an ordinary
-    # phrase, not a name.
-    fixed_wording = "\n".join(
-        [
-            environment.loader.get_source(environment, "report.html")[0],
-            inspect.getsource(sys.modules[__name__]),
-            inspect.getsource(charts),
-            inspect.getsource(leads_module),
-            market.description,
-            market.source,
-            *market.notes,
-        ]
-    )
-    assert_no_leak(page, _real_identifiers(result), allow=fixed_wording)
+    assert_no_leak(page, _real_identifiers(result), allow=fixed_wording(market))
     path = out_dir / "report.html"
     path.write_text(page, encoding="utf-8")
     for name, svg in figures.items():
@@ -141,6 +129,26 @@ def _fit_labels(result: ScreenResult, key: bytes) -> Pseudonymizer:
     names.fit("tender", market.tenders["tender_id"])
     names.fit("buyer", market.tenders["buyer"])
     return names
+
+
+def fixed_wording(market, *extra: str) -> str:
+    """The output's own wording: the template, captions and labels written in
+    this package. An identifier that occurs here is an ordinary phrase, not a
+    name, so the leak check lets it pass."""
+    loader = PackageLoader("bidscreen", "templates")
+    return "\n".join(
+        [
+            loader.get_source(Environment(), "report.html")[0],
+            inspect.getsource(sys.modules[__name__]),
+            inspect.getsource(charts),
+            inspect.getsource(leads_module),
+            inspect.getsource(price_module),
+            market.description,
+            market.source,
+            *market.notes,
+            *extra,
+        ]
+    )
 
 
 def _real_identifiers(result: ScreenResult) -> set[str]:
@@ -201,7 +209,7 @@ def _lead_view(result: ScreenResult, row: pd.Series, names: Pseudonymizer, figur
         for key in SCREENS
     ]
     rule_out = [item for key in SCREENS if key in fired for item in RULE_OUT[key]]
-    svg, tender_rows, shown = _lead_figure(market, row, names)
+    svg, tender_rows, shown, graph = _lead_figure(market, row, names)
     figures.setdefault("lead-example", svg)
 
     return {
@@ -222,6 +230,7 @@ def _lead_view(result: ScreenResult, row: pd.Series, names: Pseudonymizer, figur
         "svg": Markup(svg),
         "tenders": tender_rows,
         "tenders_shown": shown,
+        "graph": graph,
     }
 
 
@@ -355,7 +364,18 @@ def _lead_figure(market, row: pd.Series, names: Pseudonymizer):
         ),
         footnote=footnote,
     )
-    return svg, rows, len(info)
+    # The same picture as plain data, by label only, for the project site.
+    position = {node["id"]: i for i, node in enumerate(firm_nodes)}
+    tender_position = {node["id"]: i for i, node in enumerate(tender_nodes)}
+    graph = {
+        "firms": [{"label": node["label"], "member": node["member"]} for node in firm_nodes],
+        "tenders": [
+            {"label": r["tender"], "month": r["month"], "bidders": r["bidders"]} for r in rows
+        ],
+        "edges": [[position[f], tender_position[t], bool(won)] for f, t, won in edges],
+        "total": int(total),
+    }
+    return svg, rows, len(info), graph
 
 
 def _groups_view(result: ScreenResult, figures: dict):

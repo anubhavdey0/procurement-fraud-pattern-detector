@@ -3,3 +3,4 @@
 # Generated sample output: keep it out of the language statistics.
 docs/sample/*.html linguist-generated=true
 docs/figures/*.svg linguist-generated=true
+site/src/data/site-data.json linguist-generated=true

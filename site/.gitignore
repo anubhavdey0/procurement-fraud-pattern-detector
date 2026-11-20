@@ -1,0 +1,4 @@
+node_modules/
+dist/
+# Copied from docs/sample at build time.
+public/report/

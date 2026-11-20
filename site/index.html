@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f6f7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0c0e" media="(prefers-color-scheme: dark)" />
+    <meta
+      name="description"
+      content="bidscreen: collusion screens for public tender data. It produces leads for review, checked against six documented cartels, and never names a company."
+    />
+    <title>bidscreen: leads for review, never a verdict</title>
+    <link rel="icon" href="./mark.svg" type="image/svg+xml" />
+    <script>
+      // Apply a saved theme before first paint so the page does not flash.
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

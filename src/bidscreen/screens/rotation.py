@@ -135,7 +135,9 @@ def group_rotation(
     winners = winners.loc[single]
     inside = winners.loc[winners["firm"].isin(members)].copy()
     inside["order"] = inside["tender_id"].map(tenders.set_index("tender_id")["order"])
-    inside = inside.dropna(subset=["order"])
+    # A fixed row order, so that ties in time are broken the same way on
+    # every run whatever order the bids arrived in.
+    inside = inside.dropna(subset=["order"]).sort_values(["order", "tender_id"], kind="stable")
 
     out = {
         "n_joint_tenders": int(len(joint)),

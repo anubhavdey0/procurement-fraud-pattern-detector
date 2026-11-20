@@ -1,0 +1,147 @@
+@import "tailwindcss";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
+
+/* One palette, one accent. Every colour on the page comes from these tokens,
+   so the light and dark themes are a change of values and nothing else. */
+:root {
+  color-scheme: light;
+  --bg: #f5f6f7;
+  --surface: #fcfcfd;
+  --ink: #0e1013;
+  --ink-2: #474c55;
+  --muted: #666c76;
+  --line: #dfe2e7;
+  --line-strong: #c6cad2;
+  --accent: #2346e0;
+  --accent-ink: #f8f9ff;
+  --context: #a3a8b1;
+  --warm: #d6453d;
+  --mid: #e7e9ed;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0b0c0e;
+    --surface: #121317;
+    --ink: #eceef2;
+    --ink-2: #b1b7c1;
+    --muted: #8a909b;
+    --line: #23262c;
+    --line-strong: #353942;
+    --accent: #8fa3ff;
+    --accent-ink: #0b0c0e;
+    --context: #5b616b;
+    --warm: #ef7b72;
+    --mid: #24272d;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0b0c0e;
+  --surface: #121317;
+  --ink: #eceef2;
+  --ink-2: #b1b7c1;
+  --muted: #8a909b;
+  --line: #23262c;
+  --line-strong: #353942;
+  --accent: #8fa3ff;
+  --accent-ink: #0b0c0e;
+  --context: #5b616b;
+  --warm: #ef7b72;
+  --mid: #24272d;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-context: var(--context);
+  --color-warm: var(--warm);
+  --color-mid: var(--mid);
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 28%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a,
+button,
+summary,
+[role="tab"] {
+  touch-action: manipulation;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* A hairline grid behind the hero graph: it organises the stage the bids are
+   drawn on, and fades out so it never competes with them. */
+.stage-grid {
+  background-image:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse at 55% 45%, #000 30%, transparent 78%);
+}
+
+/* Heat-table cells. Strength comes from the data, hue from the side of 0.5. */
+.heat {
+  background: var(--mid);
+}
+@supports (background: color-mix(in oklab, red 50%, blue)) {
+  .heat[data-side="above"] {
+    background: color-mix(in oklab, var(--accent) var(--strength), var(--mid));
+  }
+  .heat[data-side="below"] {
+    background: color-mix(in oklab, var(--warm) var(--strength), var(--mid));
+  }
+}

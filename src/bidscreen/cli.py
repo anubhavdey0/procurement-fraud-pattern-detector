@@ -4,6 +4,7 @@ bidscreen demo        run everything on a synthetic market, no downloads
 bidscreen fetch       download the public source files
 bidscreen validate    score the screens against six documented cartel cases
 bidscreen screen      screen a market and write the leads report
+bidscreen export-site write the data file the project site reads
 """
 
 from __future__ import annotations
@@ -21,6 +22,7 @@ from bidscreen.ingest.download import fetch
 from bidscreen.leads import ScreenConfig, screen_market
 from bidscreen.model import Market
 from bidscreen.report import build_report
+from bidscreen.sitedata import write_site_data
 from bidscreen.synthetic import make_market
 
 VALIDATION_FILES = {
@@ -67,11 +69,23 @@ def main(argv: list[str] | None = None) -> int:
         default="out/validation",
         help="directory written by `bidscreen validate`, added to the report when present",
     )
+    site = commands.add_parser("export-site", help="write the data file the site reads")
+    site.add_argument("--raw-dir", default="data/raw")
+    site.add_argument("--out", default="site/src/data", help="output directory")
+    site.add_argument("--key", default=str(DEFAULT_KEY_PATH), help="pseudonym key file")
+    site.add_argument("--validation", default="docs/validation")
     _add_thresholds(screen)
     _add_thresholds(demo)
+    _add_thresholds(site)
 
     args = parser.parse_args(argv)
-    handler = {"demo": _demo, "fetch": _fetch, "validate": _validate, "screen": _screen}
+    handler = {
+        "demo": _demo,
+        "fetch": _fetch,
+        "validate": _validate,
+        "screen": _screen,
+        "export-site": _export_site,
+    }
     return handler[args.command](args)
 
 
@@ -164,6 +178,23 @@ def _screen(args) -> int:
     _print_summary(market, result)
     print(f"\nReport: {path}")
     print("Names are replaced by labels. The key is in", args.key, "and is not committed.")
+    return 0
+
+
+def _export_site(args) -> int:
+    raw = Path(args.raw_dir) / "assam" / "ocds_mapped_data.json.zip"
+    market = load_assam(raw, cache_dir="data/interim")
+    result = screen_market(market, _config(args))
+    demo = screen_market(make_market(seed=0))
+    path = write_site_data(
+        args.out,
+        result,
+        key=load_or_create_key(args.key),
+        validation=_load_validation(args.validation),
+        demo=demo,
+    )
+    _print_summary(market, result)
+    print(f"\nSite data: {path}")
     return 0
 
 

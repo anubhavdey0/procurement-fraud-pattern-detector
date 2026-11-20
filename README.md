@@ -2,6 +2,8 @@
 
 Collusion screens for public tender data. The output is a list of **leads for a person to review**. It never says that fraud was detected, and it never names a company.
 
+**Project site:** [anubhavdey0.github.io/procurement-fraud-pattern-detector](https://anubhavdey0.github.io/procurement-fraud-pattern-detector/), an interactive tour of the method, the evidence and the Assam leads.
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/figures/demo-lead-dark.svg">
   <img src="docs/figures/demo-lead-light.svg" alt="Bipartite graph of one lead in the synthetic demo market. Four firms on the left, forty tenders on the right. Three firms take turns winning and the fourth bids on most tenders without ever winning." width="820">
@@ -42,7 +44,7 @@ python -m venv .venv
 pip install -e ".[dev]"
 
 bidscreen demo                  # writes out/demo/report.html
-pytest                          # 88 tests, about a minute and a half (6 need the downloaded data)
+pytest                          # 95 tests, about two minutes (6 need the downloaded data)
 ```
 
 To reproduce the real results:
@@ -53,7 +55,7 @@ bidscreen validate              # scores every screen on the six cartel cases (a
 bidscreen screen assam          # screens the Assam tenders, writes out/assam/report.html
 ```
 
-Python 3.10 or later. The sample report from the Assam run is in [docs/sample/assam-report.html](docs/sample/assam-report.html). Download it and open it in a browser.
+Python 3.10 or later. The sample report from the Assam run is in [docs/sample/assam-report.html](docs/sample/assam-report.html), and the [project site](https://anubhavdey0.github.io/procurement-fraud-pattern-detector/report/assam.html) serves it directly.
 
 ## How it works
 
@@ -206,6 +208,24 @@ More in [docs/responsible-use.md](docs/responsible-use.md).
 
 The single change that would matter most: the amount of every losing bid. With those, the screens in the first table apply directly.
 
+## Project site
+
+<a href="https://anubhavdey0.github.io/procurement-fraud-pattern-detector/"><img src="docs/figures/site-hero.png" alt="The project site's opening screen: the headline 'Leads for review. Never a verdict.' beside an animated bipartite graph of the planted cartel in the demo market." width="820"></a>
+
+The site in [`site/`](site/) is built with React, Vite, Tailwind and Motion, and published to GitHub Pages by [`.github/workflows/site.yml`](.github/workflows/site.yml) on every push that touches it. It reads one file, `site/src/data/site-data.json`, which holds the same content as the HTML report: labels only, dates to the month. The file is written by
+
+```bash
+bidscreen export-site           # runs the Assam screen and writes site/src/data/site-data.json
+```
+
+and is put through the same leak check as the report, so it is not written if a real name is in it. To work on the site locally:
+
+```bash
+cd site
+npm ci
+npm run dev                     # http://localhost:5173
+```
+
 ## Project layout
 
 ```
@@ -220,10 +240,12 @@ src/bidscreen/
   validate.py         scores screens against the documented cases
   charts.py           SVG charts with no plotting dependency
   report.py           the HTML report
+  sitedata.py         the data file the project site reads
   synthetic.py        demo market with a planted cartel
   cli.py              the bidscreen command
-tests/                88 tests, including hand-worked values for every statistic
+tests/                95 tests, including hand-worked values for every statistic
 docs/                 methodology, data sources, responsible use, sample output
+site/                 the project site
 ```
 
 ## Data and licences

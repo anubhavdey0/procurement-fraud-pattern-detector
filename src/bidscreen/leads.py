@@ -172,7 +172,9 @@ class _Context:
 
     def _slice(self, members: frozenset) -> tuple[pd.DataFrame, pd.DataFrame]:
         """All bids, and all win expectations, on tenders a member bid on."""
-        firm_rows = [self._rows_by_firm[f] for f in members if f in self._rows_by_firm]
+        # Sorted: set order changes from one Python process to the next, and
+        # row order must not change the result.
+        firm_rows = [self._rows_by_firm[f] for f in sorted(members) if f in self._rows_by_firm]
         if not firm_rows:
             return self.bids.iloc[:0], self.expectations.iloc[:0]
         touched = self.bids["tender_id"].to_numpy()[np.concatenate(firm_rows)]
