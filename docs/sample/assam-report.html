@@ -2007,6 +2007,32 @@ footer.end p { max-width: 80ch; }
   (AUC of 0.6 or more) in 4 of 6 cases and fails in the
   rest. Screens that need bid amounts cannot run at all on a source that publishes only awards.</p>
 
+  <h3 class="sub">Learned on five cases, tested on the sixth</h3>
+  <p>The table above is in-sample: it was read with every case in view. Here each case was set
+  aside in turn and everything was learned from the other five: which screen to trust, weights
+  for all seven, and thresholds for the rule. The case set aside played no part in the choice.</p>
+  <div class="scroll" tabindex="0" role="region" aria-label="Held-out check">
+  <table class="wide">
+    <thead><tr><th scope="col">Case set aside</th><th scope="col">Screen chosen on the other five</th><th scope="col" class="n">AUC</th><th scope="col" class="n">Fitted weights</th><th scope="col" class="n">Seven averaged</th><th scope="col">Rule tuned on the other five</th><th scope="col" class="n">Lift, tuned</th><th scope="col" class="n">Lift, published</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Switzerland: Ticino</th><td>Coefficient of variation</td><td class="n">0.82</td><td class="n">0.77</td><td class="n">0.86</td><td>CV &lt; 0.09, RD &gt; 0.2</td><td class="n">1.13</td><td class="n">1.19</td></tr>
+      <tr><th scope="row">Switzerland: Graubunden and See-Gaster</th><td>Coefficient of variation</td><td class="n">0.53</td><td class="n">0.49</td><td class="n">0.43</td><td>CV &lt; 0.085, RD &gt; 0.2</td><td class="n">1.01</td><td class="n">0.94</td></tr>
+      <tr><th scope="row">Japan: Okinawa</th><td>Coefficient of variation</td><td class="n">0.74</td><td class="n">0.74</td><td class="n">0.66</td><td>CV &lt; 0.09, RD &gt; 0.2</td><td class="n">1.15</td><td class="n">1.48</td></tr>
+      <tr><th scope="row">Brazil: Petrobras</th><td>Coefficient of variation</td><td class="n">0.90</td><td class="n">0.84</td><td class="n">0.80</td><td>CV &lt; 0.045, RD &gt; 0</td><td class="n">1.88</td><td class="n">2.57</td></tr>
+      <tr><th scope="row">Italy: Turin</th><td>Coefficient of variation</td><td class="n">0.63</td><td class="n">0.61</td><td class="n">0.57</td><td>CV &lt; 0.085, RD &gt; 0.5</td><td class="n">1.00</td><td class="n">0.97</td></tr>
+      <tr><th scope="row">USA: Ohio school milk</th><td>Coefficient of variation</td><td class="n">0.46</td><td class="n">0.46</td><td class="n">0.46</td><td>CV &lt; 0.085, RD &gt; 0.2</td><td class="n">0.99</td><td class="n">0.95</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>The screen chosen was the same whichever case was set aside:
+  coefficient of variation. So its record above is not the product of picking the
+  winner after the fact. Weights fitted on all
+  seven screens beat the single chosen screen by more than 0.01 in
+  0 of 6 cases.  Thresholds tuned on the other cases did worse than the published ones in
+  3 of the 3 cases where the published rule works
+  at all (a lift of 1.1 or more). Lift is the share of flagged tenders that are cartel
+  tenders, divided by the share among all tenders scored; 1 is a random pick.</p>
+
   <div class="two">
   <div>
     <h3 class="sub">Does bidding together single out cartel pairs?</h3>

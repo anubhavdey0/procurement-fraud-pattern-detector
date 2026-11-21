@@ -199,6 +199,10 @@ def _validation(validation: dict[str, pd.DataFrame] | None) -> dict | None:
         "rule": _table(validation.get("rule"), cases),
         "cobid": _table(validation.get("cobid"), cases),
         "leads": _table(validation.get("leads"), cases),
+        "held_out": [
+            {"case": row["key"]} | {k: v for k, v in row.items() if k not in ("case", "key")}
+            for row in report.held_out_rows(validation, cases)
+        ],
     }
 
 

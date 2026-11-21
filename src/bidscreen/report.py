@@ -562,6 +562,11 @@ def _validation_view(validation: dict[str, pd.DataFrame] | None, figures: dict) 
         x_label="AUC of the coefficient of variation screen",
     )
     figures["validation"] = svg
+    held_out = held_out_rows(validation, cases)
+    choices = {row["chosen"] for row in held_out}
+    # The published rule "works" in a case when its flagged tenders are at
+    # least 10% richer in cartel tenders than a random pick.
+    rule_works = [r for r in held_out if np.isfinite(r["fixed_lift"]) and r["fixed_lift"] >= 1.1]
     lead_rows = _records(validation.get("leads"), cases)
     with_leads = [r for r in lead_rows if r["leads"] > 0]
     beat_base = [
@@ -579,7 +584,52 @@ def _validation_view(validation: dict[str, pd.DataFrame] | None, figures: dict) 
         "n_beat_base": len(beat_base),
         "n_cases": len(cases),
         "n_cv_works": int((cv["auc"].dropna() >= 0.6).sum()),
+        "held_out": held_out,
+        "held_out_choice": choices.pop() if len(choices) == 1 else None,
+        # Differences under 0.01 in AUC are noise at these sample sizes.
+        "n_weights_better": sum(r["weights_auc"] > r["chosen_auc"] + 0.01 for r in held_out),
+        "n_rule_works": len(rule_works),
+        "n_tuned_worse": sum(r["tuned_lift"] < r["fixed_lift"] for r in rule_works),
     }
+
+
+def held_out_rows(validation: dict[str, pd.DataFrame], cases: list[str]) -> list[dict]:
+    """One row per case from the leave-one-case-out tables, in case order."""
+    scores = validation.get("loco")
+    if scores is None or scores.empty:
+        return []
+    auc_of = scores.pivot(index="market", columns="method", values="auc")
+    chosen = scores.loc[scores["method"] == "best_elsewhere"].set_index("market")
+    empty = pd.DataFrame(index=pd.Index([], name="market"))
+    tuned = validation.get("loco_rule", empty).set_index("market")
+    fixed = validation.get("rule", empty).set_index("market")
+    rows = []
+    for case in cases:
+        if case not in auc_of.index:
+            continue
+        key = chosen.loc[case, "detail"]
+        row = {
+            "key": case,
+            "case": CASE_TITLES[case],
+            "chosen": PRICE_SCREENS[key].label if key in PRICE_SCREENS else str(key),
+            "chosen_auc": float(auc_of.loc[case, "best_elsewhere"]),
+            "chosen_low": float(chosen.loc[case, "auc_low"]),
+            "chosen_high": float(chosen.loc[case, "auc_high"]),
+            "weights_auc": float(auc_of.loc[case, "learned_weights"]),
+            "composite_auc": float(auc_of.loc[case, "composite"]),
+            "fixed_lift": float(fixed["lift"].get(case, np.nan)) if "lift" in fixed else np.nan,
+            "tuned_lift": np.nan,
+        }
+        if case in tuned.index:
+            t = tuned.loc[case]
+            row |= {
+                "tuned_rule": f"CV < {t['cv_below']:g}, RD > {t['rd_above']:g}",
+                "tuned_flagged": int(t["n_flagged"]),
+                "tuned_share": float(t["n_flagged"] / t["n_tenders"]) if t["n_tenders"] else np.nan,
+                "tuned_lift": float(t["lift"]),
+            }
+        rows.append(row)
+    return rows
 
 
 def _records(frame: pd.DataFrame | None, cases: list[str]) -> list[dict]:

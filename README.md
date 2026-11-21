@@ -130,6 +130,25 @@ What the table says:
 - **Averaging the screens does not beat the best one.** The weak screens dilute the strong ones.
 - **A fixed rule does not transfer.** "Variance below 0.06 and relative distance above 1", the benchmark of Imhof, Karagok and Rutz, is right 98% of the time on Ticino and 82% on Petrobras, and no better than a random pick on three other cases.
 
+### Learned on five cases, tested on the sixth
+
+The table above was read with all six cases in view, so it flatters whichever screen happens to look best. To check that, each case was set aside in turn and everything was learned from the other five: which screen to trust, weights for all seven screens (a logistic regression, after Huber and Imhof 2019), and new thresholds for the rule. The case set aside played no part in any of it.
+
+| Case set aside | Screen the other five pick | Its AUC | Fitted weights | All seven averaged | Lift, tuned rule | Lift, published rule |
+|---|---|---:|---:|---:|---:|---:|
+| Brazil: Petrobras | Coefficient of variation | **0.90** | 0.84 | 0.80 | 1.88 | 2.57 |
+| Switzerland: Ticino | Coefficient of variation | **0.82** | 0.77 | 0.86 | 1.13 | 1.19 |
+| Japan: Okinawa | Coefficient of variation | **0.74** | 0.74 | 0.66 | 1.15 | 1.48 |
+| Italy: Turin | Coefficient of variation | 0.63 | 0.61 | 0.57 | 1.00 | 0.97 |
+| Switzerland: Graubunden, See-Gaster | Coefficient of variation | 0.53 | 0.49 | 0.43 | 1.01 | 0.94 |
+| USA: Ohio school milk | Coefficient of variation | 0.46 | 0.46 | 0.46 | 0.99 | 0.95 |
+
+Lift is the share of flagged tenders that are cartel tenders, divided by the share among all tenders scored. 1 is a random pick.
+
+- **The choice of screen holds up.** Whichever case is set aside, the other five pick the coefficient of variation. Its record in the first table is not the product of picking the winner after the fact.
+- **Fitting weights does not help.** The fitted combination is below the variance screen alone in four cases and level with it in two. Beyond the variance screen, the weights change sign from one set of five cases to the next: relative distance gets +0.61 in one fold and -1.78 in another. Whatever a model learns from some cartels about the finer shape of the bids does not carry to the next one.
+- **Tuned thresholds do worse than the published ones.** Tuned on five cases, the rule loosens to "variance below about 0.09 and relative distance above 0.2" and flags far more tenders: 80% of those in Okinawa. Its lift is lower than the published rule's in all three cases where that rule works. In the other three, both sit at about 1.
+
 ### The network screens, checked the same way
 
 In the four cases that identify bidders, does bidding together single out pairs of cartel members?
@@ -201,7 +220,7 @@ More in [docs/responsible-use.md](docs/responsible-use.md).
 
 ## Limits
 
-- The validation is descriptive and in-sample, on six cases. It shows where a screen has carried signal. It does not promise the next market.
+- The per-case tables are in-sample. The held-out check learns on five cases and scores the sixth, but six cases are still six cases. It shows where a screen has carried signal. It does not promise the next market.
 - The group method differs from Wachs and Kertesz (2019) in three stated ways, and its thresholds are judgement calls. Change them with command-line flags.
 - The Assam bidder lists cover mostly 2021-22 and 2022-23, and the number of bidders listed matches the number the portal reports for under half of the tenders.
 - No estimate of how many leads are false is possible on the Assam data, because there is no ground truth for it.
@@ -273,3 +292,4 @@ The code is under the MIT licence. See [LICENSE](LICENSE).
 - Toth, Fazekas, Czibik and Toth (2014). Toolkit for detecting collusive bidding in public procurement. Corruption Research Center Budapest.
 - van Elteren (1960). On the combination of independent two-sample tests of Wilcoxon. *Bulletin of the International Statistical Institute* 37.
 - Wachs and Kertesz (2019). A network approach to cartel detection in public auction markets. *Scientific Reports* 9, 10818.
+- Youden (1950). Index for rating diagnostic tests. *Cancer* 3(1).

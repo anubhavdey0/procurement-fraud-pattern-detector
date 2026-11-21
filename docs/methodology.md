@@ -145,7 +145,15 @@ For each documented case, each screen is scored by its AUC: the probability that
 
 A tender is counted as a cartel tender when the dataset flags it. For pairs, a pair is positive when both firms are flagged as cartel members. For leads, a tender is flagged when at least two members of a lead group bid on it.
 
-These are descriptive, in-sample checks. No model is trained, so there is no train and test split to leak across, but six cases are six cases.
+The per-case tables are descriptive, in-sample checks. Nothing in them is fitted to the labels, but the reader sees all six cases at once, which flatters whichever screen looks best.
+
+**Learned on five, tested on the sixth.** Each case is set aside in turn, and three things are learned from the other five:
+
+- *Which screen to trust:* the screen with the highest mean AUC across the five.
+- *Weights for all seven:* a logistic regression of the cartel label on the screens, in the spirit of Huber and Imhof (2019). Each screen enters as its rank within its own market, from 0 to 1, oriented as the literature expects, so that markets with bids of very different sizes can be pooled. A screen that cannot be computed for a tender (kurtosis needs four bids) is set to 0.5. Each market gets its own intercept, so the share of cartel tenders, which runs from 11% to 82% across the cases, does not leak into the weights. Each market counts as much as an average-sized one, however many tenders it has. An L2 penalty of 1 on the weights settles the variance and the spread, which move together. Fitted with L-BFGS.
+- *Thresholds for the rule* "coefficient of variation below c and relative distance above r": c from 0.010 to 0.200 in steps of 0.005, r from 0 to 3 in steps of 0.1. The pair with the highest Youden index (share of cartel tenders flagged minus share of competitive tenders flagged), averaged over the five markets, is chosen. The index ignores the share of cartel tenders, which differs between cases far more than anything a screen can learn.
+
+The case set aside is then scored with what was learned: AUC for the chosen screen, the fitted weights and the training-free composite, and lift for the tuned rule. `tests/test_held_out.py` checks that inverting the labels of the case set aside changes nothing that was learned for it.
 
 ## 7. Thresholds
 

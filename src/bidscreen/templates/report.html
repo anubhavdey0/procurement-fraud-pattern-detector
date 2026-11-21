@@ -505,6 +505,33 @@ footer.end p { max-width: 80ch; }
   (AUC of 0.6 or more) in {{ checks.n_cv_works }} of {{ checks.n_cases }} cases and fails in the
   rest. Screens that need bid amounts cannot run at all on a source that publishes only awards.</p>
 
+  {% if checks.held_out %}
+  <h3 class="sub">Learned on five cases, tested on the sixth</h3>
+  <p>The table above is in-sample: it was read with every case in view. Here each case was set
+  aside in turn and everything was learned from the other five: which screen to trust, weights
+  for all seven, and thresholds for the rule. The case set aside played no part in the choice.</p>
+  <div class="scroll" tabindex="0" role="region" aria-label="Held-out check">
+  <table class="wide">
+    <thead><tr><th scope="col">Case set aside</th><th scope="col">Screen chosen on the other five</th><th scope="col" class="n">AUC</th><th scope="col" class="n">Fitted weights</th><th scope="col" class="n">Seven averaged</th><th scope="col">Rule tuned on the other five</th><th scope="col" class="n">Lift, tuned</th><th scope="col" class="n">Lift, published</th></tr></thead>
+    <tbody>
+    {% for row in checks.held_out %}
+      <tr><th scope="row">{{ row.case }}</th><td>{{ row.chosen }}</td><td class="n">{{ row.chosen_auc | f2 }}</td><td class="n">{{ row.weights_auc | f2 }}</td><td class="n">{{ row.composite_auc | f2 }}</td><td>{{ row.tuned_rule or "" }}</td><td class="n">{{ row.tuned_lift | f2 }}</td><td class="n">{{ row.fixed_lift | f2 }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  <p>{% if checks.held_out_choice %}The screen chosen was the same whichever case was set aside:
+  {{ checks.held_out_choice | lower }}. So its record above is not the product of picking the
+  winner after the fact.{% else %}The screen chosen changed with the case set aside, so the
+  in-sample table flatters whichever screen looks best there.{% endif %} Weights fitted on all
+  seven screens beat the single chosen screen by more than 0.01 in
+  {{ checks.n_weights_better }} of {{ checks.held_out | length }} cases.{% if checks.n_rule_works %}
+  Thresholds tuned on the other cases did worse than the published ones in
+  {{ checks.n_tuned_worse }} of the {{ checks.n_rule_works }} cases where the published rule works
+  at all (a lift of 1.1 or more).{% endif %} Lift is the share of flagged tenders that are cartel
+  tenders, divided by the share among all tenders scored; 1 is a random pick.</p>
+  {% endif %}
+
   <div class="two">
   {% if checks.cobid %}
   <div>

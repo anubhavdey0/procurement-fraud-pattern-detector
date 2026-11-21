@@ -30,6 +30,8 @@ VALIDATION_FILES = {
     "rule": "benchmark_rule.csv",
     "cobid": "cobidding.csv",
     "leads": "leads.csv",
+    "loco": "held_out.csv",
+    "loco_rule": "held_out_rule.csv",
 }
 
 
@@ -146,24 +148,30 @@ def _validate(args) -> int:
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     raw = Path(args.raw_dir) / "labelled"
-    price, rule, cobid, leads = [], [], [], []
+    markets, price, rule, cobid, leads = [], [], [], [], []
     for key in LABELLED_CASES:
         market = load_labelled(key, raw)
+        markets.append(market)
         print(f"{key}: {len(market.tenders):,} tenders", flush=True)
         price.append(validate.price_screen_validation(market, n_boot=args.bootstrap))
         rule.append(validate.benchmark_rule(market))
         if market.has_firms:
             cobid.append(validate.cobid_validation(market))
             leads.append(validate.lead_validation(screen_market(market)))
+    print("learning on five cases, testing on the sixth", flush=True)
+    held_out, held_out_rule = validate.leave_one_case_out(markets, n_boot=args.bootstrap)
     frames = {
         "price": pd.concat(price, ignore_index=True),
         "rule": pd.DataFrame(rule),
         "cobid": pd.concat(cobid, ignore_index=True),
         "leads": pd.DataFrame(leads),
+        "loco": held_out,
+        "loco_rule": held_out_rule,
     }
     for name, frame in frames.items():
         frame.to_csv(out / VALIDATION_FILES[name], index=False)
 
+    cases = list(LABELLED_CASES)
     wide = frames["price"].pivot(index="screen", columns="market", values="auc")
     order = [
         s
@@ -171,7 +179,10 @@ def _validate(args) -> int:
         if s in wide.index
     ]
     print("\nAUC of each price screen, by case (0.5 is a coin toss):")
-    print(wide.loc[order, list(LABELLED_CASES)].round(2).to_string())
+    print(wide.loc[order, cases].round(2).to_string())
+    print("\nAUC on each case when everything is learned from the other five:")
+    held = held_out.pivot(index="method", columns="market", values="auc")
+    print(held.loc[list(validate.LOCO_METHODS), cases].round(2).to_string())
     print(f"\nTables written to {out}")
     return 0
 
