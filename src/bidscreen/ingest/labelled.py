@@ -129,7 +129,7 @@ def load_labelled(key: str, raw_dir: Path | str = "data/raw/labelled") -> Market
     case = LABELLED_CASES[key]
     path = Path(raw_dir) / case.filename
     if not path.exists():
-        raise FileNotFoundError(f"{path} is missing. Run `bidscreen fetch` first.")
+        raise FileNotFoundError(f"{path} is missing. Run `bidscreen fetch labelled` first.")
     raw = pd.read_excel(path).drop(columns=_DROP_COLUMNS, errors="ignore")
     return _to_market(case, raw)
 

@@ -11,14 +11,17 @@ Screens applied to each group of co-bidders:
     rotation  members take turns winning more often than chance
     cover     a member keeps bidding next to the others and keeps losing
     price     the group's awards sit closer to the estimate than other
-              contested tenders from the same buyers
+              tenders from the same buyers that drew as many bidders
 
 The rotation, cover and price screens each run one test per group, so their
 p-values are adjusted for the number of groups tested (Benjamini-Hochberg).
+A group counts as tested when it had the data the test needs, whatever the
+outcome, so the correction is not limited to groups that already look odd.
 """
 
 from __future__ import annotations
 
+import math
 from dataclasses import asdict, dataclass, field
 
 import numpy as np
@@ -78,6 +81,17 @@ class ScreenConfig:
     price_min_awards: int = 5
     min_screens: int = 2  # screens that must fire for a group to be a lead
     seed: int = 0
+
+    def __post_init__(self) -> None:
+        # The exclusivity p-value cannot go below 1 / (n_null + 1). With too
+        # few reshuffles the closed-group screen could never fire, and every
+        # lead would silently need the other screens instead.
+        if self.n_null < 1 or 1.0 / (self.n_null + 1) > self.alpha + 1e-12:
+            needed = math.ceil(1.0 / self.alpha - 1.0 - 1e-9)
+            raise ValueError(
+                f"{self.n_null} reshuffled markets cannot give a p-value of {self.alpha} or "
+                f"less: the smallest possible is 1/(n_null + 1). Use at least {needed}."
+            )
 
 
 @dataclass
@@ -237,9 +251,15 @@ def _flag(groups: pd.DataFrame, config: ScreenConfig) -> pd.DataFrame:
     if groups.empty:
         return _empty_groups()
     groups = groups.copy()
-    # The cover test picks the most extreme member of each group, so the
-    # p-value is first corrected for the number of members tested.
-    cover_p = np.minimum(groups["cover_p"] * groups["n_members_tested"].clip(lower=1), 1.0)
+    # A group with members to test but none that lost by enough has no
+    # evidence of cover bidding, so its p-value is 1. It still counts in the
+    # correction: leaving it out would correct only over the groups already
+    # picked for looking suspicious, and let too many through.
+    testable = groups["n_members_tested"] > 0
+    cover_p = groups["cover_p"].where(groups["cover_p"].notna() | ~testable, 1.0)
+    # The test picks the most extreme member of each group, so the p-value is
+    # first corrected for the number of members tested.
+    cover_p = np.minimum(cover_p * groups["n_members_tested"].clip(lower=1), 1.0)
     groups["rotation_q"] = _adjust(groups["rotation_p"])
     groups["cover_q"] = _adjust(cover_p)
     groups["price_q"] = _adjust(groups["price_p_value"])

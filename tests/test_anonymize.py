@@ -97,7 +97,9 @@ def test_leak_check_skips_very_short_names():
         ("Ms Northwind Example Enterprise", "northwind example enterprise"),
         ("Quillfeather Infra Private Limited", "quillfeather infra pvt ltd"),
         ("Quillfeather Infra Pvt. Ltd.", "quillfeather infra pvt ltd"),
-        ("Shri Tara Placeholder", "tara placeholder"),
+        ("Mr. Tara Placeholder", "tara placeholder"),
+        ("Smt Tara Placeholder", "tara placeholder"),
+        ("Shri Tara Placeholder", "shri tara placeholder"),
         ("R & D Construction Company", "r and d construction co"),
         ("  ", ""),
         (None, ""),
@@ -113,3 +115,6 @@ def test_normalisation_does_not_merge_different_firms():
         "Northwind Example Enterprises"
     )
     assert normalise_firm_name("Md Placeholder") == "md placeholder"  # "Md" is part of a name
+    # "Sri" and "Dr" begin many firm names; dropping them would merge namesakes.
+    assert normalise_firm_name("Sri Example Traders") != normalise_firm_name("Example Traders")
+    assert normalise_firm_name("Dr Example Labs") != normalise_firm_name("Example Labs")

@@ -442,7 +442,7 @@ footer.end p { max-width: 80ch; }
   Piles like these usually come from rules, such as a floor below which a bid is treated as
   abnormally low, or bidding in whole percentages of the estimate. They are a feature of the
   market, so the price screen compares each group with other tenders from the same buyers
-  and never reads the level on its own.
+  that drew as many bidders, and never reads the level on its own.
   {% endif %}</p>
   <figure class="chart">
     <figcaption>Award value as a share of the buyer's estimate</figcaption>
@@ -565,7 +565,7 @@ footer.end p { max-width: 80ch; }
       </tr>
       <tr>
         <th scope="row">{{ screen_labels.rotation }}</th>
-        <td>Do members take turns winning? A runs test on the sequence of winners.</td>
+        <td>Do members take turns winning? A runs test on the sequence of winners, with a mid-p.</td>
         <td>More changes of winner than chance, at a false discovery rate of {{ config.outcome_fdr | f2 }}. Needs {{ config.rotation_min_wins }} wins.</td>
       </tr>
       <tr>
@@ -575,8 +575,8 @@ footer.end p { max-width: 80ch; }
       </tr>
       <tr>
         <th scope="row">{{ screen_labels.price }}</th>
-        <td>Are the group's awards closer to the estimate than other contested tenders from the same buyers?</td>
-        <td>Mann-Whitney test, at a false discovery rate of {{ config.outcome_fdr | f2 }}. Needs {{ config.price_min_awards }} priced awards.</td>
+        <td>Are the group's awards closer to the estimate than tenders from the same buyers that drew as many bidders?</td>
+        <td>Stratified rank test (van Elteren), at a false discovery rate of {{ config.outcome_fdr | f2 }}. Needs {{ config.price_min_awards }} compared awards.</td>
       </tr>
     </tbody>
   </table>

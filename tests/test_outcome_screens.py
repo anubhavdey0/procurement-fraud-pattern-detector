@@ -150,6 +150,94 @@ def test_group_price_needs_enough_awards(market):
     assert np.isnan(out["price_p_value"])
 
 
+def test_stratified_rank_test_is_mann_whitney_with_one_stratum():
+    rng = np.random.default_rng(4)
+    x, y = rng.normal(0.3, 1, 15).round(1), rng.normal(0, 1, 40).round(1)  # rounded: ties
+    out = pricing.stratified_rank_test(x, ["s"] * 15, y, ["s"] * 40)
+    expected = stats.mannwhitneyu(x, y, alternative="greater", use_continuity=False)
+    assert out["p_value"] == pytest.approx(expected.pvalue)
+    assert out["n_x"] == 15 and out["n_y"] == 40
+
+
+def test_stratified_rank_test_skips_unmatched_strata():
+    out = pricing.stratified_rank_test([1.0, 2.0], ["a", "b"], [0.5, 0.7, 3.0], ["a", "a", "c"])
+    assert out["n_x"] == 1 and out["n_y"] == 2
+    tied = pricing.stratified_rank_test([1.0] * 3, ["a"] * 3, [1.0] * 4, ["a"] * 4)
+    assert tied["p_value"] == 1.0
+    assert np.isnan(pricing.stratified_rank_test([1.0], ["a"], [1.0], ["b"])["p_value"])
+
+
+def test_bidder_bands():
+    assert list(pricing.bidder_band([0, 1, 2, 3, 4, 5, 6, 7, 30])) == [0, 0, 2, 3, 4, 5, 5, 7, 7]
+
+
+def _thin_competition_market(seed=0):
+    """Award prices depend only on how many firms bid. A group of three firms
+    meets in tenders with few bidders, wins its share and no more."""
+    rng = np.random.default_rng(seed)
+    others = [f"F{i}" for i in range(30)]
+    group = ["G1", "G2", "G3"]
+    tender_rows, bid_rows = [], []
+    for i in range(600):
+        joint = i < 60
+        n = int(rng.choice([2, 3])) if joint else int(rng.integers(2, 8))
+        firms = list(rng.choice(group, 2, replace=False)) if joint else []
+        firms += list(rng.choice(others, n - len(firms), replace=False))
+        winner = firms[rng.integers(len(firms))]
+        price = np.clip(1.02 - 0.04 * n + rng.normal(0, 0.03), 0.3, 1.9)
+        tender_rows.append(
+            {
+                "tender_id": f"t{i}",
+                "segment": f"s{i % 3}",
+                "estimate": 100.0,
+                "award_value": 100 * price,
+            }
+        )
+        bid_rows += [{"tender_id": f"t{i}", "firm": f, "won": f == winner} for f in firms]
+    return pd.DataFrame(bid_rows), pd.DataFrame(tender_rows), frozenset(group)
+
+
+def test_price_screen_compares_like_with_like():
+    bids, tenders, group = _thin_competition_market()
+    out = pricing.group_relative_price(bids, tenders, group)
+    assert out["n_priced_awards"] >= 5
+    # Against all tenders the group looks expensive, only because it meets
+    # where few others bid. Against tenders with as many bidders it does not.
+    priced = pricing.priced_tenders(bids, tenders)
+    joint = set(_joint_tenders(bids, group))
+    naive = stats.mannwhitneyu(
+        priced.loc[priced.index.isin(joint), "relative_price"],
+        priced.loc[~priced.index.isin(joint), "relative_price"],
+        alternative="greater",
+    )
+    assert naive.pvalue < 1e-6
+    assert out["price_p_value"] > 0.05
+
+
+def _joint_tenders(bids, members):
+    per_tender = bids.loc[bids["firm"].isin(members)].groupby("tender_id").size()
+    return per_tender.index[per_tender >= 2]
+
+
+def test_batch_runs_matches_brute_force():
+    labels = np.array([0, 1, 1, 0, 2, 0, 1])
+    batch = np.array([0, 0, 1, 2, 2, 2, 3])
+    blocks = [np.flatnonzero(batch == b) for b in range(4)]
+    runs = [
+        rotation.count_runs(labels[np.concatenate([np.array(p) for p in perms])])
+        for perms in itertools.product(*[itertools.permutations(b) for b in blocks])
+    ]
+    assert rotation.batch_runs(labels[None, :], batch, 3)[0] == pytest.approx(np.mean(runs))
+    plain = np.arange(labels.size)
+    assert rotation.batch_runs(labels[None, :], plain, 3)[0] == rotation.count_runs(labels)
+
+
+def test_rotation_p_value_is_a_mid_p():
+    # ABABABAB: 8 runs is the maximum, reached by 2 of the 70 orderings.
+    out = rotation.rotation_test(["A", "B"] * 4, n_permutations=20000)
+    assert out["p_value"] == pytest.approx(1 / 70, abs=0.004)
+
+
 def test_group_rotation_does_not_depend_on_row_order(market):
     # Same-day tenders force the tie-breaking path.
     tenders = market.tenders.assign(order=market.tenders["order"] // 86400 // 30)

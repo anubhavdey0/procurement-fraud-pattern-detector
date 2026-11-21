@@ -48,11 +48,18 @@ REFERENCES = [
     "International Journal of Industrial Organization 65.",
     "Imhof, Karagok and Rutz (2018). Screening for bid rigging: does it work? "
     "Journal of Competition Law and Economics 14(2).",
+    "Lancaster (1961). Significance tests in discrete distributions. "
+    "Journal of the American Statistical Association 56(294).",
+    "Lancichinetti, Fortunato and Kertesz (2009). Detecting the overlapping and hierarchical "
+    "community structure in complex networks. New Journal of Physics 11.",
+    "Mood (1940). The distribution theory of runs. Annals of Mathematical Statistics 11(4).",
     "OECD (2009). Guidelines for fighting bid rigging in public procurement.",
     "Onnela, Saramaki, Kertesz and Kaski (2005). Intensity and coherence of motifs in "
     "weighted complex networks. Physical Review E 71.",
     "Toth, Fazekas, Czibik and Toth (2014). Toolkit for detecting collusive bidding in "
     "public procurement. Corruption Research Center Budapest.",
+    "van Elteren (1960). On the combination of independent two-sample tests of Wilcoxon. "
+    "Bulletin of the International Statistical Institute 37.",
     "Wachs and Kertesz (2019). A network approach to cartel detection in public auction "
     "markets. Scientific Reports 9, 10818.",
 ]
@@ -237,12 +244,19 @@ def _lead_view(result: ScreenResult, row: pd.Series, names: Pseudonymizer, figur
 def _screen_text(key: str, row: pd.Series, names: Pseudonymizer, config) -> str:
     if key == "closed":
         share = _pct(row["exclusivity"])
+        p = row["p_exclusivity"]
+        if p <= 1.0 / (config.n_null + 1) + 1e-12:
+            # Say so when the p-value is as small as this many reshuffles allow.
+            p_text = f"p {_pval(p)}, the smallest {config.n_null} reshuffles can give"
+            reached = "it never got that high; the average was"
+        else:
+            p_text = f"p {_pval(p)}"
+            reached = "the average was"
         return (
             f"Exclusivity {_f2(row['exclusivity'])}: {share} of these firms' co-bidding is with "
             f"each other. With the same firms bidding the same number of times in "
-            f"{config.n_null} reshuffled markets, the average was {_f3(row['null_exclusivity'])} "
-            f"(p {_pval(row['p_exclusivity'])}). The threshold for this screen is "
-            f"{_f2(config.exclusivity_min)}."
+            f"{config.n_null} reshuffled markets, {reached} {_f3(row['null_exclusivity'])} "
+            f"({p_text}). The threshold for this screen is {_f2(config.exclusivity_min)}."
         )
     if key == "rotation":
         if not np.isfinite(row["rotation_p"]):
@@ -281,8 +295,9 @@ def _screen_text(key: str, row: pd.Series, names: Pseudonymizer, config) -> str:
         )
     return (
         f"Median award {_f3(row['median_relative_price'])} of the estimate over "
-        f"{int(row['n_priced_awards'])} awards, against {_f3(row['benchmark_median'])} for other "
-        f"contested tenders in the same segments. {_pct(row['share_near_estimate'])} of the "
+        f"{int(row['n_priced_awards'])} awards, against {_f3(row['benchmark_median'])} for "
+        f"{int(row['n_benchmark'])} other tenders from the same buyers that drew as many "
+        f"bidders. {_pct(row['share_near_estimate'])} of the "
         f"group's awards are at {NEAR_ESTIMATE:.2f} of the estimate or above "
         f"(others: {_pct(row['benchmark_share_near_estimate'])}). "
         f"Adjusted p {_pval(row['price_q'])}."

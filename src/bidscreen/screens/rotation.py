@@ -13,11 +13,22 @@ runs means frequent alternation. The p-value comes from shuffling the observed
 winner sequence, which keeps each firm's number of wins fixed, so a firm that
 simply wins more often than the others does not trigger the screen.
 
+Tenders opened at the same moment have no order between them. For those, the
+statistic is the number of runs to expect when each batch of simultaneous
+tenders is put in random order, worked out exactly rather than by sampling.
+Every shuffled sequence is scored the same way, so batches do not tilt the
+test either way.
+
+The number of runs is a whole number and many shuffles tie with the observed
+value, which makes an ordinary permutation p-value conservative: at a nominal
+5% it fires well under 5% of the time. The p-value here is the mid-p, which
+counts ties with the observed value as half (Lancaster 1961). Its error rate
+is close to the nominal level on average, at the price of not being bounded
+by it in every case.
+
 Limits: the test needs the tenders in time order, and it needs enough wins to
-say anything (eight alternating wins between two firms is the least that
-reaches p < 0.05). Tenders opened at the same moment have no order, so their
-order is randomised and the statistic averaged. That makes the test
-conservative for batches of lots awarded together.
+say anything (seven alternating wins between two firms is the least that
+reaches p < 0.05).
 """
 
 from __future__ import annotations
@@ -59,11 +70,12 @@ def rotation_test(
     """Runs test on a sequence of winners.
 
     ``winners`` must already be in time order unless ``order`` is given, in
-    which case the sequence is sorted by it and ties are randomised.
+    which case the sequence is sorted by it and tenders with equal ``order``
+    form a batch with no order inside it.
 
     Returns the number of wins, distinct winners, observed and expected runs,
-    a z-score, and ``p_value``: the share of shuffled sequences with at least
-    as many runs as observed. A small p-value means the winner changes more
+    a z-score, and ``p_value``: the mid-p share of shuffled sequences with
+    more runs than observed. A small p-value means the winner changes more
     often than chance, which is what rotation looks like.
     """
     labels = pd.factorize(np.asarray(winners, dtype=object))[0]
@@ -80,18 +92,28 @@ def rotation_test(
     if n < 2 or counts.size < 2:
         return result
 
-    rng = np.random.default_rng(seed)
     if order is None:
-        observed = float(count_runs(labels))
+        batch = np.arange(n)
     else:
-        observed = _runs_with_ties(labels, np.asarray(order, dtype=float), rng)
+        sort = np.argsort(np.asarray(order, dtype=float), kind="stable")
+        labels = labels[sort]
+        batch = np.unique(np.asarray(order, dtype=float)[sort], return_inverse=True)[1]
+
+    rng = np.random.default_rng(seed)
+    observed = float(batch_runs(labels[None, :], batch, counts.size)[0])
+    shuffled = batch_runs(
+        rng.permuted(np.tile(labels, (n_permutations, 1)), axis=1), batch, counts.size
+    )
+    tied = np.isclose(shuffled, observed, rtol=0.0, atol=1e-9)
+    above = np.count_nonzero((shuffled > observed) & ~tied)
+    # The observed sequence is one of the n_permutations + 1 equally likely
+    # ones and ties with itself, so it adds a half.
+    p_value = (above + 0.5 * (np.count_nonzero(tied) + 1)) / (n_permutations + 1)
 
     mean, variance = expected_runs(counts)
-    shuffled = np.empty(n_permutations)
-    for i in range(n_permutations):
-        shuffled[i] = count_runs(rng.permutation(labels))
-    p_value = (1 + np.count_nonzero(shuffled >= observed - 1e-9)) / (n_permutations + 1)
-
+    if batch[-1] + 1 < n:
+        # Batches narrow the spread of the statistic, so take it from the shuffles.
+        variance = float(np.var(shuffled))
     result.update(
         runs=observed,
         expected_runs=mean,
@@ -101,15 +123,35 @@ def rotation_test(
     return result
 
 
-def _runs_with_ties(labels: np.ndarray, order: np.ndarray, rng, n_orderings: int = 50) -> float:
-    """Runs in time order, averaged over random orderings of simultaneous tenders."""
-    if np.unique(order).size == order.size:
-        return float(count_runs(labels[np.argsort(order, kind="stable")]))
-    total = 0
-    for _ in range(n_orderings):
-        jitter = rng.random(order.size)
-        total += count_runs(labels[np.lexsort((jitter, order))])
-    return total / n_orderings
+def batch_runs(labels: np.ndarray, batch: np.ndarray, n_labels: int) -> np.ndarray:
+    """Expected number of runs in each row of ``labels`` when the positions
+    sharing a ``batch`` number are put in random order.
+
+    ``batch`` numbers positions 0, 1, ... and must not decrease. Inside a
+    batch of size b, two neighbours differ with probability 1 minus the share
+    of ordered pairs with the same label. Across the boundary between two
+    batches, the neighbours are one random member of each. Without batches
+    this is the plain count of runs.
+    """
+    labels = np.atleast_2d(labels)
+    rows, n = labels.shape
+    if batch[-1] + 1 == n:
+        return 1.0 + np.count_nonzero(labels[:, 1:] != labels[:, :-1], axis=1)
+    n_batches = int(batch[-1]) + 1
+    size = np.bincount(batch, minlength=n_batches).astype(float)
+    out = np.empty(rows)
+    step = max(1, 2_000_000 // max(n_batches * n_labels, 1))
+    for start in range(0, rows, step):
+        block = labels[start : start + step]
+        k = block.shape[0]
+        flat = (np.arange(k)[:, None] * n_batches + batch[None, :]) * n_labels + block
+        counts = np.bincount(flat.ravel(), minlength=k * n_batches * n_labels)
+        counts = counts.reshape(k, n_batches, n_labels).astype(float)
+        within = (size - 1).sum() - ((counts * (counts - 1)).sum(axis=2) / size).sum(axis=1)
+        share = counts / size[None, :, None]
+        across = (1.0 - (share[:, :-1] * share[:, 1:]).sum(axis=2)).sum(axis=1)
+        out[start : start + k] = 1.0 + within + across
+    return out
 
 
 def group_rotation(

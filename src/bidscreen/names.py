@@ -19,8 +19,12 @@ from __future__ import annotations
 import re
 import unicodedata
 
-# Leading courtesy titles and the "M/s" (Messrs) prefix common in Indian tenders.
-_PREFIX_TOKENS = {"ms", "messrs", "mr", "mrs", "shri", "sri", "smt", "dr"}
+# The "M/s" (Messrs) prefix common in Indian tenders, and courtesy titles that
+# only ever stand before a person's name. "Sri" and "Shri" are not dropped:
+# they begin many firm names ("Sri Sai Constructions"), and dropping them
+# would merge such a firm with any namesake that lacks the word. In the Assam
+# data that affected 148 names. "Dr" stays for the same reason ("Dr Reddys").
+_PREFIX_TOKENS = {"ms", "messrs", "mr", "mrs", "smt"}
 
 # Legal-form words mapped to one spelling. Order matters for multi-word forms.
 _LEGAL_FORMS = [

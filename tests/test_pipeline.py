@@ -2,6 +2,7 @@ import dataclasses
 import re
 
 import numpy as np
+import pandas as pd
 import pytest
 
 from bidscreen import charts, validate
@@ -150,3 +151,52 @@ def test_cli_demo(tmp_path, capsys):
     assert (tmp_path / "report.html").exists()
     printed = capsys.readouterr().out
     assert "leads for review: 1" in printed
+
+
+def test_cli_explains_missing_data(tmp_path, capsys):
+    assert main(["screen", "assam", "--raw-dir", str(tmp_path)]) == 2
+    error = capsys.readouterr().err
+    assert "bidscreen fetch assam" in error and "Traceback" not in error
+    assert main(["validate", "--raw-dir", str(tmp_path), "--out", str(tmp_path / "v")]) == 2
+    assert "bidscreen fetch labelled" in capsys.readouterr().err
+
+
+def test_cli_refuses_too_few_reshuffles(capsys):
+    with pytest.raises(SystemExit) as stop:
+        main(["demo", "--null", "10"])
+    assert stop.value.code == 2
+    assert "at least 19" in capsys.readouterr().err
+
+
+def test_too_few_reshuffles_are_refused():
+    # 1/(n + 1) must reach alpha, or the closed-group screen can never fire.
+    with pytest.raises(ValueError, match="at least 19"):
+        ScreenConfig(n_null=18)
+    ScreenConfig(n_null=19)
+    with pytest.raises(ValueError, match="at least 99"):
+        ScreenConfig(n_null=50, alpha=0.01)
+
+
+def test_cover_correction_counts_every_testable_group():
+    # Two groups had members with enough bids; only one had a member losing
+    # by enough to get a p-value. Both belong in the correction.
+    from bidscreen.leads import _flag
+
+    groups = pd.DataFrame(
+        {
+            "members": [frozenset("AB"), frozenset("CD"), frozenset("EF")],
+            "exclusivity": [0.5, 0.5, 0.5],
+            "p_exclusivity": [0.5, 0.5, 0.5],
+            "rotation_p": [np.nan] * 3,
+            "rotation_z": [np.nan] * 3,
+            "price_p_value": [np.nan] * 3,
+            "cover_p": [0.03, np.nan, np.nan],
+            "n_members_tested": [1, 2, 0],
+        }
+    )
+    flagged = _flag(groups, ScreenConfig()).set_index(groups.index)
+    q = flagged.sort_values("cover_q")["cover_q"].to_numpy()
+    # BH over two groups: 0.03 * 2 / 1 = 0.06; the untestable group stays out.
+    assert q[0] == pytest.approx(0.06)
+    assert q[1] == pytest.approx(1.0)
+    assert np.isnan(q[2])

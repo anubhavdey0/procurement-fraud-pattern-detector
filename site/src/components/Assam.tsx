@@ -289,7 +289,7 @@ export function Assam() {
               {percent(peaks[0].count / price.n)} of awards sit at {fixed(peaks[0].at)} of the buyer's estimate and {percent(peaks[1].count / price.n)} at {fixed(peaks[1].at)}.
               Piles like these usually come from a rule, such as a floor below which a bid is treated as abnormally low.
             </p>
-            <p className="mt-3 text-[14.5px] leading-relaxed text-ink-2">So the price screen compares a group only with other tenders from the same buyer and region.</p>
+            <p className="mt-3 text-[14.5px] leading-relaxed text-ink-2">So the price screen compares a group only with other tenders from the same buyer and region that drew as many bidders, since thin competition alone pushes awards toward the estimate.</p>
           </div>
           <div className="lg:col-span-8"><Histogram /></div>
         </Reveal>

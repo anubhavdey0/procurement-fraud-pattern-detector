@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-20",
+  "generated": "2026-11-21",
   "version": "0.1.0",
   "market": "Assam, India",
   "description": "India: Assam state tenders, fiscal years 2016-17 to 2022-23.",
@@ -12,17 +12,17 @@
   "tenders": 43669,
   "with_bidders": 9994,
   "with_winner": 5258,
-  "bidders": 12213,
-  "pairs": 2497449,
-  "links": 22070,
-  "groups": 335,
-  "leads": 8,
+  "bidders": 12349,
+  "pairs": 2504195,
+  "links": 22050,
+  "groups": 338,
+  "leads": 4,
   "priced": 4054,
   "screens_fired": {
    "closed": 46,
    "rotation": 0,
-   "cover": 11,
-   "price": 17
+   "cover": 8,
+   "price": 10
   }
  },
  "config": {
@@ -79,28 +79,6 @@
   {
    "id": "G001",
    "size": 3,
-   "exclusivity": 0.7371,
-   "joint": 8,
-   "closed_share": 1.0,
-   "screens": [
-    "closed",
-    "price"
-   ]
-  },
-  {
-   "id": "G002",
-   "size": 7,
-   "exclusivity": 0.4439,
-   "joint": 20,
-   "closed_share": 0.7,
-   "screens": [
-    "closed",
-    "cover"
-   ]
-  },
-  {
-   "id": "G003",
-   "size": 3,
    "exclusivity": 0.4395,
    "joint": 7,
    "closed_share": 0.571,
@@ -110,18 +88,7 @@
    ]
   },
   {
-   "id": "G004",
-   "size": 3,
-   "exclusivity": 0.3791,
-   "joint": 6,
-   "closed_share": 0.5,
-   "screens": [
-    "closed",
-    "price"
-   ]
-  },
-  {
-   "id": "G005",
+   "id": "G002",
    "size": 4,
    "exclusivity": 0.3205,
    "joint": 37,
@@ -132,7 +99,7 @@
    ]
   },
   {
-   "id": "G006",
+   "id": "G003",
    "size": 5,
    "exclusivity": 0.2544,
    "joint": 30,
@@ -143,9 +110,9 @@
    ]
   },
   {
-   "id": "G007",
+   "id": "G004",
    "size": 6,
-   "exclusivity": 0.0378,
+   "exclusivity": 0.0377,
    "joint": 90,
    "closed_share": 0.311,
    "screens": [
@@ -154,18 +121,7 @@
    ]
   },
   {
-   "id": "G008",
-   "size": 6,
-   "exclusivity": 0.0124,
-   "joint": 25,
-   "closed_share": 0.4,
-   "screens": [
-    "cover",
-    "price"
-   ]
-  },
-  {
-   "id": "G009",
+   "id": "G005",
    "size": 5,
    "exclusivity": 0.891,
    "joint": 8,
@@ -175,7 +131,7 @@
    ]
   },
   {
-   "id": "G010",
+   "id": "G006",
    "size": 3,
    "exclusivity": 0.8504,
    "joint": 29,
@@ -185,7 +141,17 @@
    ]
   },
   {
-   "id": "G011",
+   "id": "G007",
+   "size": 3,
+   "exclusivity": 0.7371,
+   "joint": 8,
+   "closed_share": 1.0,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G008",
    "size": 9,
    "exclusivity": 0.7265,
    "joint": 9,
@@ -195,7 +161,7 @@
    ]
   },
   {
-   "id": "G012",
+   "id": "G009",
    "size": 3,
    "exclusivity": 0.632,
    "joint": 11,
@@ -205,7 +171,7 @@
    ]
   },
   {
-   "id": "G013",
+   "id": "G010",
    "size": 4,
    "exclusivity": 0.6262,
    "joint": 7,
@@ -215,7 +181,7 @@
    ]
   },
   {
-   "id": "G014",
+   "id": "G011",
    "size": 3,
    "exclusivity": 0.6186,
    "joint": 6,
@@ -225,7 +191,7 @@
    ]
   },
   {
-   "id": "G015",
+   "id": "G012",
    "size": 18,
    "exclusivity": 0.6043,
    "joint": 15,
@@ -235,7 +201,7 @@
    ]
   },
   {
-   "id": "G016",
+   "id": "G013",
    "size": 4,
    "exclusivity": 0.5182,
    "joint": 6,
@@ -245,9 +211,9 @@
    ]
   },
   {
-   "id": "G017",
+   "id": "G014",
    "size": 3,
-   "exclusivity": 0.4978,
+   "exclusivity": 0.4802,
    "joint": 4,
    "closed_share": 0.75,
    "screens": [
@@ -255,9 +221,9 @@
    ]
   },
   {
-   "id": "G018",
+   "id": "G015",
    "size": 3,
-   "exclusivity": 0.4696,
+   "exclusivity": 0.4695,
    "joint": 4,
    "closed_share": 0.0,
    "screens": [
@@ -265,7 +231,7 @@
    ]
   },
   {
-   "id": "G019",
+   "id": "G016",
    "size": 3,
    "exclusivity": 0.4661,
    "joint": 6,
@@ -275,7 +241,17 @@
    ]
   },
   {
-   "id": "G020",
+   "id": "G017",
+   "size": 7,
+   "exclusivity": 0.4437,
+   "joint": 20,
+   "closed_share": 0.7,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G018",
    "size": 3,
    "exclusivity": 0.4319,
    "joint": 5,
@@ -285,7 +261,7 @@
    ]
   },
   {
-   "id": "G021",
+   "id": "G019",
    "size": 4,
    "exclusivity": 0.4264,
    "joint": 17,
@@ -295,17 +271,7 @@
    ]
   },
   {
-   "id": "G022",
-   "size": 3,
-   "exclusivity": 0.4064,
-   "joint": 10,
-   "closed_share": 0.6,
-   "screens": [
-    "closed"
-   ]
-  },
-  {
-   "id": "G023",
+   "id": "G020",
    "size": 5,
    "exclusivity": 0.4061,
    "joint": 9,
@@ -315,7 +281,17 @@
    ]
   },
   {
-   "id": "G024",
+   "id": "G021",
+   "size": 3,
+   "exclusivity": 0.405,
+   "joint": 10,
+   "closed_share": 0.6,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G022",
    "size": 3,
    "exclusivity": 0.3997,
    "joint": 10,
@@ -325,7 +301,17 @@
    ]
   },
   {
-   "id": "G025",
+   "id": "G023",
+   "size": 3,
+   "exclusivity": 0.3791,
+   "joint": 6,
+   "closed_share": 0.5,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G024",
    "size": 4,
    "exclusivity": 0.3711,
    "joint": 5,
@@ -335,9 +321,9 @@
    ]
   },
   {
-   "id": "G026",
+   "id": "G025",
    "size": 3,
-   "exclusivity": 0.3677,
+   "exclusivity": 0.3656,
    "joint": 4,
    "closed_share": 1.0,
    "screens": [
@@ -345,7 +331,7 @@
    ]
   },
   {
-   "id": "G027",
+   "id": "G026",
    "size": 3,
    "exclusivity": 0.3624,
    "joint": 3,
@@ -355,17 +341,7 @@
    ]
   },
   {
-   "id": "G028",
-   "size": 3,
-   "exclusivity": 0.3569,
-   "joint": 5,
-   "closed_share": 0.4,
-   "screens": [
-    "closed"
-   ]
-  },
-  {
-   "id": "G029",
+   "id": "G027",
    "size": 5,
    "exclusivity": 0.354,
    "joint": 11,
@@ -375,9 +351,9 @@
    ]
   },
   {
-   "id": "G030",
+   "id": "G028",
    "size": 3,
-   "exclusivity": 0.3535,
+   "exclusivity": 0.3527,
    "joint": 5,
    "closed_share": 0.8,
    "screens": [
@@ -385,9 +361,19 @@
    ]
   },
   {
-   "id": "G031",
+   "id": "G029",
+   "size": 3,
+   "exclusivity": 0.3524,
+   "joint": 5,
+   "closed_share": 0.4,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G030",
    "size": 4,
-   "exclusivity": 0.3494,
+   "exclusivity": 0.3448,
    "joint": 8,
    "closed_share": 0.5,
    "screens": [
@@ -395,9 +381,9 @@
    ]
   },
   {
-   "id": "G032",
+   "id": "G031",
    "size": 5,
-   "exclusivity": 0.3383,
+   "exclusivity": 0.3377,
    "joint": 11,
    "closed_share": 0.182,
    "screens": [
@@ -405,7 +391,7 @@
    ]
   },
   {
-   "id": "G033",
+   "id": "G032",
    "size": 3,
    "exclusivity": 0.3198,
    "joint": 6,
@@ -415,9 +401,9 @@
    ]
   },
   {
-   "id": "G034",
+   "id": "G033",
    "size": 5,
-   "exclusivity": 0.3187,
+   "exclusivity": 0.3169,
    "joint": 14,
    "closed_share": 0.214,
    "screens": [
@@ -425,11 +411,21 @@
    ]
   },
   {
-   "id": "G035",
+   "id": "G034",
    "size": 5,
    "exclusivity": 0.3092,
    "joint": 20,
    "closed_share": 0.85,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G035",
+   "size": 3,
+   "exclusivity": 0.3079,
+   "joint": 5,
+   "closed_share": 0.6,
    "screens": [
     "closed"
    ]
@@ -446,8 +442,18 @@
   },
   {
    "id": "G037",
+   "size": 3,
+   "exclusivity": 0.3023,
+   "joint": 10,
+   "closed_share": 0.4,
+   "screens": [
+    "closed"
+   ]
+  },
+  {
+   "id": "G038",
    "size": 5,
-   "exclusivity": 0.298,
+   "exclusivity": 0.2979,
    "joint": 94,
    "closed_share": 0.33,
    "screens": [
@@ -455,7 +461,7 @@
    ]
   },
   {
-   "id": "G038",
+   "id": "G039",
    "size": 4,
    "exclusivity": 0.2872,
    "joint": 3,
@@ -465,19 +471,9 @@
    ]
   },
   {
-   "id": "G039",
-   "size": 3,
-   "exclusivity": 0.2848,
-   "joint": 11,
-   "closed_share": 0.364,
-   "screens": [
-    "closed"
-   ]
-  },
-  {
    "id": "G040",
    "size": 4,
-   "exclusivity": 0.2827,
+   "exclusivity": 0.2821,
    "joint": 9,
    "closed_share": 0.556,
    "screens": [
@@ -497,7 +493,7 @@
   {
    "id": "G042",
    "size": 13,
-   "exclusivity": 0.2743,
+   "exclusivity": 0.2742,
    "joint": 21,
    "closed_share": 0.095,
    "screens": [
@@ -517,7 +513,7 @@
   {
    "id": "G044",
    "size": 3,
-   "exclusivity": 0.2726,
+   "exclusivity": 0.272,
    "joint": 7,
    "closed_share": 0.429,
    "screens": [
@@ -527,7 +523,7 @@
   {
    "id": "G045",
    "size": 5,
-   "exclusivity": 0.2693,
+   "exclusivity": 0.2692,
    "joint": 66,
    "closed_share": 0.152,
    "screens": [
@@ -546,16 +542,6 @@
   },
   {
    "id": "G047",
-   "size": 4,
-   "exclusivity": 0.2602,
-   "joint": 17,
-   "closed_share": 0.412,
-   "screens": [
-    "closed"
-   ]
-  },
-  {
-   "id": "G048",
    "size": 9,
    "exclusivity": 0.2576,
    "joint": 27,
@@ -565,9 +551,9 @@
    ]
   },
   {
-   "id": "G049",
+   "id": "G048",
    "size": 7,
-   "exclusivity": 0.2491,
+   "exclusivity": 0.2488,
    "joint": 20,
    "closed_share": 0.35,
    "screens": [
@@ -575,29 +561,9 @@
    ]
   },
   {
-   "id": "G050",
+   "id": "G049",
    "size": 4,
-   "exclusivity": 0.2342,
-   "joint": 15,
-   "closed_share": 0.267,
-   "screens": [
-    "price"
-   ]
-  },
-  {
-   "id": "G051",
-   "size": 3,
-   "exclusivity": 0.1884,
-   "joint": 13,
-   "closed_share": 0.769,
-   "screens": [
-    "price"
-   ]
-  },
-  {
-   "id": "G052",
-   "size": 4,
-   "exclusivity": 0.1877,
+   "exclusivity": 0.1876,
    "joint": 103,
    "closed_share": 0.068,
    "screens": [
@@ -605,9 +571,9 @@
    ]
   },
   {
-   "id": "G053",
+   "id": "G050",
    "size": 4,
-   "exclusivity": 0.1427,
+   "exclusivity": 0.1425,
    "joint": 13,
    "closed_share": 0.231,
    "screens": [
@@ -615,37 +581,7 @@
    ]
   },
   {
-   "id": "G054",
-   "size": 3,
-   "exclusivity": 0.113,
-   "joint": 10,
-   "closed_share": 0.7,
-   "screens": [
-    "price"
-   ]
-  },
-  {
-   "id": "G055",
-   "size": 5,
-   "exclusivity": 0.1062,
-   "joint": 20,
-   "closed_share": 0.45,
-   "screens": [
-    "price"
-   ]
-  },
-  {
-   "id": "G056",
-   "size": 4,
-   "exclusivity": 0.0895,
-   "joint": 14,
-   "closed_share": 0.143,
-   "screens": [
-    "price"
-   ]
-  },
-  {
-   "id": "G057",
+   "id": "G051",
    "size": 3,
    "exclusivity": 0.0831,
    "joint": 78,
@@ -655,9 +591,19 @@
    ]
   },
   {
-   "id": "G058",
+   "id": "G052",
+   "size": 22,
+   "exclusivity": 0.0823,
+   "joint": 40,
+   "closed_share": 0.025,
+   "screens": [
+    "price"
+   ]
+  },
+  {
+   "id": "G053",
    "size": 5,
-   "exclusivity": 0.0772,
+   "exclusivity": 0.0771,
    "joint": 51,
    "closed_share": 0.569,
    "screens": [
@@ -665,19 +611,9 @@
    ]
   },
   {
-   "id": "G059",
+   "id": "G054",
    "size": 8,
-   "exclusivity": 0.0403,
-   "joint": 24,
-   "closed_share": 0.292,
-   "screens": [
-    "price"
-   ]
-  },
-  {
-   "id": "G060",
-   "size": 8,
-   "exclusivity": 0.0381,
+   "exclusivity": 0.0379,
    "joint": 23,
    "closed_share": 0.304,
    "screens": [
@@ -685,19 +621,9 @@
    ]
   },
   {
-   "id": "G061",
-   "size": 16,
-   "exclusivity": 0.0289,
-   "joint": 65,
-   "closed_share": 0.308,
-   "screens": [
-    "cover"
-   ]
-  },
-  {
-   "id": "G062",
+   "id": "G055",
    "size": 7,
-   "exclusivity": 0.0244,
+   "exclusivity": 0.0243,
    "joint": 48,
    "closed_share": 0.375,
    "screens": [
@@ -705,27 +631,27 @@
    ]
   },
   {
-   "id": "G063",
-   "size": 12,
-   "exclusivity": 0.023,
-   "joint": 78,
-   "closed_share": 0.103,
-   "screens": [
-    "price"
-   ]
-  },
-  {
-   "id": "G064",
+   "id": "G056",
    "size": 16,
-   "exclusivity": 0.0172,
-   "joint": 58,
-   "closed_share": 0.155,
+   "exclusivity": 0.0234,
+   "joint": 59,
+   "closed_share": 0.322,
    "screens": [
     "cover"
    ]
   },
   {
-   "id": "G065",
+   "id": "G057",
+   "size": 6,
+   "exclusivity": 0.0124,
+   "joint": 25,
+   "closed_share": 0.4,
+   "screens": [
+    "price"
+   ]
+  },
+  {
+   "id": "G058",
    "size": 3,
    "exclusivity": 0.0111,
    "joint": 16,
@@ -735,17 +661,27 @@
    ]
   },
   {
-   "id": "G066",
-   "size": 7,
-   "exclusivity": 0.0052,
-   "joint": 37,
-   "closed_share": 0.73,
+   "id": "G059",
+   "size": 4,
+   "exclusivity": 0.0103,
+   "joint": 14,
+   "closed_share": 0.857,
    "screens": [
     "price"
    ]
   },
   {
-   "id": "G067",
+   "id": "G060",
+   "size": 5,
+   "exclusivity": 0.0072,
+   "joint": 15,
+   "closed_share": 0.067,
+   "screens": [
+    "price"
+   ]
+  },
+  {
+   "id": "G061",
    "size": 6,
    "exclusivity": 0.2465,
    "joint": 18,
@@ -753,15 +689,7 @@
    "screens": []
   },
   {
-   "id": "G068",
-   "size": 3,
-   "exclusivity": 0.2434,
-   "joint": 12,
-   "closed_share": 0.583,
-   "screens": []
-  },
-  {
-   "id": "G069",
+   "id": "G062",
    "size": 4,
    "exclusivity": 0.2393,
    "joint": 4,
@@ -769,7 +697,7 @@
    "screens": []
   },
   {
-   "id": "G070",
+   "id": "G063",
    "size": 5,
    "exclusivity": 0.2389,
    "joint": 15,
@@ -777,15 +705,7 @@
    "screens": []
   },
   {
-   "id": "G071",
-   "size": 3,
-   "exclusivity": 0.2384,
-   "joint": 5,
-   "closed_share": 0.4,
-   "screens": []
-  },
-  {
-   "id": "G072",
+   "id": "G064",
    "size": 8,
    "exclusivity": 0.2361,
    "joint": 10,
@@ -793,7 +713,31 @@
    "screens": []
   },
   {
-   "id": "G073",
+   "id": "G065",
+   "size": 3,
+   "exclusivity": 0.2352,
+   "joint": 5,
+   "closed_share": 0.4,
+   "screens": []
+  },
+  {
+   "id": "G066",
+   "size": 4,
+   "exclusivity": 0.2342,
+   "joint": 15,
+   "closed_share": 0.267,
+   "screens": []
+  },
+  {
+   "id": "G067",
+   "size": 3,
+   "exclusivity": 0.2312,
+   "joint": 14,
+   "closed_share": 0.429,
+   "screens": []
+  },
+  {
+   "id": "G068",
    "size": 5,
    "exclusivity": 0.2269,
    "joint": 8,
@@ -801,7 +745,15 @@
    "screens": []
   },
   {
-   "id": "G074",
+   "id": "G069",
+   "size": 3,
+   "exclusivity": 0.2263,
+   "joint": 4,
+   "closed_share": 0.5,
+   "screens": []
+  },
+  {
+   "id": "G070",
    "size": 3,
    "exclusivity": 0.2208,
    "joint": 6,
@@ -809,7 +761,15 @@
    "screens": []
   },
   {
-   "id": "G075",
+   "id": "G071",
+   "size": 3,
+   "exclusivity": 0.2204,
+   "joint": 7,
+   "closed_share": 0.429,
+   "screens": []
+  },
+  {
+   "id": "G072",
    "size": 3,
    "exclusivity": 0.2197,
    "joint": 8,
@@ -817,47 +777,55 @@
    "screens": []
   },
   {
-   "id": "G076",
-   "size": 3,
-   "exclusivity": 0.2099,
-   "joint": 5,
-   "closed_share": 0.6,
-   "screens": []
-  },
-  {
-   "id": "G077",
-   "size": 3,
-   "exclusivity": 0.2093,
-   "joint": 5,
-   "closed_share": 0.4,
-   "screens": []
-  },
-  {
-   "id": "G078",
+   "id": "G073",
    "size": 4,
-   "exclusivity": 0.2092,
+   "exclusivity": 0.2091,
    "joint": 9,
    "closed_share": 0.444,
    "screens": []
   },
   {
-   "id": "G079",
+   "id": "G074",
    "size": 3,
-   "exclusivity": 0.1829,
+   "exclusivity": 0.2078,
+   "joint": 5,
+   "closed_share": 0.4,
+   "screens": []
+  },
+  {
+   "id": "G075",
+   "size": 8,
+   "exclusivity": 0.1885,
+   "joint": 55,
+   "closed_share": 0.091,
+   "screens": []
+  },
+  {
+   "id": "G076",
+   "size": 3,
+   "exclusivity": 0.1884,
    "joint": 5,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G080",
+   "id": "G077",
    "size": 3,
-   "exclusivity": 0.1767,
+   "exclusivity": 0.1883,
+   "joint": 13,
+   "closed_share": 0.769,
+   "screens": []
+  },
+  {
+   "id": "G078",
+   "size": 3,
+   "exclusivity": 0.1871,
    "joint": 11,
    "closed_share": 0.273,
    "screens": []
   },
   {
-   "id": "G081",
+   "id": "G079",
    "size": 8,
    "exclusivity": 0.1759,
    "joint": 30,
@@ -865,7 +833,15 @@
    "screens": []
   },
   {
-   "id": "G082",
+   "id": "G080",
+   "size": 15,
+   "exclusivity": 0.1705,
+   "joint": 25,
+   "closed_share": 0.4,
+   "screens": []
+  },
+  {
+   "id": "G081",
    "size": 11,
    "exclusivity": 0.1664,
    "joint": 37,
@@ -873,23 +849,23 @@
    "screens": []
   },
   {
-   "id": "G083",
+   "id": "G082",
    "size": 3,
-   "exclusivity": 0.1607,
+   "exclusivity": 0.1604,
    "joint": 10,
    "closed_share": 1.0,
    "screens": []
   },
   {
-   "id": "G084",
+   "id": "G083",
    "size": 4,
-   "exclusivity": 0.1601,
+   "exclusivity": 0.1599,
    "joint": 6,
    "closed_share": 0.167,
    "screens": []
   },
   {
-   "id": "G085",
+   "id": "G084",
    "size": 3,
    "exclusivity": 0.1561,
    "joint": 9,
@@ -897,7 +873,7 @@
    "screens": []
   },
   {
-   "id": "G086",
+   "id": "G085",
    "size": 3,
    "exclusivity": 0.1547,
    "joint": 7,
@@ -905,23 +881,7 @@
    "screens": []
   },
   {
-   "id": "G087",
-   "size": 3,
-   "exclusivity": 0.1514,
-   "joint": 8,
-   "closed_share": 0.5,
-   "screens": []
-  },
-  {
-   "id": "G088",
-   "size": 3,
-   "exclusivity": 0.1513,
-   "joint": 8,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
-   "id": "G089",
+   "id": "G086",
    "size": 7,
    "exclusivity": 0.1512,
    "joint": 19,
@@ -929,7 +889,23 @@
    "screens": []
   },
   {
-   "id": "G090",
+   "id": "G087",
+   "size": 3,
+   "exclusivity": 0.1512,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G088",
+   "size": 3,
+   "exclusivity": 0.1512,
+   "joint": 8,
+   "closed_share": 0.5,
+   "screens": []
+  },
+  {
+   "id": "G089",
    "size": 7,
    "exclusivity": 0.1466,
    "joint": 11,
@@ -937,15 +913,15 @@
    "screens": []
   },
   {
-   "id": "G091",
+   "id": "G090",
    "size": 4,
-   "exclusivity": 0.1456,
+   "exclusivity": 0.1435,
    "joint": 7,
    "closed_share": 0.429,
    "screens": []
   },
   {
-   "id": "G092",
+   "id": "G091",
    "size": 3,
    "exclusivity": 0.1399,
    "joint": 7,
@@ -953,7 +929,7 @@
    "screens": []
   },
   {
-   "id": "G093",
+   "id": "G092",
    "size": 6,
    "exclusivity": 0.1383,
    "joint": 32,
@@ -961,7 +937,7 @@
    "screens": []
   },
   {
-   "id": "G094",
+   "id": "G093",
    "size": 3,
    "exclusivity": 0.1376,
    "joint": 4,
@@ -969,7 +945,7 @@
    "screens": []
   },
   {
-   "id": "G095",
+   "id": "G094",
    "size": 4,
    "exclusivity": 0.1375,
    "joint": 8,
@@ -977,15 +953,7 @@
    "screens": []
   },
   {
-   "id": "G096",
-   "size": 3,
-   "exclusivity": 0.1282,
-   "joint": 6,
-   "closed_share": 0.5,
-   "screens": []
-  },
-  {
-   "id": "G097",
+   "id": "G095",
    "size": 3,
    "exclusivity": 0.128,
    "joint": 5,
@@ -993,9 +961,25 @@
    "screens": []
   },
   {
+   "id": "G096",
+   "size": 4,
+   "exclusivity": 0.1272,
+   "joint": 7,
+   "closed_share": 0.429,
+   "screens": []
+  },
+  {
+   "id": "G097",
+   "size": 3,
+   "exclusivity": 0.1241,
+   "joint": 6,
+   "closed_share": 0.5,
+   "screens": []
+  },
+  {
    "id": "G098",
    "size": 3,
-   "exclusivity": 0.1244,
+   "exclusivity": 0.1225,
    "joint": 6,
    "closed_share": 0.5,
    "screens": []
@@ -1018,10 +1002,10 @@
   },
   {
    "id": "G101",
-   "size": 4,
-   "exclusivity": 0.1208,
-   "joint": 7,
-   "closed_share": 0.429,
+   "size": 6,
+   "exclusivity": 0.1195,
+   "joint": 26,
+   "closed_share": 0.577,
    "screens": []
   },
   {
@@ -1034,18 +1018,18 @@
   },
   {
    "id": "G103",
-   "size": 6,
-   "exclusivity": 0.1184,
-   "joint": 27,
-   "closed_share": 0.556,
+   "size": 3,
+   "exclusivity": 0.1173,
+   "joint": 7,
+   "closed_share": 0.429,
    "screens": []
   },
   {
    "id": "G104",
-   "size": 3,
-   "exclusivity": 0.1178,
-   "joint": 7,
-   "closed_share": 0.429,
+   "size": 21,
+   "exclusivity": 0.117,
+   "joint": 39,
+   "closed_share": 0.077,
    "screens": []
   },
   {
@@ -1059,7 +1043,7 @@
   {
    "id": "G106",
    "size": 5,
-   "exclusivity": 0.114,
+   "exclusivity": 0.1139,
    "joint": 17,
    "closed_share": 0.294,
    "screens": []
@@ -1067,25 +1051,25 @@
   {
    "id": "G107",
    "size": 4,
-   "exclusivity": 0.113,
+   "exclusivity": 0.1129,
    "joint": 6,
    "closed_share": 0.0,
    "screens": []
   },
   {
    "id": "G108",
-   "size": 15,
+   "size": 3,
    "exclusivity": 0.1127,
-   "joint": 8,
-   "closed_share": 0.0,
+   "joint": 10,
+   "closed_share": 0.7,
    "screens": []
   },
   {
    "id": "G109",
-   "size": 8,
-   "exclusivity": 0.1122,
-   "joint": 55,
-   "closed_share": 0.091,
+   "size": 15,
+   "exclusivity": 0.1127,
+   "joint": 8,
+   "closed_share": 0.0,
    "screens": []
   },
   {
@@ -1114,38 +1098,54 @@
   },
   {
    "id": "G113",
-   "size": 21,
-   "exclusivity": 0.1054,
-   "joint": 39,
-   "closed_share": 0.077,
+   "size": 5,
+   "exclusivity": 0.1057,
+   "joint": 20,
+   "closed_share": 0.45,
    "screens": []
   },
   {
    "id": "G114",
+   "size": 3,
+   "exclusivity": 0.1015,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G115",
    "size": 5,
-   "exclusivity": 0.1013,
+   "exclusivity": 0.1011,
    "joint": 14,
    "closed_share": 0.143,
    "screens": []
   },
   {
-   "id": "G115",
+   "id": "G116",
    "size": 4,
-   "exclusivity": 0.101,
+   "exclusivity": 0.1009,
    "joint": 10,
    "closed_share": 0.5,
    "screens": []
   },
   {
-   "id": "G116",
+   "id": "G117",
    "size": 3,
-   "exclusivity": 0.0965,
+   "exclusivity": 0.1,
+   "joint": 9,
+   "closed_share": 0.111,
+   "screens": []
+  },
+  {
+   "id": "G118",
+   "size": 3,
+   "exclusivity": 0.0964,
    "joint": 5,
    "closed_share": 0.2,
    "screens": []
   },
   {
-   "id": "G117",
+   "id": "G119",
    "size": 5,
    "exclusivity": 0.0954,
    "joint": 19,
@@ -1153,39 +1153,39 @@
    "screens": []
   },
   {
-   "id": "G118",
+   "id": "G120",
    "size": 5,
-   "exclusivity": 0.0948,
+   "exclusivity": 0.0943,
    "joint": 10,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G119",
+   "id": "G121",
    "size": 5,
-   "exclusivity": 0.094,
+   "exclusivity": 0.0938,
    "joint": 22,
    "closed_share": 0.455,
    "screens": []
   },
   {
-   "id": "G120",
+   "id": "G122",
    "size": 5,
-   "exclusivity": 0.0935,
+   "exclusivity": 0.0933,
    "joint": 9,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G121",
-   "size": 6,
+   "id": "G123",
+   "size": 3,
    "exclusivity": 0.0925,
-   "joint": 14,
-   "closed_share": 0.071,
+   "joint": 17,
+   "closed_share": 0.471,
    "screens": []
   },
   {
-   "id": "G122",
+   "id": "G124",
    "size": 4,
    "exclusivity": 0.0921,
    "joint": 10,
@@ -1193,7 +1193,7 @@
    "screens": []
   },
   {
-   "id": "G123",
+   "id": "G125",
    "size": 6,
    "exclusivity": 0.0911,
    "joint": 34,
@@ -1201,7 +1201,7 @@
    "screens": []
   },
   {
-   "id": "G124",
+   "id": "G126",
    "size": 3,
    "exclusivity": 0.0906,
    "joint": 8,
@@ -1209,15 +1209,23 @@
    "screens": []
   },
   {
-   "id": "G125",
+   "id": "G127",
    "size": 7,
-   "exclusivity": 0.0902,
+   "exclusivity": 0.0901,
    "joint": 49,
    "closed_share": 0.224,
    "screens": []
   },
   {
-   "id": "G126",
+   "id": "G128",
+   "size": 4,
+   "exclusivity": 0.0894,
+   "joint": 14,
+   "closed_share": 0.143,
+   "screens": []
+  },
+  {
+   "id": "G129",
    "size": 3,
    "exclusivity": 0.0885,
    "joint": 7,
@@ -1225,23 +1233,7 @@
    "screens": []
   },
   {
-   "id": "G127",
-   "size": 4,
-   "exclusivity": 0.0882,
-   "joint": 10,
-   "closed_share": 0.2,
-   "screens": []
-  },
-  {
-   "id": "G128",
-   "size": 3,
-   "exclusivity": 0.087,
-   "joint": 9,
-   "closed_share": 0.111,
-   "screens": []
-  },
-  {
-   "id": "G129",
+   "id": "G130",
    "size": 4,
    "exclusivity": 0.0858,
    "joint": 14,
@@ -1249,27 +1241,19 @@
    "screens": []
   },
   {
-   "id": "G130",
+   "id": "G131",
    "size": 10,
-   "exclusivity": 0.0846,
+   "exclusivity": 0.0841,
    "joint": 29,
    "closed_share": 0.034,
    "screens": []
   },
   {
-   "id": "G131",
+   "id": "G132",
    "size": 11,
-   "exclusivity": 0.0831,
+   "exclusivity": 0.0825,
    "joint": 30,
    "closed_share": 0.167,
-   "screens": []
-  },
-  {
-   "id": "G132",
-   "size": 22,
-   "exclusivity": 0.0824,
-   "joint": 40,
-   "closed_share": 0.025,
    "screens": []
   },
   {
@@ -1282,46 +1266,38 @@
   },
   {
    "id": "G134",
-   "size": 4,
-   "exclusivity": 0.0801,
+   "size": 3,
+   "exclusivity": 0.0795,
    "joint": 9,
    "closed_share": 0.0,
    "screens": []
   },
   {
    "id": "G135",
-   "size": 3,
-   "exclusivity": 0.0801,
-   "joint": 9,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
-   "id": "G136",
    "size": 4,
-   "exclusivity": 0.0797,
+   "exclusivity": 0.0795,
    "joint": 11,
    "closed_share": 0.182,
    "screens": []
   },
   {
+   "id": "G136",
+   "size": 4,
+   "exclusivity": 0.0792,
+   "joint": 9,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
    "id": "G137",
    "size": 12,
-   "exclusivity": 0.0744,
+   "exclusivity": 0.0742,
    "joint": 12,
    "closed_share": 0.0,
    "screens": []
   },
   {
    "id": "G138",
-   "size": 5,
-   "exclusivity": 0.0743,
-   "joint": 29,
-   "closed_share": 0.379,
-   "screens": []
-  },
-  {
-   "id": "G139",
    "size": 3,
    "exclusivity": 0.0741,
    "joint": 5,
@@ -1329,7 +1305,7 @@
    "screens": []
   },
   {
-   "id": "G140",
+   "id": "G139",
    "size": 3,
    "exclusivity": 0.0731,
    "joint": 10,
@@ -1337,7 +1313,7 @@
    "screens": []
   },
   {
-   "id": "G141",
+   "id": "G140",
    "size": 7,
    "exclusivity": 0.072,
    "joint": 5,
@@ -1345,23 +1321,39 @@
    "screens": []
   },
   {
+   "id": "G141",
+   "size": 4,
+   "exclusivity": 0.0717,
+   "joint": 20,
+   "closed_share": 0.85,
+   "screens": []
+  },
+  {
    "id": "G142",
    "size": 3,
-   "exclusivity": 0.0705,
-   "joint": 17,
-   "closed_share": 0.0,
+   "exclusivity": 0.0714,
+   "joint": 10,
+   "closed_share": 0.2,
    "screens": []
   },
   {
    "id": "G143",
-   "size": 4,
-   "exclusivity": 0.0703,
-   "joint": 17,
-   "closed_share": 0.118,
+   "size": 3,
+   "exclusivity": 0.071,
+   "joint": 9,
+   "closed_share": 0.222,
    "screens": []
   },
   {
    "id": "G144",
+   "size": 4,
+   "exclusivity": 0.0706,
+   "joint": 13,
+   "closed_share": 0.077,
+   "screens": []
+  },
+  {
+   "id": "G145",
    "size": 3,
    "exclusivity": 0.0701,
    "joint": 5,
@@ -1369,35 +1361,27 @@
    "screens": []
   },
   {
-   "id": "G145",
+   "id": "G146",
    "size": 3,
    "exclusivity": 0.07,
-   "joint": 7,
-   "closed_share": 0.429,
-   "screens": []
-  },
-  {
-   "id": "G146",
-   "size": 5,
-   "exclusivity": 0.0699,
-   "joint": 9,
+   "joint": 17,
    "closed_share": 0.0,
    "screens": []
   },
   {
    "id": "G147",
-   "size": 3,
-   "exclusivity": 0.0695,
-   "joint": 10,
-   "closed_share": 0.2,
+   "size": 4,
+   "exclusivity": 0.07,
+   "joint": 17,
+   "closed_share": 0.118,
    "screens": []
   },
   {
    "id": "G148",
-   "size": 4,
-   "exclusivity": 0.0681,
-   "joint": 20,
-   "closed_share": 0.85,
+   "size": 5,
+   "exclusivity": 0.0696,
+   "joint": 9,
+   "closed_share": 0.0,
    "screens": []
   },
   {
@@ -1410,6 +1394,14 @@
   },
   {
    "id": "G150",
+   "size": 5,
+   "exclusivity": 0.0674,
+   "joint": 5,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G151",
    "size": 6,
    "exclusivity": 0.066,
    "joint": 4,
@@ -1417,17 +1409,9 @@
    "screens": []
   },
   {
-   "id": "G151",
-   "size": 15,
-   "exclusivity": 0.0647,
-   "joint": 26,
-   "closed_share": 0.385,
-   "screens": []
-  },
-  {
    "id": "G152",
    "size": 8,
-   "exclusivity": 0.0647,
+   "exclusivity": 0.0646,
    "joint": 38,
    "closed_share": 0.316,
    "screens": []
@@ -1435,29 +1419,13 @@
   {
    "id": "G153",
    "size": 5,
-   "exclusivity": 0.0647,
+   "exclusivity": 0.0629,
    "joint": 13,
    "closed_share": 0.077,
    "screens": []
   },
   {
    "id": "G154",
-   "size": 5,
-   "exclusivity": 0.0623,
-   "joint": 5,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
-   "id": "G155",
-   "size": 4,
-   "exclusivity": 0.0619,
-   "joint": 9,
-   "closed_share": 0.111,
-   "screens": []
-  },
-  {
-   "id": "G156",
    "size": 4,
    "exclusivity": 0.0616,
    "joint": 9,
@@ -1465,55 +1433,79 @@
    "screens": []
   },
   {
-   "id": "G157",
+   "id": "G155",
    "size": 4,
-   "exclusivity": 0.0609,
-   "joint": 8,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
-   "id": "G158",
-   "size": 4,
-   "exclusivity": 0.0608,
+   "exclusivity": 0.061,
    "joint": 9,
    "closed_share": 0.111,
    "screens": []
   },
   {
-   "id": "G159",
+   "id": "G156",
    "size": 4,
    "exclusivity": 0.0607,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G157",
+   "size": 4,
+   "exclusivity": 0.0605,
    "joint": 9,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G160",
+   "id": "G158",
    "size": 6,
-   "exclusivity": 0.0588,
+   "exclusivity": 0.0596,
    "joint": 12,
    "closed_share": 0.083,
    "screens": []
   },
   {
-   "id": "G161",
+   "id": "G159",
    "size": 4,
-   "exclusivity": 0.0586,
+   "exclusivity": 0.0595,
+   "joint": 9,
+   "closed_share": 0.111,
+   "screens": []
+  },
+  {
+   "id": "G160",
+   "size": 3,
+   "exclusivity": 0.0587,
+   "joint": 8,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G161",
+   "size": 3,
+   "exclusivity": 0.0587,
+   "joint": 7,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G162",
+   "size": 4,
+   "exclusivity": 0.0584,
    "joint": 6,
    "closed_share": 0.167,
    "screens": []
   },
   {
-   "id": "G162",
+   "id": "G163",
    "size": 5,
-   "exclusivity": 0.0563,
+   "exclusivity": 0.0561,
    "joint": 14,
    "closed_share": 0.214,
    "screens": []
   },
   {
-   "id": "G163",
+   "id": "G164",
    "size": 3,
    "exclusivity": 0.0543,
    "joint": 7,
@@ -1521,19 +1513,11 @@
    "screens": []
   },
   {
-   "id": "G164",
-   "size": 4,
-   "exclusivity": 0.0535,
-   "joint": 9,
-   "closed_share": 0.444,
-   "screens": []
-  },
-  {
    "id": "G165",
    "size": 4,
-   "exclusivity": 0.0519,
-   "joint": 10,
-   "closed_share": 0.0,
+   "exclusivity": 0.0534,
+   "joint": 9,
+   "closed_share": 0.444,
    "screens": []
   },
   {
@@ -1547,21 +1531,29 @@
   {
    "id": "G167",
    "size": 4,
+   "exclusivity": 0.0518,
+   "joint": 10,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G168",
+   "size": 4,
    "exclusivity": 0.051,
    "joint": 9,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G168",
+   "id": "G169",
    "size": 3,
-   "exclusivity": 0.051,
+   "exclusivity": 0.0509,
    "joint": 8,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G169",
+   "id": "G170",
    "size": 3,
    "exclusivity": 0.0507,
    "joint": 8,
@@ -1569,7 +1561,7 @@
    "screens": []
   },
   {
-   "id": "G170",
+   "id": "G171",
    "size": 5,
    "exclusivity": 0.047,
    "joint": 12,
@@ -1577,15 +1569,15 @@
    "screens": []
   },
   {
-   "id": "G171",
+   "id": "G172",
    "size": 4,
-   "exclusivity": 0.047,
+   "exclusivity": 0.0469,
    "joint": 7,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G172",
+   "id": "G173",
    "size": 3,
    "exclusivity": 0.0452,
    "joint": 5,
@@ -1593,15 +1585,15 @@
    "screens": []
   },
   {
-   "id": "G173",
+   "id": "G174",
    "size": 4,
-   "exclusivity": 0.045,
+   "exclusivity": 0.0447,
    "joint": 8,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G174",
+   "id": "G175",
    "size": 9,
    "exclusivity": 0.0446,
    "joint": 39,
@@ -1609,19 +1601,11 @@
    "screens": []
   },
   {
-   "id": "G175",
-   "size": 3,
-   "exclusivity": 0.0444,
-   "joint": 9,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
    "id": "G176",
    "size": 3,
-   "exclusivity": 0.0444,
-   "joint": 10,
-   "closed_share": 0.1,
+   "exclusivity": 0.0443,
+   "joint": 9,
+   "closed_share": 0.0,
    "screens": []
   },
   {
@@ -1635,25 +1619,25 @@
   {
    "id": "G178",
    "size": 3,
+   "exclusivity": 0.0443,
+   "joint": 10,
+   "closed_share": 0.1,
+   "screens": []
+  },
+  {
+   "id": "G179",
+   "size": 3,
    "exclusivity": 0.0442,
    "joint": 4,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G179",
+   "id": "G180",
    "size": 5,
    "exclusivity": 0.0432,
    "joint": 15,
    "closed_share": 0.133,
-   "screens": []
-  },
-  {
-   "id": "G180",
-   "size": 5,
-   "exclusivity": 0.0431,
-   "joint": 17,
-   "closed_share": 0.059,
    "screens": []
   },
   {
@@ -1667,21 +1651,37 @@
   {
    "id": "G182",
    "size": 5,
-   "exclusivity": 0.0418,
-   "joint": 13,
-   "closed_share": 0.0,
+   "exclusivity": 0.0428,
+   "joint": 17,
+   "closed_share": 0.059,
    "screens": []
   },
   {
    "id": "G183",
    "size": 3,
-   "exclusivity": 0.0414,
+   "exclusivity": 0.0417,
+   "joint": 13,
+   "closed_share": 0.154,
+   "screens": []
+  },
+  {
+   "id": "G184",
+   "size": 5,
+   "exclusivity": 0.0415,
+   "joint": 13,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G185",
+   "size": 3,
+   "exclusivity": 0.0413,
    "joint": 8,
    "closed_share": 0.25,
    "screens": []
   },
   {
-   "id": "G184",
+   "id": "G186",
    "size": 4,
    "exclusivity": 0.0411,
    "joint": 6,
@@ -1689,31 +1689,39 @@
    "screens": []
   },
   {
-   "id": "G185",
+   "id": "G187",
    "size": 19,
-   "exclusivity": 0.0407,
+   "exclusivity": 0.0405,
    "joint": 88,
    "closed_share": 0.125,
    "screens": []
   },
   {
-   "id": "G186",
+   "id": "G188",
    "size": 4,
-   "exclusivity": 0.0404,
+   "exclusivity": 0.0403,
    "joint": 9,
    "closed_share": 0.111,
    "screens": []
   },
   {
-   "id": "G187",
+   "id": "G189",
    "size": 4,
-   "exclusivity": 0.0394,
+   "exclusivity": 0.0391,
    "joint": 7,
    "closed_share": 0.143,
    "screens": []
   },
   {
-   "id": "G188",
+   "id": "G190",
+   "size": 9,
+   "exclusivity": 0.0388,
+   "joint": 34,
+   "closed_share": 0.029,
+   "screens": []
+  },
+  {
+   "id": "G191",
    "size": 5,
    "exclusivity": 0.0383,
    "joint": 13,
@@ -1721,15 +1729,15 @@
    "screens": []
   },
   {
-   "id": "G189",
+   "id": "G192",
    "size": 3,
-   "exclusivity": 0.0382,
+   "exclusivity": 0.0379,
    "joint": 15,
    "closed_share": 0.2,
    "screens": []
   },
   {
-   "id": "G190",
+   "id": "G193",
    "size": 3,
    "exclusivity": 0.0379,
    "joint": 5,
@@ -1737,55 +1745,71 @@
    "screens": []
   },
   {
-   "id": "G191",
+   "id": "G194",
+   "size": 6,
+   "exclusivity": 0.0349,
+   "joint": 19,
+   "closed_share": 0.368,
+   "screens": []
+  },
+  {
+   "id": "G195",
    "size": 7,
-   "exclusivity": 0.0348,
+   "exclusivity": 0.0346,
    "joint": 17,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G192",
+   "id": "G196",
    "size": 4,
-   "exclusivity": 0.0346,
+   "exclusivity": 0.0337,
    "joint": 15,
-   "closed_share": 0.667,
+   "closed_share": 0.533,
    "screens": []
   },
   {
-   "id": "G193",
+   "id": "G197",
+   "size": 6,
+   "exclusivity": 0.0327,
+   "joint": 12,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G198",
    "size": 5,
-   "exclusivity": 0.0319,
+   "exclusivity": 0.0317,
    "joint": 20,
    "closed_share": 0.05,
    "screens": []
   },
   {
-   "id": "G194",
-   "size": 9,
-   "exclusivity": 0.0311,
-   "joint": 34,
-   "closed_share": 0.029,
+   "id": "G199",
+   "size": 4,
+   "exclusivity": 0.0309,
+   "joint": 13,
+   "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G195",
+   "id": "G200",
    "size": 4,
-   "exclusivity": 0.03,
+   "exclusivity": 0.0299,
    "joint": 11,
    "closed_share": 0.182,
    "screens": []
   },
   {
-   "id": "G196",
+   "id": "G201",
    "size": 3,
-   "exclusivity": 0.0298,
+   "exclusivity": 0.0297,
    "joint": 6,
    "closed_share": 0.333,
    "screens": []
   },
   {
-   "id": "G197",
+   "id": "G202",
    "size": 3,
    "exclusivity": 0.0267,
    "joint": 6,
@@ -1793,31 +1817,31 @@
    "screens": []
   },
   {
-   "id": "G198",
-   "size": 17,
+   "id": "G203",
+   "size": 10,
    "exclusivity": 0.0266,
+   "joint": 99,
+   "closed_share": 0.182,
+   "screens": []
+  },
+  {
+   "id": "G204",
+   "size": 17,
+   "exclusivity": 0.0265,
    "joint": 34,
    "closed_share": 0.176,
    "screens": []
   },
   {
-   "id": "G199",
+   "id": "G205",
    "size": 3,
-   "exclusivity": 0.0264,
+   "exclusivity": 0.0262,
    "joint": 9,
    "closed_share": 0.222,
    "screens": []
   },
   {
-   "id": "G200",
-   "size": 8,
-   "exclusivity": 0.0239,
-   "joint": 15,
-   "closed_share": 0.067,
-   "screens": []
-  },
-  {
-   "id": "G201",
+   "id": "G206",
    "size": 4,
    "exclusivity": 0.0239,
    "joint": 4,
@@ -1825,15 +1849,23 @@
    "screens": []
   },
   {
-   "id": "G202",
+   "id": "G207",
+   "size": 8,
+   "exclusivity": 0.0239,
+   "joint": 15,
+   "closed_share": 0.067,
+   "screens": []
+  },
+  {
+   "id": "G208",
    "size": 22,
-   "exclusivity": 0.0238,
+   "exclusivity": 0.0237,
    "joint": 57,
    "closed_share": 0.123,
    "screens": []
   },
   {
-   "id": "G203",
+   "id": "G209",
    "size": 4,
    "exclusivity": 0.0234,
    "joint": 7,
@@ -1841,15 +1873,23 @@
    "screens": []
   },
   {
-   "id": "G204",
-   "size": 5,
-   "exclusivity": 0.0227,
-   "joint": 10,
-   "closed_share": 0.0,
+   "id": "G210",
+   "size": 12,
+   "exclusivity": 0.0229,
+   "joint": 78,
+   "closed_share": 0.103,
    "screens": []
   },
   {
-   "id": "G205",
+   "id": "G211",
+   "size": 11,
+   "exclusivity": 0.0223,
+   "joint": 77,
+   "closed_share": 0.494,
+   "screens": []
+  },
+  {
+   "id": "G212",
    "size": 10,
    "exclusivity": 0.0219,
    "joint": 19,
@@ -1857,23 +1897,23 @@
    "screens": []
   },
   {
-   "id": "G206",
+   "id": "G213",
    "size": 12,
-   "exclusivity": 0.0219,
+   "exclusivity": 0.0217,
    "joint": 38,
    "closed_share": 0.053,
    "screens": []
   },
   {
-   "id": "G207",
+   "id": "G214",
    "size": 3,
-   "exclusivity": 0.0216,
+   "exclusivity": 0.0215,
    "joint": 9,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G208",
+   "id": "G215",
    "size": 3,
    "exclusivity": 0.0212,
    "joint": 15,
@@ -1881,63 +1921,55 @@
    "screens": []
   },
   {
-   "id": "G209",
+   "id": "G216",
    "size": 4,
-   "exclusivity": 0.0208,
+   "exclusivity": 0.0206,
    "joint": 17,
    "closed_share": 0.176,
    "screens": []
   },
   {
-   "id": "G210",
+   "id": "G217",
    "size": 5,
-   "exclusivity": 0.0198,
+   "exclusivity": 0.0197,
    "joint": 27,
    "closed_share": 0.259,
    "screens": []
   },
   {
-   "id": "G211",
+   "id": "G218",
    "size": 3,
-   "exclusivity": 0.0197,
+   "exclusivity": 0.0195,
    "joint": 5,
    "closed_share": 1.0,
    "screens": []
   },
   {
-   "id": "G212",
-   "size": 13,
-   "exclusivity": 0.0197,
-   "joint": 88,
-   "closed_share": 0.477,
-   "screens": []
-  },
-  {
-   "id": "G213",
+   "id": "G219",
    "size": 11,
-   "exclusivity": 0.0192,
+   "exclusivity": 0.019,
    "joint": 27,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G214",
+   "id": "G220",
    "size": 11,
-   "exclusivity": 0.0186,
+   "exclusivity": 0.0185,
    "joint": 3,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G215",
+   "id": "G221",
    "size": 7,
-   "exclusivity": 0.0183,
+   "exclusivity": 0.0182,
    "joint": 21,
    "closed_share": 0.333,
    "screens": []
   },
   {
-   "id": "G216",
+   "id": "G222",
    "size": 17,
    "exclusivity": 0.0182,
    "joint": 54,
@@ -1945,15 +1977,23 @@
    "screens": []
   },
   {
-   "id": "G217",
+   "id": "G223",
+   "size": 4,
+   "exclusivity": 0.017,
+   "joint": 10,
+   "closed_share": 0.3,
+   "screens": []
+  },
+  {
+   "id": "G224",
    "size": 3,
-   "exclusivity": 0.0168,
+   "exclusivity": 0.0167,
    "joint": 7,
    "closed_share": 0.286,
    "screens": []
   },
   {
-   "id": "G218",
+   "id": "G225",
    "size": 3,
    "exclusivity": 0.0164,
    "joint": 6,
@@ -1961,15 +2001,15 @@
    "screens": []
   },
   {
-   "id": "G219",
+   "id": "G226",
    "size": 3,
-   "exclusivity": 0.0163,
+   "exclusivity": 0.0162,
    "joint": 6,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G220",
+   "id": "G227",
    "size": 9,
    "exclusivity": 0.0162,
    "joint": 30,
@@ -1977,23 +2017,15 @@
    "screens": []
   },
   {
-   "id": "G221",
-   "size": 3,
-   "exclusivity": 0.0162,
-   "joint": 8,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
-   "id": "G222",
+   "id": "G228",
    "size": 15,
-   "exclusivity": 0.0161,
+   "exclusivity": 0.016,
    "joint": 3,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G223",
+   "id": "G229",
    "size": 3,
    "exclusivity": 0.0155,
    "joint": 22,
@@ -2001,7 +2033,7 @@
    "screens": []
   },
   {
-   "id": "G224",
+   "id": "G230",
    "size": 6,
    "exclusivity": 0.0149,
    "joint": 21,
@@ -2009,7 +2041,7 @@
    "screens": []
   },
   {
-   "id": "G225",
+   "id": "G231",
    "size": 3,
    "exclusivity": 0.0132,
    "joint": 6,
@@ -2017,7 +2049,7 @@
    "screens": []
   },
   {
-   "id": "G226",
+   "id": "G232",
    "size": 20,
    "exclusivity": 0.0131,
    "joint": 28,
@@ -2025,15 +2057,7 @@
    "screens": []
   },
   {
-   "id": "G227",
-   "size": 11,
-   "exclusivity": 0.0131,
-   "joint": 30,
-   "closed_share": 0.133,
-   "screens": []
-  },
-  {
-   "id": "G228",
+   "id": "G233",
    "size": 4,
    "exclusivity": 0.0131,
    "joint": 11,
@@ -2041,23 +2065,31 @@
    "screens": []
   },
   {
-   "id": "G229",
+   "id": "G234",
+   "size": 11,
+   "exclusivity": 0.013,
+   "joint": 30,
+   "closed_share": 0.133,
+   "screens": []
+  },
+  {
+   "id": "G235",
    "size": 3,
-   "exclusivity": 0.0129,
+   "exclusivity": 0.0128,
    "joint": 3,
    "closed_share": 0.667,
    "screens": []
   },
   {
-   "id": "G230",
+   "id": "G236",
    "size": 8,
-   "exclusivity": 0.0128,
+   "exclusivity": 0.0127,
    "joint": 22,
    "closed_share": 0.136,
    "screens": []
   },
   {
-   "id": "G231",
+   "id": "G237",
    "size": 4,
    "exclusivity": 0.0126,
    "joint": 8,
@@ -2065,15 +2097,7 @@
    "screens": []
   },
   {
-   "id": "G232",
-   "size": 4,
-   "exclusivity": 0.0126,
-   "joint": 10,
-   "closed_share": 0.3,
-   "screens": []
-  },
-  {
-   "id": "G233",
+   "id": "G238",
    "size": 6,
    "exclusivity": 0.0122,
    "joint": 29,
@@ -2081,7 +2105,7 @@
    "screens": []
   },
   {
-   "id": "G234",
+   "id": "G239",
    "size": 3,
    "exclusivity": 0.0121,
    "joint": 8,
@@ -2089,7 +2113,7 @@
    "screens": []
   },
   {
-   "id": "G235",
+   "id": "G240",
    "size": 23,
    "exclusivity": 0.0119,
    "joint": 110,
@@ -2097,23 +2121,31 @@
    "screens": []
   },
   {
-   "id": "G236",
+   "id": "G241",
+   "size": 23,
+   "exclusivity": 0.0116,
+   "joint": 56,
+   "closed_share": 0.107,
+   "screens": []
+  },
+  {
+   "id": "G242",
    "size": 6,
-   "exclusivity": 0.0114,
+   "exclusivity": 0.0113,
    "joint": 4,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G237",
-   "size": 17,
-   "exclusivity": 0.0107,
-   "joint": 39,
-   "closed_share": 0.154,
+   "id": "G243",
+   "size": 11,
+   "exclusivity": 0.0111,
+   "joint": 42,
+   "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G238",
+   "id": "G244",
    "size": 5,
    "exclusivity": 0.0106,
    "joint": 20,
@@ -2121,15 +2153,23 @@
    "screens": []
   },
   {
-   "id": "G239",
+   "id": "G245",
+   "size": 3,
+   "exclusivity": 0.0103,
+   "joint": 19,
+   "closed_share": 0.158,
+   "screens": []
+  },
+  {
+   "id": "G246",
    "size": 4,
-   "exclusivity": 0.0102,
+   "exclusivity": 0.0101,
    "joint": 8,
    "closed_share": 0.125,
    "screens": []
   },
   {
-   "id": "G240",
+   "id": "G247",
    "size": 3,
    "exclusivity": 0.01,
    "joint": 15,
@@ -2137,47 +2177,47 @@
    "screens": []
   },
   {
-   "id": "G241",
-   "size": 6,
+   "id": "G248",
+   "size": 9,
    "exclusivity": 0.0098,
+   "joint": 3,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G249",
+   "size": 6,
+   "exclusivity": 0.0097,
    "joint": 19,
    "closed_share": 0.316,
    "screens": []
   },
   {
-   "id": "G242",
-   "size": 11,
-   "exclusivity": 0.0094,
-   "joint": 8,
-   "closed_share": 0.25,
-   "screens": []
-  },
-  {
-   "id": "G243",
+   "id": "G250",
    "size": 5,
-   "exclusivity": 0.0093,
+   "exclusivity": 0.0092,
    "joint": 13,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G244",
+   "id": "G251",
    "size": 3,
-   "exclusivity": 0.0091,
+   "exclusivity": 0.009,
    "joint": 4,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G245",
+   "id": "G252",
    "size": 3,
-   "exclusivity": 0.0087,
+   "exclusivity": 0.0086,
    "joint": 5,
    "closed_share": 0.2,
    "screens": []
   },
   {
-   "id": "G246",
+   "id": "G253",
    "size": 4,
    "exclusivity": 0.0084,
    "joint": 8,
@@ -2185,7 +2225,7 @@
    "screens": []
   },
   {
-   "id": "G247",
+   "id": "G254",
    "size": 5,
    "exclusivity": 0.0082,
    "joint": 23,
@@ -2193,55 +2233,55 @@
    "screens": []
   },
   {
-   "id": "G248",
-   "size": 23,
-   "exclusivity": 0.0079,
-   "joint": 86,
-   "closed_share": 0.14,
+   "id": "G255",
+   "size": 13,
+   "exclusivity": 0.0081,
+   "joint": 41,
+   "closed_share": 0.049,
    "screens": []
   },
   {
-   "id": "G249",
+   "id": "G256",
+   "size": 21,
+   "exclusivity": 0.0074,
+   "joint": 80,
+   "closed_share": 0.15,
+   "screens": []
+  },
+  {
+   "id": "G257",
    "size": 14,
-   "exclusivity": 0.0073,
+   "exclusivity": 0.0072,
    "joint": 48,
    "closed_share": 0.146,
    "screens": []
   },
   {
-   "id": "G250",
+   "id": "G258",
    "size": 10,
-   "exclusivity": 0.0072,
+   "exclusivity": 0.0071,
    "joint": 29,
    "closed_share": 0.241,
    "screens": []
   },
   {
-   "id": "G251",
-   "size": 5,
-   "exclusivity": 0.0071,
-   "joint": 15,
-   "closed_share": 0.067,
-   "screens": []
-  },
-  {
-   "id": "G252",
+   "id": "G259",
    "size": 3,
-   "exclusivity": 0.0071,
-   "joint": 5,
-   "closed_share": 0.4,
-   "screens": []
-  },
-  {
-   "id": "G253",
-   "size": 3,
-   "exclusivity": 0.0066,
+   "exclusivity": 0.0065,
    "joint": 6,
    "closed_share": 0.333,
    "screens": []
   },
   {
-   "id": "G254",
+   "id": "G260",
+   "size": 4,
+   "exclusivity": 0.0065,
+   "joint": 31,
+   "closed_share": 0.097,
+   "screens": []
+  },
+  {
+   "id": "G261",
    "size": 12,
    "exclusivity": 0.0064,
    "joint": 52,
@@ -2249,65 +2289,9 @@
    "screens": []
   },
   {
-   "id": "G255",
-   "size": 3,
-   "exclusivity": 0.0063,
-   "joint": 13,
-   "closed_share": 0.154,
-   "screens": []
-  },
-  {
-   "id": "G256",
-   "size": 3,
-   "exclusivity": 0.0062,
-   "joint": 7,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
-   "id": "G257",
-   "size": 8,
-   "exclusivity": 0.0062,
-   "joint": 12,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
-   "id": "G258",
-   "size": 20,
-   "exclusivity": 0.0061,
-   "joint": 68,
-   "closed_share": 0.118,
-   "screens": []
-  },
-  {
-   "id": "G259",
-   "size": 23,
-   "exclusivity": 0.0061,
-   "joint": 58,
-   "closed_share": 0.224,
-   "screens": []
-  },
-  {
-   "id": "G260",
-   "size": 4,
-   "exclusivity": 0.0061,
-   "joint": 15,
-   "closed_share": 0.067,
-   "screens": []
-  },
-  {
-   "id": "G261",
-   "size": 12,
-   "exclusivity": 0.006,
-   "joint": 19,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
    "id": "G262",
    "size": 3,
-   "exclusivity": 0.0059,
+   "exclusivity": 0.0062,
    "joint": 7,
    "closed_share": 0.0,
    "screens": []
@@ -2315,21 +2299,45 @@
   {
    "id": "G263",
    "size": 8,
+   "exclusivity": 0.0061,
+   "joint": 12,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G264",
+   "size": 20,
+   "exclusivity": 0.0061,
+   "joint": 68,
+   "closed_share": 0.118,
+   "screens": []
+  },
+  {
+   "id": "G265",
+   "size": 4,
+   "exclusivity": 0.006,
+   "joint": 15,
+   "closed_share": 0.067,
+   "screens": []
+  },
+  {
+   "id": "G266",
+   "size": 12,
+   "exclusivity": 0.0059,
+   "joint": 19,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G267",
+   "size": 8,
    "exclusivity": 0.0058,
    "joint": 23,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G264",
-   "size": 3,
-   "exclusivity": 0.0058,
-   "joint": 7,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
-   "id": "G265",
+   "id": "G268",
    "size": 7,
    "exclusivity": 0.0058,
    "joint": 7,
@@ -2337,15 +2345,23 @@
    "screens": []
   },
   {
-   "id": "G266",
-   "size": 16,
+   "id": "G269",
+   "size": 3,
    "exclusivity": 0.0058,
+   "joint": 7,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G270",
+   "size": 16,
+   "exclusivity": 0.0057,
    "joint": 59,
    "closed_share": 0.051,
    "screens": []
   },
   {
-   "id": "G267",
+   "id": "G271",
    "size": 3,
    "exclusivity": 0.0057,
    "joint": 6,
@@ -2353,23 +2369,15 @@
    "screens": []
   },
   {
-   "id": "G268",
-   "size": 6,
-   "exclusivity": 0.0054,
-   "joint": 19,
-   "closed_share": 0.368,
+   "id": "G272",
+   "size": 7,
+   "exclusivity": 0.0051,
+   "joint": 37,
+   "closed_share": 0.73,
    "screens": []
   },
   {
-   "id": "G269",
-   "size": 5,
-   "exclusivity": 0.0052,
-   "joint": 33,
-   "closed_share": 0.212,
-   "screens": []
-  },
-  {
-   "id": "G270",
+   "id": "G273",
    "size": 21,
    "exclusivity": 0.0051,
    "joint": 32,
@@ -2377,7 +2385,15 @@
    "screens": []
   },
   {
-   "id": "G271",
+   "id": "G274",
+   "size": 3,
+   "exclusivity": 0.005,
+   "joint": 4,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G275",
    "size": 3,
    "exclusivity": 0.005,
    "joint": 6,
@@ -2385,7 +2401,7 @@
    "screens": []
   },
   {
-   "id": "G272",
+   "id": "G276",
    "size": 10,
    "exclusivity": 0.005,
    "joint": 31,
@@ -2393,7 +2409,7 @@
    "screens": []
   },
   {
-   "id": "G273",
+   "id": "G277",
    "size": 3,
    "exclusivity": 0.0049,
    "joint": 3,
@@ -2401,7 +2417,7 @@
    "screens": []
   },
   {
-   "id": "G274",
+   "id": "G278",
    "size": 8,
    "exclusivity": 0.0049,
    "joint": 15,
@@ -2409,39 +2425,31 @@
    "screens": []
   },
   {
-   "id": "G275",
+   "id": "G279",
    "size": 8,
-   "exclusivity": 0.0049,
+   "exclusivity": 0.0048,
    "joint": 3,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G276",
+   "id": "G280",
    "size": 13,
-   "exclusivity": 0.0049,
+   "exclusivity": 0.0048,
    "joint": 6,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G277",
-   "size": 3,
-   "exclusivity": 0.0048,
-   "joint": 4,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
-   "id": "G278",
-   "size": 11,
-   "exclusivity": 0.0047,
+   "id": "G281",
+   "size": 10,
+   "exclusivity": 0.0046,
    "joint": 28,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G279",
+   "id": "G282",
    "size": 3,
    "exclusivity": 0.0046,
    "joint": 8,
@@ -2449,7 +2457,15 @@
    "screens": []
   },
   {
-   "id": "G280",
+   "id": "G283",
+   "size": 3,
+   "exclusivity": 0.0046,
+   "joint": 7,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G284",
    "size": 6,
    "exclusivity": 0.0043,
    "joint": 19,
@@ -2457,7 +2473,7 @@
    "screens": []
   },
   {
-   "id": "G281",
+   "id": "G285",
    "size": 3,
    "exclusivity": 0.004,
    "joint": 7,
@@ -2465,7 +2481,7 @@
    "screens": []
   },
   {
-   "id": "G282",
+   "id": "G286",
    "size": 9,
    "exclusivity": 0.004,
    "joint": 6,
@@ -2473,7 +2489,7 @@
    "screens": []
   },
   {
-   "id": "G283",
+   "id": "G287",
    "size": 3,
    "exclusivity": 0.0038,
    "joint": 6,
@@ -2481,7 +2497,7 @@
    "screens": []
   },
   {
-   "id": "G284",
+   "id": "G288",
    "size": 3,
    "exclusivity": 0.0038,
    "joint": 5,
@@ -2489,15 +2505,15 @@
    "screens": []
   },
   {
-   "id": "G285",
+   "id": "G289",
    "size": 25,
-   "exclusivity": 0.0038,
+   "exclusivity": 0.0037,
    "joint": 46,
    "closed_share": 0.109,
    "screens": []
   },
   {
-   "id": "G286",
+   "id": "G290",
    "size": 4,
    "exclusivity": 0.0037,
    "joint": 9,
@@ -2505,7 +2521,7 @@
    "screens": []
   },
   {
-   "id": "G287",
+   "id": "G291",
    "size": 24,
    "exclusivity": 0.0037,
    "joint": 64,
@@ -2513,23 +2529,23 @@
    "screens": []
   },
   {
-   "id": "G288",
+   "id": "G292",
    "size": 3,
    "exclusivity": 0.0037,
-   "joint": 10,
-   "closed_share": 0.9,
+   "joint": 4,
+   "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G289",
-   "size": 13,
-   "exclusivity": 0.0037,
-   "joint": 34,
+   "id": "G293",
+   "size": 5,
+   "exclusivity": 0.0035,
+   "joint": 17,
    "closed_share": 0.235,
    "screens": []
   },
   {
-   "id": "G290",
+   "id": "G294",
    "size": 5,
    "exclusivity": 0.0035,
    "joint": 8,
@@ -2537,7 +2553,23 @@
    "screens": []
   },
   {
-   "id": "G291",
+   "id": "G295",
+   "size": 23,
+   "exclusivity": 0.0035,
+   "joint": 59,
+   "closed_share": 0.017,
+   "screens": []
+  },
+  {
+   "id": "G296",
+   "size": 13,
+   "exclusivity": 0.0034,
+   "joint": 33,
+   "closed_share": 0.152,
+   "screens": []
+  },
+  {
+   "id": "G297",
    "size": 5,
    "exclusivity": 0.0034,
    "joint": 5,
@@ -2545,7 +2577,15 @@
    "screens": []
   },
   {
-   "id": "G292",
+   "id": "G298",
+   "size": 6,
+   "exclusivity": 0.0033,
+   "joint": 13,
+   "closed_share": 0.308,
+   "screens": []
+  },
+  {
+   "id": "G299",
    "size": 3,
    "exclusivity": 0.0032,
    "joint": 10,
@@ -2553,7 +2593,7 @@
    "screens": []
   },
   {
-   "id": "G293",
+   "id": "G300",
    "size": 4,
    "exclusivity": 0.0032,
    "joint": 11,
@@ -2561,7 +2601,7 @@
    "screens": []
   },
   {
-   "id": "G294",
+   "id": "G301",
    "size": 3,
    "exclusivity": 0.0031,
    "joint": 5,
@@ -2569,7 +2609,7 @@
    "screens": []
   },
   {
-   "id": "G295",
+   "id": "G302",
    "size": 4,
    "exclusivity": 0.0031,
    "joint": 7,
@@ -2577,15 +2617,15 @@
    "screens": []
   },
   {
-   "id": "G296",
+   "id": "G303",
    "size": 11,
-   "exclusivity": 0.0031,
+   "exclusivity": 0.003,
    "joint": 44,
    "closed_share": 0.341,
    "screens": []
   },
   {
-   "id": "G297",
+   "id": "G304",
    "size": 5,
    "exclusivity": 0.003,
    "joint": 3,
@@ -2593,7 +2633,7 @@
    "screens": []
   },
   {
-   "id": "G298",
+   "id": "G305",
    "size": 3,
    "exclusivity": 0.0029,
    "joint": 13,
@@ -2601,31 +2641,31 @@
    "screens": []
   },
   {
-   "id": "G299",
-   "size": 4,
+   "id": "G306",
+   "size": 3,
    "exclusivity": 0.0028,
-   "joint": 9,
-   "closed_share": 0.111,
+   "joint": 6,
+   "closed_share": 0.5,
    "screens": []
   },
   {
-   "id": "G300",
+   "id": "G307",
    "size": 3,
    "exclusivity": 0.0028,
+   "joint": 5,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G308",
+   "size": 3,
+   "exclusivity": 0.0027,
    "joint": 4,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G301",
-   "size": 18,
-   "exclusivity": 0.0027,
-   "joint": 44,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
-   "id": "G302",
+   "id": "G309",
    "size": 6,
    "exclusivity": 0.0027,
    "joint": 17,
@@ -2633,7 +2673,7 @@
    "screens": []
   },
   {
-   "id": "G303",
+   "id": "G310",
    "size": 3,
    "exclusivity": 0.0027,
    "joint": 3,
@@ -2641,7 +2681,7 @@
    "screens": []
   },
   {
-   "id": "G304",
+   "id": "G311",
    "size": 3,
    "exclusivity": 0.0026,
    "joint": 5,
@@ -2649,31 +2689,7 @@
    "screens": []
   },
   {
-   "id": "G305",
-   "size": 6,
-   "exclusivity": 0.0025,
-   "joint": 13,
-   "closed_share": 0.308,
-   "screens": []
-  },
-  {
-   "id": "G306",
-   "size": 3,
-   "exclusivity": 0.0025,
-   "joint": 6,
-   "closed_share": 0.5,
-   "screens": []
-  },
-  {
-   "id": "G307",
-   "size": 8,
-   "exclusivity": 0.0024,
-   "joint": 14,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
-   "id": "G308",
+   "id": "G312",
    "size": 5,
    "exclusivity": 0.0022,
    "joint": 16,
@@ -2681,23 +2697,15 @@
    "screens": []
   },
   {
-   "id": "G309",
+   "id": "G313",
    "size": 4,
-   "exclusivity": 0.0022,
-   "joint": 9,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
-   "id": "G310",
-   "size": 4,
-   "exclusivity": 0.0022,
+   "exclusivity": 0.0021,
    "joint": 10,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G311",
+   "id": "G314",
    "size": 3,
    "exclusivity": 0.002,
    "joint": 10,
@@ -2705,7 +2713,7 @@
    "screens": []
   },
   {
-   "id": "G312",
+   "id": "G315",
    "size": 5,
    "exclusivity": 0.002,
    "joint": 5,
@@ -2713,7 +2721,7 @@
    "screens": []
   },
   {
-   "id": "G313",
+   "id": "G316",
    "size": 7,
    "exclusivity": 0.002,
    "joint": 12,
@@ -2721,7 +2729,7 @@
    "screens": []
   },
   {
-   "id": "G314",
+   "id": "G317",
    "size": 4,
    "exclusivity": 0.0019,
    "joint": 10,
@@ -2729,15 +2737,15 @@
    "screens": []
   },
   {
-   "id": "G315",
+   "id": "G318",
    "size": 4,
-   "exclusivity": 0.0019,
+   "exclusivity": 0.0018,
    "joint": 8,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G316",
+   "id": "G319",
    "size": 5,
    "exclusivity": 0.0018,
    "joint": 11,
@@ -2745,7 +2753,7 @@
    "screens": []
   },
   {
-   "id": "G317",
+   "id": "G320",
    "size": 5,
    "exclusivity": 0.0017,
    "joint": 6,
@@ -2753,7 +2761,7 @@
    "screens": []
   },
   {
-   "id": "G318",
+   "id": "G321",
    "size": 3,
    "exclusivity": 0.0017,
    "joint": 7,
@@ -2761,15 +2769,15 @@
    "screens": []
   },
   {
-   "id": "G319",
+   "id": "G322",
    "size": 4,
-   "exclusivity": 0.0017,
+   "exclusivity": 0.0016,
    "joint": 12,
    "closed_share": 0.417,
    "screens": []
   },
   {
-   "id": "G320",
+   "id": "G323",
    "size": 3,
    "exclusivity": 0.0016,
    "joint": 8,
@@ -2777,7 +2785,15 @@
    "screens": []
   },
   {
-   "id": "G321",
+   "id": "G324",
+   "size": 4,
+   "exclusivity": 0.0016,
+   "joint": 12,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G325",
    "size": 6,
    "exclusivity": 0.0015,
    "joint": 6,
@@ -2785,23 +2801,7 @@
    "screens": []
   },
   {
-   "id": "G322",
-   "size": 4,
-   "exclusivity": 0.0015,
-   "joint": 12,
-   "closed_share": 0.0,
-   "screens": []
-  },
-  {
-   "id": "G323",
-   "size": 3,
-   "exclusivity": 0.0013,
-   "joint": 7,
-   "closed_share": 0.143,
-   "screens": []
-  },
-  {
-   "id": "G324",
+   "id": "G326",
    "size": 3,
    "exclusivity": 0.0013,
    "joint": 3,
@@ -2809,7 +2809,15 @@
    "screens": []
   },
   {
-   "id": "G325",
+   "id": "G327",
+   "size": 3,
+   "exclusivity": 0.0013,
+   "joint": 7,
+   "closed_share": 0.143,
+   "screens": []
+  },
+  {
+   "id": "G328",
    "size": 4,
    "exclusivity": 0.0013,
    "joint": 10,
@@ -2817,7 +2825,15 @@
    "screens": []
   },
   {
-   "id": "G326",
+   "id": "G329",
+   "size": 5,
+   "exclusivity": 0.0013,
+   "joint": 12,
+   "closed_share": 0.0,
+   "screens": []
+  },
+  {
+   "id": "G330",
    "size": 5,
    "exclusivity": 0.0013,
    "joint": 8,
@@ -2825,7 +2841,7 @@
    "screens": []
   },
   {
-   "id": "G327",
+   "id": "G331",
    "size": 5,
    "exclusivity": 0.0012,
    "joint": 6,
@@ -2833,15 +2849,15 @@
    "screens": []
   },
   {
-   "id": "G328",
+   "id": "G332",
    "size": 3,
-   "exclusivity": 0.0012,
+   "exclusivity": 0.0011,
    "joint": 4,
    "closed_share": 0.0,
    "screens": []
   },
   {
-   "id": "G329",
+   "id": "G333",
    "size": 3,
    "exclusivity": 0.0011,
    "joint": 5,
@@ -2849,7 +2865,7 @@
    "screens": []
   },
   {
-   "id": "G330",
+   "id": "G334",
    "size": 3,
    "exclusivity": 0.0011,
    "joint": 6,
@@ -2857,7 +2873,7 @@
    "screens": []
   },
   {
-   "id": "G331",
+   "id": "G335",
    "size": 4,
    "exclusivity": 0.001,
    "joint": 5,
@@ -2865,7 +2881,7 @@
    "screens": []
   },
   {
-   "id": "G332",
+   "id": "G336",
    "size": 4,
    "exclusivity": 0.0009,
    "joint": 6,
@@ -2873,7 +2889,7 @@
    "screens": []
   },
   {
-   "id": "G333",
+   "id": "G337",
    "size": 3,
    "exclusivity": 0.0009,
    "joint": 4,
@@ -2881,15 +2897,7 @@
    "screens": []
   },
   {
-   "id": "G334",
-   "size": 4,
-   "exclusivity": 0.0007,
-   "joint": 8,
-   "closed_share": 0.125,
-   "screens": []
-  },
-  {
-   "id": "G335",
+   "id": "G338",
    "size": 3,
    "exclusivity": 0.0007,
    "joint": 4,
@@ -3191,741 +3199,9 @@
   {
    "id": "G001",
    "members": [
-    "FIRM-02438",
-    "FIRM-09241",
-    "FIRM-10971"
-   ],
-   "size": 3,
-   "period": "Feb 2022 to Mar 2023",
-   "joint": 8,
-   "closed": 8,
-   "closed_share": 1.0,
-   "wins": 7,
-   "decided": 7,
-   "segments": 3,
-   "exclusivity": 0.7371,
-   "screens": [
-    {
-     "key": "closed",
-     "label": "Closed group",
-     "fired": true,
-     "text": "Exclusivity 0.74: 74% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.020 (p 0.048). The threshold for this screen is 0.25."
-    },
-    {
-     "key": "rotation",
-     "label": "Winner rotation",
-     "fired": false,
-     "text": "Not tested. The test needs at least 8 tenders won by members with more than one winner among them. This group has 7."
-    },
-    {
-     "key": "cover",
-     "label": "Persistent losing bidder",
-     "fired": false,
-     "text": "No member with at least 10 bids on decided tenders won a quarter or less of what equal odds would give."
-    },
-    {
-     "key": "price",
-     "label": "Awards near the estimate",
-     "fired": true,
-     "text": "Median award 1.000 of the estimate over 7 awards, against 0.999 for other contested tenders in the same segments. 100% of the group's awards are at 0.99 of the estimate or above (others: 54%). Adjusted p 0.025."
-    }
-   ],
-   "rule_out": [
-    "A small local market: few contractors are registered, eligible or near enough to bid.",
-    "A specialised trade or contractor class that only these firms hold.",
-    "Related firms that are openly part of one business group.",
-    "An estimate that is out of date, so honest bids land at or above it.",
-    "A floor on bids below the estimate that piles awards at the same ratio.",
-    "Work that is harder than the buyer's schedule of rates assumes."
-   ],
-   "graph": {
-    "firms": [
-     {
-      "label": "FIRM-02438",
-      "member": true
-     },
-     {
-      "label": "FIRM-09241",
-      "member": true
-     },
-     {
-      "label": "FIRM-10971",
-      "member": true
-     }
-    ],
-    "tenders": [
-     {
-      "label": "TENDER-36547",
-      "month": "Feb 2022",
-      "bidders": 2
-     },
-     {
-      "label": "TENDER-20534",
-      "month": "Jun 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-10330",
-      "month": "Jun 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-40587",
-      "month": "Jun 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-20678",
-      "month": "Dec 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-21212",
-      "month": "Dec 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-07971",
-      "month": "Dec 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-41399",
-      "month": "Mar 2023",
-      "bidders": 3
-     }
-    ],
-    "edges": [
-     [
-      1,
-      0,
-      false
-     ],
-     [
-      0,
-      0,
-      false
-     ],
-     [
-      2,
-      1,
-      false
-     ],
-     [
-      1,
-      1,
-      false
-     ],
-     [
-      0,
-      1,
-      true
-     ],
-     [
-      1,
-      2,
-      false
-     ],
-     [
-      0,
-      2,
-      false
-     ],
-     [
-      2,
-      2,
-      true
-     ],
-     [
-      2,
-      3,
-      false
-     ],
-     [
-      1,
-      3,
-      false
-     ],
-     [
-      0,
-      3,
-      true
-     ],
-     [
-      2,
-      4,
-      false
-     ],
-     [
-      1,
-      4,
-      false
-     ],
-     [
-      0,
-      4,
-      true
-     ],
-     [
-      2,
-      5,
-      false
-     ],
-     [
-      0,
-      5,
-      false
-     ],
-     [
-      1,
-      5,
-      true
-     ],
-     [
-      2,
-      6,
-      false
-     ],
-     [
-      1,
-      6,
-      false
-     ],
-     [
-      0,
-      6,
-      true
-     ],
-     [
-      2,
-      7,
-      false
-     ],
-     [
-      0,
-      7,
-      false
-     ],
-     [
-      1,
-      7,
-      true
-     ]
-    ],
-    "total": 8
-   }
-  },
-  {
-   "id": "G002",
-   "members": [
-    "FIRM-00332",
-    "FIRM-00391",
-    "FIRM-03011",
-    "FIRM-04742",
-    "FIRM-07059",
-    "FIRM-08569",
-    "FIRM-11964"
-   ],
-   "size": 7,
-   "period": "Jul 2021 to Mar 2023",
-   "joint": 20,
-   "closed": 14,
-   "closed_share": 0.7,
-   "wins": 16,
-   "decided": 16,
-   "segments": 6,
-   "exclusivity": 0.4439,
-   "screens": [
-    {
-     "key": "closed",
-     "label": "Closed group",
-     "fired": true,
-     "text": "Exclusivity 0.44: 44% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.006 (p 0.048). The threshold for this screen is 0.25."
-    },
-    {
-     "key": "rotation",
-     "label": "Winner rotation",
-     "fired": false,
-     "text": "16 wins by 5 members changed hands in 8.0 runs. Chance predicts about 11.0. p 0.995, adjusted for the groups tested: 1.000."
-    },
-    {
-     "key": "cover",
-     "label": "Persistent losing bidder",
-     "fired": true,
-     "text": "FIRM-00332 bid on 11 decided tenders alongside other members and won 0. Equal odds would give about 3.5. Adjusted p 0.044."
-    },
-    {
-     "key": "price",
-     "label": "Awards near the estimate",
-     "fired": false,
-     "text": "Median award 1.000 of the estimate over 16 awards, against 1.000 for other contested tenders in the same segments. 100% of the group's awards are at 0.99 of the estimate or above (others: 75%). Adjusted p 0.316."
-    }
-   ],
-   "rule_out": [
-    "A small local market: few contractors are registered, eligible or near enough to bid.",
-    "A specialised trade or contractor class that only these firms hold.",
-    "Related firms that are openly part of one business group.",
-    "A small or new firm that bids often and is simply not competitive.",
-    "Bids rejected at the technical stage for paperwork reasons."
-   ],
-   "graph": {
-    "firms": [
-     {
-      "label": "FIRM-00332",
-      "member": true
-     },
-     {
-      "label": "FIRM-00391",
-      "member": true
-     },
-     {
-      "label": "FIRM-03011",
-      "member": true
-     },
-     {
-      "label": "FIRM-04742",
-      "member": true
-     },
-     {
-      "label": "FIRM-07059",
-      "member": true
-     },
-     {
-      "label": "FIRM-08569",
-      "member": true
-     },
-     {
-      "label": "FIRM-11964",
-      "member": true
-     },
-     {
-      "label": "Other bidders",
-      "member": false
-     }
-    ],
-    "tenders": [
-     {
-      "label": "TENDER-43035",
-      "month": "Jul 2021",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-39383",
-      "month": "Dec 2021",
-      "bidders": 5
-     },
-     {
-      "label": "TENDER-14127",
-      "month": "Jan 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-04153",
-      "month": "Apr 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-02590",
-      "month": "Jun 2022",
-      "bidders": 4
-     },
-     {
-      "label": "TENDER-26792",
-      "month": "Jun 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-09369",
-      "month": "Jul 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-26501",
-      "month": "Jul 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-28220",
-      "month": "Jul 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-00359",
-      "month": "Jul 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-38158",
-      "month": "Jul 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-01582",
-      "month": "Aug 2022",
-      "bidders": 4
-     },
-     {
-      "label": "TENDER-36632",
-      "month": "Aug 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-38682",
-      "month": "Aug 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-02365",
-      "month": "Sep 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-27161",
-      "month": "Oct 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-09422",
-      "month": "Oct 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-27165",
-      "month": "Dec 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-37818",
-      "month": "Feb 2023",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-38047",
-      "month": "Mar 2023",
-      "bidders": 3
-     }
-    ],
-    "edges": [
-     [
-      1,
-      0,
-      false
-     ],
-     [
-      0,
-      0,
-      false
-     ],
-     [
-      7,
-      0,
-      false
-     ],
-     [
-      0,
-      1,
-      false
-     ],
-     [
-      6,
-      1,
-      true
-     ],
-     [
-      7,
-      1,
-      false
-     ],
-     [
-      1,
-      2,
-      false
-     ],
-     [
-      0,
-      2,
-      false
-     ],
-     [
-      5,
-      2,
-      true
-     ],
-     [
-      5,
-      3,
-      false
-     ],
-     [
-      1,
-      3,
-      false
-     ],
-     [
-      0,
-      3,
-      false
-     ],
-     [
-      0,
-      4,
-      false
-     ],
-     [
-      6,
-      4,
-      false
-     ],
-     [
-      4,
-      4,
-      false
-     ],
-     [
-      7,
-      4,
-      false
-     ],
-     [
-      0,
-      5,
-      false
-     ],
-     [
-      4,
-      5,
-      false
-     ],
-     [
-      6,
-      5,
-      true
-     ],
-     [
-      2,
-      6,
-      false
-     ],
-     [
-      4,
-      6,
-      false
-     ],
-     [
-      3,
-      6,
-      true
-     ],
-     [
-      2,
-      7,
-      false
-     ],
-     [
-      3,
-      7,
-      false
-     ],
-     [
-      4,
-      7,
-      true
-     ],
-     [
-      2,
-      8,
-      false
-     ],
-     [
-      3,
-      8,
-      false
-     ],
-     [
-      4,
-      8,
-      true
-     ],
-     [
-      2,
-      9,
-      false
-     ],
-     [
-      3,
-      9,
-      false
-     ],
-     [
-      4,
-      9,
-      true
-     ],
-     [
-      0,
-      10,
-      false
-     ],
-     [
-      4,
-      10,
-      false
-     ],
-     [
-      6,
-      10,
-      true
-     ],
-     [
-      0,
-      11,
-      false
-     ],
-     [
-      4,
-      11,
-      false
-     ],
-     [
-      6,
-      11,
-      true
-     ],
-     [
-      7,
-      11,
-      false
-     ],
-     [
-      0,
-      12,
-      false
-     ],
-     [
-      4,
-      12,
-      false
-     ],
-     [
-      6,
-      12,
-      true
-     ],
-     [
-      0,
-      13,
-      false
-     ],
-     [
-      4,
-      13,
-      false
-     ],
-     [
-      6,
-      13,
-      true
-     ],
-     [
-      0,
-      14,
-      false
-     ],
-     [
-      4,
-      14,
-      false
-     ],
-     [
-      6,
-      14,
-      true
-     ],
-     [
-      0,
-      15,
-      false
-     ],
-     [
-      4,
-      15,
-      false
-     ],
-     [
-      6,
-      15,
-      true
-     ],
-     [
-      0,
-      16,
-      false
-     ],
-     [
-      4,
-      16,
-      false
-     ],
-     [
-      6,
-      16,
-      true
-     ],
-     [
-      0,
-      17,
-      false
-     ],
-     [
-      5,
-      17,
-      true
-     ],
-     [
-      7,
-      17,
-      false
-     ],
-     [
-      4,
-      18,
-      false
-     ],
-     [
-      2,
-      18,
-      true
-     ],
-     [
-      7,
-      18,
-      false
-     ],
-     [
-      0,
-      19,
-      false
-     ],
-     [
-      6,
-      19,
-      false
-     ],
-     [
-      4,
-      19,
-      false
-     ]
-    ],
-    "total": 20
-   }
-  },
-  {
-   "id": "G003",
-   "members": [
-    "FIRM-01018",
-    "FIRM-03673",
-    "FIRM-11272"
+    "FIRM-01047",
+    "FIRM-03715",
+    "FIRM-11401"
    ],
    "size": 3,
    "period": "Feb 2022 to Mar 2023",
@@ -3941,7 +3217,7 @@
      "key": "closed",
      "label": "Closed group",
      "fired": true,
-     "text": "Exclusivity 0.44: 44% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.005 (p 0.048). The threshold for this screen is 0.25."
+     "text": "Exclusivity 0.44: 44% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, it never got that high; the average was 0.006 (p 0.048, the smallest 20 reshuffles can give). The threshold for this screen is 0.25."
     },
     {
      "key": "rotation",
@@ -3959,7 +3235,7 @@
      "key": "price",
      "label": "Awards near the estimate",
      "fired": true,
-     "text": "Median award 1.000 of the estimate over 6 awards, against 1.000 for other contested tenders in the same segments. 100% of the group's awards are at 0.99 of the estimate or above (others: 67%). Adjusted p 0.025."
+     "text": "Median award 1.000 of the estimate over 6 awards, against 1.000 for 154 other tenders from the same buyers that drew as many bidders. 100% of the group's awards are at 0.99 of the estimate or above (others: 90%). Adjusted p 0.071."
     }
    ],
    "rule_out": [
@@ -3973,15 +3249,15 @@
    "graph": {
     "firms": [
      {
-      "label": "FIRM-01018",
+      "label": "FIRM-01047",
       "member": true
      },
      {
-      "label": "FIRM-03673",
+      "label": "FIRM-03715",
       "member": true
      },
      {
-      "label": "FIRM-11272",
+      "label": "FIRM-11401",
       "member": true
      },
      {
@@ -4117,213 +3393,12 @@
    }
   },
   {
-   "id": "G004",
+   "id": "G002",
    "members": [
-    "FIRM-04950",
-    "FIRM-05360",
-    "FIRM-09700"
-   ],
-   "size": 3,
-   "period": "Apr 2022 to Jul 2022",
-   "joint": 6,
-   "closed": 3,
-   "closed_share": 0.5,
-   "wins": 6,
-   "decided": 6,
-   "segments": 6,
-   "exclusivity": 0.3791,
-   "screens": [
-    {
-     "key": "closed",
-     "label": "Closed group",
-     "fired": true,
-     "text": "Exclusivity 0.38: 38% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.027 (p 0.048). The threshold for this screen is 0.25."
-    },
-    {
-     "key": "rotation",
-     "label": "Winner rotation",
-     "fired": false,
-     "text": "Not tested. The test needs at least 8 tenders won by members with more than one winner among them. This group has 6."
-    },
-    {
-     "key": "cover",
-     "label": "Persistent losing bidder",
-     "fired": false,
-     "text": "No member with at least 10 bids on decided tenders won a quarter or less of what equal odds would give."
-    },
-    {
-     "key": "price",
-     "label": "Awards near the estimate",
-     "fired": true,
-     "text": "Median award 1.159 of the estimate over 6 awards, against 0.914 for other contested tenders in the same segments. 100% of the group's awards are at 0.99 of the estimate or above (others: 38%). Adjusted p 0.003."
-    }
-   ],
-   "rule_out": [
-    "A small local market: few contractors are registered, eligible or near enough to bid.",
-    "A specialised trade or contractor class that only these firms hold.",
-    "Related firms that are openly part of one business group.",
-    "An estimate that is out of date, so honest bids land at or above it.",
-    "A floor on bids below the estimate that piles awards at the same ratio.",
-    "Work that is harder than the buyer's schedule of rates assumes."
-   ],
-   "graph": {
-    "firms": [
-     {
-      "label": "FIRM-04950",
-      "member": true
-     },
-     {
-      "label": "FIRM-05360",
-      "member": true
-     },
-     {
-      "label": "FIRM-09700",
-      "member": true
-     },
-     {
-      "label": "Other bidders",
-      "member": false
-     }
-    ],
-    "tenders": [
-     {
-      "label": "TENDER-28464",
-      "month": "Apr 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-27297",
-      "month": "Apr 2022",
-      "bidders": 4
-     },
-     {
-      "label": "TENDER-07137",
-      "month": "Apr 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-12035",
-      "month": "May 2022",
-      "bidders": 4
-     },
-     {
-      "label": "TENDER-02618",
-      "month": "May 2022",
-      "bidders": 4
-     },
-     {
-      "label": "TENDER-18303",
-      "month": "Jul 2022",
-      "bidders": 3
-     }
-    ],
-    "edges": [
-     [
-      0,
-      0,
-      false
-     ],
-     [
-      2,
-      0,
-      false
-     ],
-     [
-      1,
-      0,
-      true
-     ],
-     [
-      0,
-      1,
-      false
-     ],
-     [
-      2,
-      1,
-      false
-     ],
-     [
-      1,
-      1,
-      true
-     ],
-     [
-      3,
-      1,
-      false
-     ],
-     [
-      0,
-      2,
-      false
-     ],
-     [
-      2,
-      2,
-      false
-     ],
-     [
-      1,
-      2,
-      true
-     ],
-     [
-      2,
-      3,
-      false
-     ],
-     [
-      0,
-      3,
-      true
-     ],
-     [
-      3,
-      3,
-      false
-     ],
-     [
-      0,
-      4,
-      false
-     ],
-     [
-      2,
-      4,
-      true
-     ],
-     [
-      3,
-      4,
-      false
-     ],
-     [
-      0,
-      5,
-      false
-     ],
-     [
-      2,
-      5,
-      false
-     ],
-     [
-      1,
-      5,
-      true
-     ]
-    ],
-    "total": 6
-   }
-  },
-  {
-   "id": "G005",
-   "members": [
-    "FIRM-07282",
-    "FIRM-08408",
-    "FIRM-09198",
-    "FIRM-11494"
+    "FIRM-07368",
+    "FIRM-08503",
+    "FIRM-09301",
+    "FIRM-11621"
    ],
    "size": 4,
    "period": "Dec 2022",
@@ -4339,19 +3414,19 @@
      "key": "closed",
      "label": "Closed group",
      "fired": true,
-     "text": "Exclusivity 0.32: 32% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.044 (p 0.048). The threshold for this screen is 0.25."
+     "text": "Exclusivity 0.32: 32% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, it never got that high; the average was 0.048 (p 0.048, the smallest 20 reshuffles can give). The threshold for this screen is 0.25."
     },
     {
      "key": "rotation",
      "label": "Winner rotation",
      "fired": false,
-     "text": "32 wins by 3 members changed hands in 15.2 runs. Chance predicts about 15.1. p 0.437, adjusted for the groups tested: 1.000."
+     "text": "32 wins by 3 members changed hands in 15.4 runs. Chance predicts about 15.1. p 0.090, adjusted for the groups tested: 1.000."
     },
     {
      "key": "cover",
      "label": "Persistent losing bidder",
      "fired": true,
-     "text": "FIRM-09198 bid on 12 decided tenders alongside other members and won 0. Equal odds would give about 5.6. Adjusted p 0.004."
+     "text": "FIRM-09301 bid on 12 decided tenders alongside other members and won 0. Equal odds would give about 5.6. Adjusted p 0.016."
     },
     {
      "key": "price",
@@ -4370,19 +3445,19 @@
    "graph": {
     "firms": [
      {
-      "label": "FIRM-07282",
+      "label": "FIRM-07368",
       "member": true
      },
      {
-      "label": "FIRM-08408",
+      "label": "FIRM-08503",
       "member": true
      },
      {
-      "label": "FIRM-09198",
+      "label": "FIRM-09301",
       "member": true
      },
      {
-      "label": "FIRM-11494",
+      "label": "FIRM-11621",
       "member": true
      },
      {
@@ -5048,13 +4123,13 @@
    }
   },
   {
-   "id": "G006",
+   "id": "G003",
    "members": [
-    "FIRM-01375",
-    "FIRM-03856",
-    "FIRM-06068",
-    "FIRM-06673",
-    "FIRM-08007"
+    "FIRM-03900",
+    "FIRM-06124",
+    "FIRM-06754",
+    "FIRM-07934",
+    "FIRM-08837"
    ],
    "size": 5,
    "period": "Sep 2021 to Apr 2023",
@@ -5070,13 +4145,13 @@
      "key": "closed",
      "label": "Closed group",
      "fired": true,
-     "text": "Exclusivity 0.25: 25% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.014 (p 0.048). The threshold for this screen is 0.25."
+     "text": "Exclusivity 0.25: 25% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, it never got that high; the average was 0.014 (p 0.048, the smallest 20 reshuffles can give). The threshold for this screen is 0.25."
     },
     {
      "key": "rotation",
      "label": "Winner rotation",
      "fired": false,
-     "text": "21 wins by 5 members changed hands in 19.7 runs. Chance predicts about 17.2. p 0.073, adjusted for the groups tested: 1.000."
+     "text": "21 wins by 5 members changed hands in 19.4 runs. Chance predicts about 17.2. p 0.060, adjusted for the groups tested: 1.000."
     },
     {
      "key": "cover",
@@ -5088,7 +4163,7 @@
      "key": "price",
      "label": "Awards near the estimate",
      "fired": true,
-     "text": "Median award 1.131 of the estimate over 21 awards, against 1.000 for other contested tenders in the same segments. 90% of the group's awards are at 0.99 of the estimate or above (others: 70%). Adjusted p 0.002."
+     "text": "Median award 1.131 of the estimate over 21 awards, against 1.015 for 160 other tenders from the same buyers that drew as many bidders. 90% of the group's awards are at 0.99 of the estimate or above (others: 81%). Adjusted p 0.031."
     }
    ],
    "rule_out": [
@@ -5102,23 +4177,23 @@
    "graph": {
     "firms": [
      {
-      "label": "FIRM-01375",
+      "label": "FIRM-03900",
       "member": true
      },
      {
-      "label": "FIRM-03856",
+      "label": "FIRM-06124",
       "member": true
      },
      {
-      "label": "FIRM-06068",
+      "label": "FIRM-06754",
       "member": true
      },
      {
-      "label": "FIRM-06673",
+      "label": "FIRM-07934",
       "member": true
      },
      {
-      "label": "FIRM-08007",
+      "label": "FIRM-08837",
       "member": true
      },
      {
@@ -5280,14 +4355,19 @@
     ],
     "edges": [
      [
-      3,
+      2,
       0,
       false
      ],
      [
-      1,
+      0,
       0,
       true
+     ],
+     [
+      3,
+      1,
+      false
      ],
      [
       4,
@@ -5295,14 +4375,14 @@
       false
      ],
      [
-      0,
-      1,
-      false
-     ],
-     [
       5,
       1,
       true
+     ],
+     [
+      3,
+      2,
+      false
      ],
      [
       4,
@@ -5310,22 +4390,17 @@
       false
      ],
      [
-      0,
-      2,
-      false
-     ],
-     [
       5,
       2,
       true
      ],
      [
-      0,
+      4,
       3,
       false
      ],
      [
-      4,
+      3,
       3,
       true
      ],
@@ -5335,49 +4410,54 @@
       false
      ],
      [
-      4,
-      4,
-      false
-     ],
-     [
-      0,
-      4,
-      false
-     ],
-     [
-      5,
-      4,
-      false
-     ],
-     [
-      2,
-      5,
-      false
-     ],
-     [
       3,
-      5,
+      4,
+      false
+     ],
+     [
+      4,
+      4,
       false
      ],
      [
       5,
-      5,
+      4,
       false
      ],
      [
       1,
-      6,
+      5,
       false
      ],
      [
-      4,
+      2,
+      5,
+      false
+     ],
+     [
+      5,
+      5,
+      false
+     ],
+     [
+      0,
       6,
       false
      ],
      [
       3,
       6,
+      false
+     ],
+     [
+      2,
+      6,
       true
+     ],
+     [
+      2,
+      7,
+      false
      ],
      [
       3,
@@ -5385,138 +4465,138 @@
       false
      ],
      [
-      4,
-      7,
-      false
-     ],
-     [
-      1,
+      0,
       7,
       true
      ],
      [
-      1,
+      0,
       8,
       false
      ],
      [
-      4,
+      3,
       8,
       false
      ],
      [
-      2,
+      1,
       8,
       true
      ],
      [
-      1,
+      0,
       9,
       false
      ],
      [
-      4,
+      3,
       9,
       false
      ],
      [
-      2,
+      1,
       9,
       true
      ],
      [
-      3,
+      2,
       10,
       false
      ],
      [
-      4,
+      3,
       10,
-      false
-     ],
-     [
-      1,
-      10,
-      true
-     ],
-     [
-      2,
-      11,
-      false
-     ],
-     [
-      1,
-      11,
-      false
-     ],
-     [
-      3,
-      11,
-      true
-     ],
-     [
-      1,
-      12,
-      false
-     ],
-     [
-      3,
-      12,
-      false
-     ],
-     [
-      2,
-      12,
-      true
-     ],
-     [
-      2,
-      13,
-      false
-     ],
-     [
-      1,
-      13,
-      false
-     ],
-     [
-      4,
-      13,
-      false
-     ],
-     [
-      3,
-      13,
-      true
-     ],
-     [
-      3,
-      14,
-      false
-     ],
-     [
-      4,
-      14,
-      false
-     ],
-     [
-      5,
-      14,
-      false
-     ],
-     [
-      4,
-      15,
       false
      ],
      [
       0,
+      10,
+      true
+     ],
+     [
+      1,
+      11,
+      false
+     ],
+     [
+      0,
+      11,
+      false
+     ],
+     [
+      2,
+      11,
+      true
+     ],
+     [
+      0,
+      12,
+      false
+     ],
+     [
+      2,
+      12,
+      false
+     ],
+     [
+      1,
+      12,
+      true
+     ],
+     [
+      1,
+      13,
+      false
+     ],
+     [
+      0,
+      13,
+      false
+     ],
+     [
+      3,
+      13,
+      false
+     ],
+     [
+      2,
+      13,
+      true
+     ],
+     [
+      2,
+      14,
+      false
+     ],
+     [
+      3,
+      14,
+      false
+     ],
+     [
+      5,
+      14,
+      false
+     ],
+     [
+      3,
+      15,
+      false
+     ],
+     [
+      4,
       15,
       true
      ],
      [
       5,
       15,
+      false
+     ],
+     [
+      2,
+      16,
       false
      ],
      [
@@ -5525,13 +4605,13 @@
       false
      ],
      [
-      4,
+      5,
       16,
       false
      ],
      [
-      5,
-      16,
+      2,
+      17,
       false
      ],
      [
@@ -5540,109 +4620,109 @@
       false
      ],
      [
-      4,
-      17,
-      false
-     ],
-     [
       5,
       17,
-      false
-     ],
-     [
-      4,
-      18,
       false
      ],
      [
       3,
       18,
-      true
-     ],
-     [
-      3,
-      19,
-      false
-     ],
-     [
-      0,
-      19,
-      false
-     ],
-     [
-      4,
-      19,
-      true
-     ],
-     [
-      4,
-      20,
-      false
-     ],
-     [
-      3,
-      20,
-      true
-     ],
-     [
-      0,
-      21,
-      false
-     ],
-     [
-      4,
-      21,
-      true
-     ],
-     [
-      5,
-      21,
-      false
-     ],
-     [
-      3,
-      22,
-      false
-     ],
-     [
-      1,
-      22,
-      true
-     ],
-     [
-      5,
-      22,
-      false
-     ],
-     [
-      3,
-      23,
-      false
-     ],
-     [
-      4,
-      23,
-      false
-     ],
-     [
-      1,
-      23,
-      true
-     ],
-     [
-      3,
-      24,
-      false
-     ],
-     [
-      4,
-      24,
       false
      ],
      [
       2,
+      18,
+      true
+     ],
+     [
+      2,
+      19,
+      false
+     ],
+     [
+      4,
+      19,
+      false
+     ],
+     [
+      3,
+      19,
+      true
+     ],
+     [
+      3,
+      20,
+      false
+     ],
+     [
+      2,
+      20,
+      true
+     ],
+     [
+      4,
+      21,
+      false
+     ],
+     [
+      3,
+      21,
+      true
+     ],
+     [
+      5,
+      21,
+      false
+     ],
+     [
+      2,
+      22,
+      false
+     ],
+     [
+      0,
+      22,
+      true
+     ],
+     [
+      5,
+      22,
+      false
+     ],
+     [
+      2,
+      23,
+      false
+     ],
+     [
+      3,
+      23,
+      false
+     ],
+     [
+      0,
+      23,
+      true
+     ],
+     [
+      2,
+      24,
+      false
+     ],
+     [
+      3,
+      24,
+      false
+     ],
+     [
+      1,
       24,
       true
+     ],
+     [
+      2,
+      25,
+      false
      ],
      [
       3,
@@ -5650,28 +4730,28 @@
       false
      ],
      [
-      4,
-      25,
-      false
-     ],
-     [
       5,
       25,
       true
      ],
      [
-      4,
+      3,
       26,
       false
      ],
      [
-      0,
+      4,
       26,
       true
      ],
      [
       5,
       26,
+      false
+     ],
+     [
+      2,
+      27,
       false
      ],
      [
@@ -5680,17 +4760,12 @@
       false
      ],
      [
-      4,
-      27,
-      false
-     ],
-     [
-      2,
+      1,
       28,
       false
      ],
      [
-      3,
+      2,
       28,
       true
      ],
@@ -5700,17 +4775,17 @@
       false
      ],
      [
-      2,
-      29,
-      false
-     ],
-     [
-      4,
-      29,
-      false
-     ],
-     [
       1,
+      29,
+      false
+     ],
+     [
+      3,
+      29,
+      false
+     ],
+     [
+      0,
       29,
       true
      ]
@@ -5719,14 +4794,14 @@
    }
   },
   {
-   "id": "G007",
+   "id": "G004",
    "members": [
-    "FIRM-00794",
-    "FIRM-02885",
-    "FIRM-03473",
-    "FIRM-05214",
-    "FIRM-06535",
-    "FIRM-10145"
+    "FIRM-00817",
+    "FIRM-02912",
+    "FIRM-03521",
+    "FIRM-05259",
+    "FIRM-06610",
+    "FIRM-10252"
    ],
    "size": 6,
    "period": "Aug 2021 to Feb 2023",
@@ -5736,31 +4811,31 @@
    "wins": 44,
    "decided": 64,
    "segments": 12,
-   "exclusivity": 0.0378,
+   "exclusivity": 0.0377,
    "screens": [
     {
      "key": "closed",
      "label": "Closed group",
      "fired": false,
-     "text": "Exclusivity 0.04: 4% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.020 (p 0.048). The threshold for this screen is 0.25."
+     "text": "Exclusivity 0.04: 4% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, it never got that high; the average was 0.021 (p 0.048, the smallest 20 reshuffles can give). The threshold for this screen is 0.25."
     },
     {
      "key": "rotation",
      "label": "Winner rotation",
      "fired": false,
-     "text": "44 wins by 4 members changed hands in 30.5 runs. Chance predicts about 30.4. p 0.499, adjusted for the groups tested: 1.000."
+     "text": "44 wins by 4 members changed hands in 30.3 runs. Chance predicts about 30.4. p 0.611, adjusted for the groups tested: 1.000."
     },
     {
      "key": "cover",
      "label": "Persistent losing bidder",
      "fired": true,
-     "text": "FIRM-05214 bid on 43 decided tenders alongside other members and won 0. Equal odds would give about 10.8. Adjusted p below 0.001."
+     "text": "FIRM-05259 bid on 43 decided tenders alongside other members and won 0. Equal odds would give about 10.8. Adjusted p below 0.001."
     },
     {
      "key": "price",
      "label": "Awards near the estimate",
      "fired": true,
-     "text": "Median award 1.011 of the estimate over 44 awards, against 0.900 for other contested tenders in the same segments. 75% of the group's awards are at 0.99 of the estimate or above (others: 22%). Adjusted p below 0.001."
+     "text": "Median award 1.012 of the estimate over 41 awards, against 0.978 for 40 other tenders from the same buyers that drew as many bidders. 76% of the group's awards are at 0.99 of the estimate or above (others: 18%). Adjusted p 0.031."
     }
    ],
    "rule_out": [
@@ -5773,27 +4848,27 @@
    "graph": {
     "firms": [
      {
-      "label": "FIRM-00794",
+      "label": "FIRM-00817",
       "member": true
      },
      {
-      "label": "FIRM-02885",
+      "label": "FIRM-02912",
       "member": true
      },
      {
-      "label": "FIRM-03473",
+      "label": "FIRM-03521",
       "member": true
      },
      {
-      "label": "FIRM-05214",
+      "label": "FIRM-05259",
       "member": true
      },
      {
-      "label": "FIRM-06535",
+      "label": "FIRM-06610",
       "member": true
      },
      {
-      "label": "FIRM-10145",
+      "label": "FIRM-10252",
       "member": true
      },
      {
@@ -6826,571 +5901,6 @@
      ]
     ],
     "total": 90
-   }
-  },
-  {
-   "id": "G008",
-   "members": [
-    "FIRM-01275",
-    "FIRM-05705",
-    "FIRM-06169",
-    "FIRM-08176",
-    "FIRM-08392",
-    "FIRM-09021"
-   ],
-   "size": 6,
-   "period": "Jun 2021 to Apr 2023",
-   "joint": 25,
-   "closed": 10,
-   "closed_share": 0.4,
-   "wins": 12,
-   "decided": 17,
-   "segments": 15,
-   "exclusivity": 0.0124,
-   "screens": [
-    {
-     "key": "closed",
-     "label": "Closed group",
-     "fired": false,
-     "text": "Exclusivity 0.01: 1% of these firms' co-bidding is with each other. With the same firms bidding the same number of times in 20 reshuffled markets, the average was 0.000 (p 0.048). The threshold for this screen is 0.25."
-    },
-    {
-     "key": "rotation",
-     "label": "Winner rotation",
-     "fired": false,
-     "text": "12 wins by 4 members changed hands in 6.0 runs. Chance predicts about 9.2. p 0.998, adjusted for the groups tested: 1.000."
-    },
-    {
-     "key": "cover",
-     "label": "Persistent losing bidder",
-     "fired": true,
-     "text": "FIRM-01275 bid on 10 decided tenders alongside other members and won 1. Equal odds would give about 4.4. Adjusted p 0.038."
-    },
-    {
-     "key": "price",
-     "label": "Awards near the estimate",
-     "fired": true,
-     "text": "Median award 1.000 of the estimate over 12 awards, against 1.000 for other contested tenders in the same segments. 92% of the group's awards are at 0.99 of the estimate or above (others: 58%). Adjusted p 0.012."
-    }
-   ],
-   "rule_out": [
-    "A small or new firm that bids often and is simply not competitive.",
-    "Bids rejected at the technical stage for paperwork reasons.",
-    "An estimate that is out of date, so honest bids land at or above it.",
-    "A floor on bids below the estimate that piles awards at the same ratio.",
-    "Work that is harder than the buyer's schedule of rates assumes."
-   ],
-   "graph": {
-    "firms": [
-     {
-      "label": "FIRM-01275",
-      "member": true
-     },
-     {
-      "label": "FIRM-05705",
-      "member": true
-     },
-     {
-      "label": "FIRM-06169",
-      "member": true
-     },
-     {
-      "label": "FIRM-08176",
-      "member": true
-     },
-     {
-      "label": "FIRM-08392",
-      "member": true
-     },
-     {
-      "label": "FIRM-09021",
-      "member": true
-     },
-     {
-      "label": "Other bidders",
-      "member": false
-     }
-    ],
-    "tenders": [
-     {
-      "label": "TENDER-22530",
-      "month": "Jun 2021",
-      "bidders": 6
-     },
-     {
-      "label": "TENDER-06228",
-      "month": "Jun 2021",
-      "bidders": 4
-     },
-     {
-      "label": "TENDER-02190",
-      "month": "Jul 2021",
-      "bidders": 4
-     },
-     {
-      "label": "TENDER-11114",
-      "month": "Dec 2021",
-      "bidders": 2
-     },
-     {
-      "label": "TENDER-24277",
-      "month": "Jan 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-21881",
-      "month": "Jan 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-23679",
-      "month": "Jan 2022",
-      "bidders": 11
-     },
-     {
-      "label": "TENDER-09352",
-      "month": "Feb 2022",
-      "bidders": 10
-     },
-     {
-      "label": "TENDER-43443",
-      "month": "Mar 2022",
-      "bidders": 9
-     },
-     {
-      "label": "TENDER-32205",
-      "month": "Mar 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-34903",
-      "month": "May 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-17151",
-      "month": "May 2022",
-      "bidders": 2
-     },
-     {
-      "label": "TENDER-19847",
-      "month": "Aug 2022",
-      "bidders": 2
-     },
-     {
-      "label": "TENDER-04247",
-      "month": "Aug 2022",
-      "bidders": 2
-     },
-     {
-      "label": "TENDER-19548",
-      "month": "Dec 2022",
-      "bidders": 5
-     },
-     {
-      "label": "TENDER-03185",
-      "month": "Dec 2022",
-      "bidders": 5
-     },
-     {
-      "label": "TENDER-16525",
-      "month": "Dec 2022",
-      "bidders": 2
-     },
-     {
-      "label": "TENDER-42173",
-      "month": "Dec 2022",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-39371",
-      "month": "Dec 2022",
-      "bidders": 5
-     },
-     {
-      "label": "TENDER-04326",
-      "month": "Dec 2022",
-      "bidders": 2
-     },
-     {
-      "label": "TENDER-34162",
-      "month": "Jan 2023",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-27980",
-      "month": "Mar 2023",
-      "bidders": 5
-     },
-     {
-      "label": "TENDER-03685",
-      "month": "Mar 2023",
-      "bidders": 2
-     },
-     {
-      "label": "TENDER-03251",
-      "month": "Mar 2023",
-      "bidders": 3
-     },
-     {
-      "label": "TENDER-35590",
-      "month": "Apr 2023",
-      "bidders": 3
-     }
-    ],
-    "edges": [
-     [
-      4,
-      0,
-      false
-     ],
-     [
-      1,
-      0,
-      false
-     ],
-     [
-      6,
-      0,
-      true
-     ],
-     [
-      4,
-      1,
-      false
-     ],
-     [
-      1,
-      1,
-      false
-     ],
-     [
-      6,
-      1,
-      true
-     ],
-     [
-      0,
-      2,
-      false
-     ],
-     [
-      2,
-      2,
-      false
-     ],
-     [
-      6,
-      2,
-      true
-     ],
-     [
-      0,
-      3,
-      false
-     ],
-     [
-      2,
-      3,
-      true
-     ],
-     [
-      0,
-      4,
-      false
-     ],
-     [
-      2,
-      4,
-      false
-     ],
-     [
-      4,
-      4,
-      true
-     ],
-     [
-      0,
-      5,
-      false
-     ],
-     [
-      2,
-      5,
-      false
-     ],
-     [
-      4,
-      5,
-      true
-     ],
-     [
-      4,
-      6,
-      false
-     ],
-     [
-      1,
-      6,
-      false
-     ],
-     [
-      6,
-      6,
-      true
-     ],
-     [
-      1,
-      7,
-      false
-     ],
-     [
-      5,
-      7,
-      true
-     ],
-     [
-      6,
-      7,
-      false
-     ],
-     [
-      4,
-      8,
-      false
-     ],
-     [
-      0,
-      8,
-      false
-     ],
-     [
-      6,
-      8,
-      true
-     ],
-     [
-      4,
-      9,
-      false
-     ],
-     [
-      0,
-      9,
-      false
-     ],
-     [
-      2,
-      9,
-      false
-     ],
-     [
-      4,
-      10,
-      false
-     ],
-     [
-      3,
-      10,
-      true
-     ],
-     [
-      6,
-      10,
-      false
-     ],
-     [
-      4,
-      11,
-      false
-     ],
-     [
-      3,
-      11,
-      true
-     ],
-     [
-      4,
-      12,
-      true
-     ],
-     [
-      0,
-      12,
-      true
-     ],
-     [
-      0,
-      13,
-      false
-     ],
-     [
-      2,
-      13,
-      true
-     ],
-     [
-      4,
-      14,
-      false
-     ],
-     [
-      0,
-      14,
-      false
-     ],
-     [
-      2,
-      14,
-      false
-     ],
-     [
-      6,
-      14,
-      false
-     ],
-     [
-      4,
-      15,
-      false
-     ],
-     [
-      0,
-      15,
-      false
-     ],
-     [
-      2,
-      15,
-      false
-     ],
-     [
-      6,
-      15,
-      false
-     ],
-     [
-      0,
-      16,
-      false
-     ],
-     [
-      2,
-      16,
-      true
-     ],
-     [
-      5,
-      17,
-      false
-     ],
-     [
-      1,
-      17,
-      false
-     ],
-     [
-      6,
-      17,
-      false
-     ],
-     [
-      5,
-      18,
-      false
-     ],
-     [
-      1,
-      18,
-      false
-     ],
-     [
-      6,
-      18,
-      false
-     ],
-     [
-      0,
-      19,
-      false
-     ],
-     [
-      2,
-      19,
-      true
-     ],
-     [
-      0,
-      20,
-      false
-     ],
-     [
-      2,
-      20,
-      true
-     ],
-     [
-      6,
-      20,
-      false
-     ],
-     [
-      4,
-      21,
-      false
-     ],
-     [
-      0,
-      21,
-      false
-     ],
-     [
-      6,
-      21,
-      false
-     ],
-     [
-      4,
-      22,
-      false
-     ],
-     [
-      3,
-      22,
-      true
-     ],
-     [
-      4,
-      23,
-      false
-     ],
-     [
-      3,
-      23,
-      true
-     ],
-     [
-      6,
-      23,
-      false
-     ],
-     [
-      0,
-      24,
-      false
-     ],
-     [
-      2,
-      24,
-      false
-     ],
-     [
-      6,
-      24,
-      false
-     ]
-    ],
-    "total": 25
    }
   }
  ],

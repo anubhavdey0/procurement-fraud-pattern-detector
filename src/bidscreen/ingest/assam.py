@@ -43,7 +43,7 @@ SOURCE = (
 )
 DEFAULT_PATH = Path("data/raw/assam/ocds_mapped_data.json.zip")
 WON_STATUS = "Accepted-AOC"
-_CACHE_VERSION = 3
+_CACHE_VERSION = 4  # bump whenever parsing or name matching changes
 
 # The portal writes dates as year-day-month. ISO order is tried as a fallback.
 _DATE_FORMATS = ["%Y-%d-%m %H:%M", "%Y-%m-%d %H:%M", "%Y-%d-%m", "%Y-%m-%d"]
@@ -58,7 +58,7 @@ def load_assam(path: Path | str = DEFAULT_PATH, cache_dir: Path | str | None = N
     """
     path = Path(path)
     if not path.exists():
-        raise FileNotFoundError(f"{path} is missing. Run `bidscreen fetch` first.")
+        raise FileNotFoundError(f"{path} is missing. Run `bidscreen fetch assam` first.")
     cache = None
     if cache_dir is not None:
         stat = path.stat()

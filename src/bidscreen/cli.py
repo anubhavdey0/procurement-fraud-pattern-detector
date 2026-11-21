@@ -18,7 +18,7 @@ import pandas as pd
 from bidscreen import __version__
 from bidscreen.anonymize import DEFAULT_KEY_PATH, load_or_create_key
 from bidscreen.ingest import LABELLED_CASES, load_assam, load_labelled
-from bidscreen.ingest.download import fetch
+from bidscreen.ingest.download import DownloadError, fetch
 from bidscreen.leads import ScreenConfig, screen_market
 from bidscreen.model import Market
 from bidscreen.report import build_report
@@ -79,6 +79,11 @@ def main(argv: list[str] | None = None) -> int:
     _add_thresholds(site)
 
     args = parser.parse_args(argv)
+    if hasattr(args, "n_null"):
+        try:
+            args.config = _config(args)
+        except ValueError as error:
+            parser.error(str(error))
     handler = {
         "demo": _demo,
         "fetch": _fetch,
@@ -86,7 +91,13 @@ def main(argv: list[str] | None = None) -> int:
         "screen": _screen,
         "export-site": _export_site,
     }
-    return handler[args.command](args)
+    try:
+        return handler[args.command](args)
+    except (FileNotFoundError, DownloadError) as error:
+        # Missing data and failed downloads are expected; a traceback is not
+        # what anyone needs to see.
+        print(f"bidscreen: {error}", file=sys.stderr)
+        return 2
 
 
 def _add_thresholds(parser: argparse.ArgumentParser) -> None:
@@ -99,7 +110,7 @@ def _add_thresholds(parser: argparse.ArgumentParser) -> None:
         type=int,
         default=defaults.n_null,
         dest="n_null",
-        help="reshuffled markets for the exclusivity test",
+        help="reshuffled markets for the exclusivity test (at least 19 for p of 0.05)",
     )
     group.add_argument("--min-screens", type=int, default=defaults.min_screens)
 
@@ -116,7 +127,7 @@ def _config(args) -> ScreenConfig:
 
 def _demo(args) -> int:
     market = make_market(with_prices=not args.awards_only, seed=args.seed)
-    result = screen_market(market, _config(args))
+    result = screen_market(market, args.config)
     # A fixed key is fine here: nothing in a synthetic market is real.
     path = build_report(result, args.out, key=b"synthetic-demo", title="Leads for review: demo")
     _print_summary(market, result)
@@ -171,7 +182,7 @@ def _screen(args) -> int:
         market = load_assam(raw / "assam" / "ocds_mapped_data.json.zip", cache_dir="data/interim")
     else:
         market = load_labelled(args.source, raw / "labelled")
-    result = screen_market(market, _config(args))
+    result = screen_market(market, args.config)
     out = Path(args.out or f"out/{args.source}")
     key = load_or_create_key(args.key)
     path = build_report(result, out, key=key, validation=_load_validation(args.validation))
@@ -184,7 +195,7 @@ def _screen(args) -> int:
 def _export_site(args) -> int:
     raw = Path(args.raw_dir) / "assam" / "ocds_mapped_data.json.zip"
     market = load_assam(raw, cache_dir="data/interim")
-    result = screen_market(market, _config(args))
+    result = screen_market(market, args.config)
     demo = screen_market(make_market(seed=0))
     path = write_site_data(
         args.out,

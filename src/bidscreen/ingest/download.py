@@ -13,11 +13,18 @@ away, the files can be obtained from the paper and placed in
 from __future__ import annotations
 
 import hashlib
+import urllib.error
 import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
 
 _RAW = "https://raw.githubusercontent.com"
+
+
+class DownloadError(RuntimeError):
+    """A source file could not be fetched, or did not match its digest."""
+
+
 _ASSAM = f"{_RAW}/CivicDataLab/assam-tenders-data/1e12e516748130c15398b2501fb092bfa7413941"
 _CASES = f"{_RAW}/aparmendariz/master_thesis/588755793f72b46aba2a55a40bd7217dc6685909"
 
@@ -104,13 +111,24 @@ def fetch(group: str = "all", raw_dir: Path | str = "data/raw", log=print) -> li
         partial = target.with_suffix(target.suffix + ".part")
         log(f"download  {source.path}")
         request = urllib.request.Request(source.url, headers={"User-Agent": "bidscreen"})
-        with urllib.request.urlopen(request, timeout=120) as response, partial.open("wb") as out:
-            while chunk := response.read(1 << 20):
-                out.write(chunk)
+        try:
+            with (
+                urllib.request.urlopen(request, timeout=120) as response,
+                partial.open("wb") as out,
+            ):
+                while chunk := response.read(1 << 20):
+                    out.write(chunk)
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as error:
+            partial.unlink(missing_ok=True)
+            reason = getattr(error, "reason", None) or error
+            raise DownloadError(
+                f"{source.path}: download failed ({reason}). Check the connection and run "
+                "`bidscreen fetch` again; files already downloaded are kept."
+            ) from error
         digest = sha256_of(partial)
         if digest != source.sha256:
             partial.unlink()
-            raise RuntimeError(
+            raise DownloadError(
                 f"{source.path}: checksum mismatch (got {digest}). The file was not kept."
             )
         partial.replace(target)

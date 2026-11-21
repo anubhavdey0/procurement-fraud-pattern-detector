@@ -28,7 +28,7 @@ Three findings, in order of how much weight they can bear.
 
 **2. Who bids with whom does not, on its own, find cartels.** A co-bidding network singled out the cartel pairs in one case of four. Leads built only from participation and outcomes found none of the documented cartels.
 
-**3. Indian open tender data supports only the weaker kind of screen.** The Assam data lists bidders and awards but not losing bid amounts. The screen there produces 8 leads from 335 co-bidding groups. Given finding 2, they are a reading list and nothing more.
+**3. Indian open tender data supports only the weaker kind of screen.** The Assam data lists bidders and awards but not losing bid amounts. The screen there produces 4 leads from 338 co-bidding groups. Given finding 2, they are a reading list and nothing more.
 
 That third point is the most useful result here: the best-tested screens cannot run on this data, because the amounts of the losing bids are not in it.
 
@@ -44,7 +44,7 @@ python -m venv .venv
 pip install -e ".[dev]"
 
 bidscreen demo                  # writes out/demo/report.html
-pytest                          # 95 tests, about two minutes (6 need the downloaded data)
+pytest                          # 107 tests, about two minutes (6 need the downloaded data)
 ```
 
 To reproduce the real results:
@@ -92,9 +92,9 @@ Where every bid amount is published, seven price screens also run on each tender
 | Relative distance, gap between two lowest | Is the lowest bid set apart from the rest? | every bid amount | Imhof, Karagok and Rutz (2018) |
 | Skewness, kurtosis, Kolmogorov-Smirnov | Is the shape of the bid distribution lopsided or bunched? | every bid amount | Huber and Imhof (2019) |
 | Closed group | Is a group's bidding mostly with itself, beyond what reshuffled markets give? | who bid on what | Wachs and Kertesz (2019) |
-| Winner rotation | Do members take turns winning more often than chance? | winners, in time order | runs test (Mood 1940); pattern from the OECD guidelines (2009) |
+| Winner rotation | Do members take turns winning more often than chance? | winners, in time order | runs test (Mood 1940) with mid-p (Lancaster 1961); pattern from the OECD guidelines (2009) |
 | Persistent losing bidder | Does a member keep bidding and keep losing? | winners | OECD guidelines (2009); Toth et al. (2014) |
-| Awards near the estimate | Are the group's awards closer to the estimate than other tenders from the same buyers? | award value and estimate | Wachs and Kertesz (2019) |
+| Awards near the estimate | Are the group's awards closer to the estimate than tenders from the same buyers that drew as many bidders? | award value and estimate | Wachs and Kertesz (2019); stratified test of van Elteren (1960) |
 
 Formulas, null models and thresholds are in [docs/methodology.md](docs/methodology.md). Where the implementation differs from a paper, the difference is listed there.
 
@@ -161,22 +161,22 @@ Source: [Assam Public Procurement Data](https://github.com/CivicDataLab/assam-te
 | | |
 |---|---:|
 | Tenders that list who bid | 9,994 |
-| Distinct bidders (matched by name) | 12,213 |
-| Pairs of bidders that ever bid together | 2,497,449 |
-| Pairs linked: three or more joint tenders, and more than chance | 22,070 |
-| Co-bidding groups found | 335 |
+| Distinct bidders (matched by name) | 12,349 |
+| Pairs of bidders that ever bid together | 2,504,195 |
+| Pairs linked: three or more joint tenders, and more than chance | 22,050 |
+| Co-bidding groups found | 338 |
 | Groups where the closed-group screen fired | 46 |
-| Groups where the award-price screen fired | 17 |
-| Groups where the cover-bidding screen fired | 11 |
-| Groups where the rotation screen fired | 0 of 62 tested |
-| **Leads: two or more screens** | **8** |
+| Groups where the award-price screen fired | 10 |
+| Groups where the cover-bidding screen fired | 8 |
+| Groups where the rotation screen fired | 0 of 63 tested |
+| **Leads: two or more screens** | **4** |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/figures/groups-dark.svg">
-  <img src="docs/figures/groups-light.svg" alt="Scatter plot of 335 co-bidding groups in the Assam data. Horizontal axis is exclusivity from 0 to 1, vertical axis is the number of joint tenders on a log scale. Most groups sit near zero exclusivity. Eight leads are highlighted." width="820">
+  <img src="docs/figures/groups-light.svg" alt="Scatter plot of 338 co-bidding groups in the Assam data. Horizontal axis is exclusivity from 0 to 1, vertical axis is the number of joint tenders on a log scale. Most groups sit near zero exclusivity. Four leads are highlighted." width="820">
 </picture>
 
-Each dot is a group of firms that bid together far more than their activity explains. Most are what a local market looks like. The eight highlighted groups are the leads.
+Each dot is a group of firms that bid together far more than their activity explains. Most are what a local market looks like. The four highlighted groups are the leads.
 
 One finding does not depend on any screen. Award prices in this data pile up at two values:
 
@@ -185,7 +185,7 @@ One finding does not depend on any screen. Award prices in this data pile up at 
   <img src="docs/figures/award-price-light.svg" alt="Histogram of award value divided by the buyer's estimate for 4,012 Assam awards. Two tall spikes: 26 percent of awards at 0.90 of the estimate and 32 percent at 1.00." width="820">
 </picture>
 
-26% of awards are at 0.90 of the buyer's estimate and 32% are at 1.00, to the nearest 0.01. Piles like these usually come from rules, such as a floor below which a bid is treated as abnormally low. They are a property of the market, and a screen that read the price level on its own would flag half of it. The price screen here compares each group only with other tenders from the same buyer and postal region.
+26% of awards are at 0.90 of the buyer's estimate and 32% are at 1.00, to the nearest 0.01. Piles like these usually come from rules, such as a floor below which a bid is treated as abnormally low. They are a property of the market, and a screen that read the price level on its own would flag half of it. The price screen here compares each group only with other tenders from the same buyer and postal region that drew the same number of bidders, because fewer bidders means awards nearer the estimate whether or not anyone colludes.
 
 ## What this project will not do
 
@@ -243,7 +243,7 @@ src/bidscreen/
   sitedata.py         the data file the project site reads
   synthetic.py        demo market with a planted cartel
   cli.py              the bidscreen command
-tests/                95 tests, including hand-worked values for every statistic
+tests/                107 tests, including hand-worked values for every statistic
 docs/                 methodology, data sources, responsible use, sample output
 site/                 the project site
 ```
@@ -265,8 +265,11 @@ The code is under the MIT licence. See [LICENSE](LICENSE).
 - Garcia Rodriguez, Rodriguez-Montequin, Ballesteros-Perez, Love and Signor (2022). Collusion detection in public procurement auctions with machine learning algorithms. *Automation in Construction* 133, 104047.
 - Huber and Imhof (2019). Machine learning with screens for detecting bid-rigging cartels. *International Journal of Industrial Organization* 65.
 - Imhof, Karagok and Rutz (2018). Screening for bid rigging: does it work? *Journal of Competition Law and Economics* 14(2).
+- Lancaster (1961). Significance tests in discrete distributions. *Journal of the American Statistical Association* 56(294).
 - Lancichinetti, Fortunato and Kertesz (2009). Detecting the overlapping and hierarchical community structure in complex networks. *New Journal of Physics* 11.
+- Mood (1940). The distribution theory of runs. *Annals of Mathematical Statistics* 11(4).
 - OECD (2009). Guidelines for fighting bid rigging in public procurement.
 - Onnela, Saramaki, Kertesz and Kaski (2005). Intensity and coherence of motifs in weighted complex networks. *Physical Review E* 71.
 - Toth, Fazekas, Czibik and Toth (2014). Toolkit for detecting collusive bidding in public procurement. Corruption Research Center Budapest.
+- van Elteren (1960). On the combination of independent two-sample tests of Wilcoxon. *Bulletin of the International Statistical Institute* 37.
 - Wachs and Kertesz (2019). A network approach to cartel detection in public auction markets. *Scientific Reports* 9, 10818.
