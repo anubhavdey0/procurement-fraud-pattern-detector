@@ -20,6 +20,8 @@ Collusion screens for public tender data. The output is a list of **leads for a 
 
 The package is called `bidscreen`. The repository keeps its working title.
 
+**Why not ask an AI chatbot instead?** A chatbot writes text that reads like an analysis. This tool computes one over every bid, has its record measured against proven cartels, gives the same answer every time, and keeps names on your machine. [The full answer](#why-not-just-ask-an-ai-chatbot).
+
 ## What came out of it
 
 Three findings, in order of how much weight they can bear.
@@ -44,7 +46,7 @@ python -m venv .venv
 pip install -e ".[dev]"
 
 bidscreen demo                  # writes out/demo/report.html
-pytest                          # 107 tests, about two minutes (6 need the downloaded data)
+pytest                          # 112 tests, about two minutes (6 need the downloaded data)
 ```
 
 To reproduce the real results:
@@ -205,6 +207,82 @@ One finding does not depend on any screen. Award prices in this data pile up at 
 </picture>
 
 26% of awards are at 0.90 of the buyer's estimate and 32% are at 1.00, to the nearest 0.01. Piles like these usually come from rules, such as a floor below which a bid is treated as abnormally low. They are a property of the market, and a screen that read the price level on its own would flag half of it. The price screen here compares each group only with other tenders from the same buyer and postal region that drew the same number of bidders, because fewer bidders means awards nearer the estimate whether or not anyone colludes.
+
+## Why not just ask an AI chatbot?
+
+It is a fair question. General-purpose assistants such as ChatGPT or Gemini can explain bid rigging, summarise a tender notice and write code. Ask one "which of these firms are colluding?" and it will give an answer. The issue is what kind of answer that is.
+
+A chatbot produces text that reads like an analysis. bidscreen performs the analysis. It computes every statistic from every bid and compares each one with a stated baseline. It also records how often each method has been right on cartels that were proven. When the question can end with a company under investigation, that difference decides whether the answer can be used at all.
+
+| | General-purpose chatbot | bidscreen |
+|---|---|---|
+| How much data it reads | What fits in one conversation, far less than the 382 MB of JSON in the Assam data | All of it: 43,669 tenders and 2.5 million pairs of co-bidders |
+| Where the numbers come from | Generated text, which can include figures that were never computed | Code covered by 112 tests. Five price screens match the published values to four decimals |
+| Asked the same question twice | Can answer differently, and the model behind it is updated over time | Gives the same answer, from pinned data, fixed seeds and versioned code |
+| How often it is right | Not known for this task | Measured on six documented cartels, failures included |
+| Compared with what | Nothing, unless you build the baseline yourself | A stated null model for every screen |
+| Showing its working | An explanation that is itself generated text | Every statistic, threshold and comparison group, in the report |
+| Where the data goes | To the provider's servers, under its terms | Nowhere: it runs on your own computer |
+| Naming companies | Will name them if asked, and can be confidently wrong | Never names one, and refuses to save a report that does |
+| Cost | Free tiers are limited, and heavier use is paid | Free and open source. Runs offline on a laptop |
+
+### What the difference looks like in practice
+
+**It reads every bid, not a sample.** Collusion screening is a search for a few needles in a large haystack. The Assam run tests 2,504,195 pairs of bidders to find the 22,050 pairs that bid together more often than chance allows. Shown a few hundred rows, a chatbot will find patterns in those rows. It has no way to say whether they stand out from the other 43,000 tenders.
+
+**"More than chance" needs a definition.** In a small district, the same five contractors meet on every tender because there are only five contractors. Someone reading the list, person or language model, sees a ring. A test that holds each firm's level of activity fixed sees an ordinary local market. bidscreen asks every question against a baseline:
+
+- a hypergeometric test for each pair of firms;
+- 20 reshuffled copies of the market that keep each firm's number of bids;
+- for prices, a comparison only with tenders from the same buyer that drew as many bidders.
+
+Of the 338 groups in Assam that bid together more than chance allows, 4 had two screens fire.
+
+**Its record is published, failures included.** Every screen was scored on six cartels that courts and competition authorities documented. The price screens were then scored again, with each case held out of everything learned. The variance screen separates cartel tenders in four of the six cases. The co-bidding network singled out the cartel in one case of four. Those numbers tell a reviewer how much weight a lead can bear. No one can give the equivalent number for a chatbot answering the same question.
+
+**The same input gives the same output.** Source files are pinned to a commit and checked against a SHA-256 digest, and every random step uses a fixed seed. Anyone can rerun `bidscreen screen assam` and get the same four leads. An answer that changes when the question is asked again, or when the provider updates its model, cannot be checked by a second reviewer, let alone defended.
+
+**Every number can be traced.** For each lead, the report lists:
+
+- which screens fired, and the statistic behind each;
+- the p-value after correction for multiple testing, and the threshold it was held to;
+- the tenders it was compared with;
+- the ordinary explanations to rule out first.
+
+[docs/methodology.md](docs/methodology.md) gives every formula and says where it departs from the paper it comes from. When a chatbot explains its own answer, the explanation is more generated text, not a record of a calculation.
+
+**Names stay on your machine.** Raw tender files hold the names of firms and of individual contractors. Pasting them into a hosted chatbot sends them to a third party. bidscreen:
+
+- runs locally;
+- replaces every name with a keyed label;
+- keeps the key out of the repository;
+- refuses to write a report in which a real name appears.
+
+For an audit office or a newsroom, that alone often settles the choice.
+
+**It does not accuse.** Asked about a named company, a chatbot can produce a confident, specific claim that nothing supports. A wrong accusation of bid rigging can damage a business, and expose whoever repeats it. bidscreen is built so that it cannot make one. Its output is a reading list, and every lead says what to rule out. The wording is fixed in code, not left to a prompt.
+
+### Could a chatbot just run this kind of analysis?
+
+A chatbot with a code tool can write and run a script like this one. The question then becomes whether that script is right:
+
+- Does the null model hold each firm's activity fixed?
+- Are 2.5 million tests corrected for multiple testing?
+- Does the price comparison control for the number of bidders?
+- Do any names leak into the output?
+
+Each of those took work here, and each is covered by tests. Writing a script is the quick part. Checking it is the real job, and in this repository it has been done in the open.
+
+### Where a chatbot does help
+
+The two work well together. A chatbot is good at:
+
+- explaining what bid rotation or cover bidding means, or what an AUC measures;
+- helping read the methodology, or adapting a loader to a new data source;
+- drafting a note to a colleague about a lead, working from the anonymised report;
+- suggesting innocent explanations to check before a lead goes any further.
+
+Use bidscreen to find and measure, and a chatbot to help explain and write up. Give the chatbot the anonymised report, never the raw files.
 
 ## What this project will not do
 
