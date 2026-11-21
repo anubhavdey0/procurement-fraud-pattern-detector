@@ -69,6 +69,22 @@ export interface ValidationScreen {
   cells: Record<string, Cell>;
 }
 
+export interface HeldOut {
+  case: string;
+  /** Label of the screen with the best AUC on the other cases. */
+  chosen: string;
+  chosen_auc: number;
+  chosen_low: number | null;
+  chosen_high: number | null;
+  weights_auc: number;
+  composite_auc: number;
+  fixed_lift: number | null;
+  tuned_lift: number | null;
+  tuned_rule?: string;
+  tuned_flagged?: number;
+  tuned_share?: number;
+}
+
 export interface SiteData {
   meta: {
     generated: string;
@@ -110,6 +126,8 @@ export interface SiteData {
       n_collusive: number;
       n_tenders: number;
     }[];
+    /** Each case scored with everything learned from the other cases. */
+    held_out: HeldOut[];
   };
   demo: { members: string[]; joint: number; screens: string[]; graph: Graph };
 }

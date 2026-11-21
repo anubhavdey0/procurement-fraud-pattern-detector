@@ -85,7 +85,7 @@ function Graphic({ step }: { step: number }) {
         <text x={402} y={30} textAnchor="middle" fontSize={12} fill="var(--muted)">Tenders</text>
       </motion.g>
       <motion.g initial={false} animate={{ opacity: step === 2 ? 1 : 0 }} transition={fade}>
-        <text x={178} y={292} textAnchor="middle" fontSize={12.5} fill="var(--ink)" className="tabular font-mono">exclusivity 0.74</text>
+        <text x={178} y={292} textAnchor="middle" fontSize={12.5} fill="var(--accent)" className="tabular font-mono">exclusivity 0.74</text>
         <text x={178} y={310} textAnchor="middle" fontSize={11.5} fill="var(--muted)">share of bidding kept inside the group</text>
       </motion.g>
 
@@ -93,7 +93,7 @@ function Graphic({ step }: { step: number }) {
         <motion.g key={screen.label} initial={false}
           animate={{ opacity: step === 3 ? 1 : 0, x: step === 3 ? 0 : 14 }}
           transition={reduce ? { duration: 0 } : { duration: 0.45, delay: step === 3 ? 0.12 + i * 0.09 : 0 }}>
-          <rect x={300} y={78 + i * 62} width={204} height={46} rx={10} fill="var(--surface)"
+          <rect x={300} y={78 + i * 62} width={204} height={46} rx={3} fill="var(--surface)"
             stroke={screen.fired ? "var(--accent)" : "var(--line-strong)"} strokeWidth={screen.fired ? 1.6 : 1} />
           <circle cx={320} cy={101 + i * 62} r={5} fill={screen.fired ? "var(--accent)" : "none"}
             stroke={screen.fired ? "var(--accent)" : "var(--context)"} strokeWidth={1.5} />
@@ -131,32 +131,39 @@ export function Method() {
   }, []);
 
   return (
-    <Section id="method" title="From a table of bids to a short reading list"
+    <Section id="method" number="03" kicker="Method" title="From a table of bids to a short reading list"
       lead="Every step is a published method with a stated null model. Scroll to follow one small market through all four.">
-      <div className="grid gap-x-10 lg:grid-cols-12 grid-cols-1">
-        <div className="sticky top-16 z-10 -mx-5 border-b border-line bg-bg px-5 pb-3 pt-2 lg:top-24 lg:col-span-7 lg:mx-0 lg:self-start lg:border-0 lg:bg-transparent lg:p-0">
-          <div className="rounded-2xl border border-line bg-surface p-3 sm:p-6">
-            <div className="mx-auto max-w-[280px] sm:max-w-[360px] lg:max-w-none">
+      <div className="grid grid-cols-1 gap-x-12 lg:grid-cols-12">
+        <div className="sticky top-[60px] z-10 -mx-5 border-b border-line bg-bg px-5 pb-3 pt-3 lg:top-24 lg:col-span-7 lg:mx-0 lg:self-start lg:border-0 lg:bg-transparent lg:p-0">
+          <figure className="m-0 lg:border-t lg:border-line-strong lg:pt-3.5">
+            <figcaption className="tabular flex items-baseline justify-between gap-4 font-mono text-[12px] text-muted">
+              <span><span className="mr-2.5 text-accent">Fig. 4</span>One small market, four steps</span>
+              <span aria-hidden="true">Step {active + 1} of {STEPS.length}</span>
+            </figcaption>
+            <div className="mx-auto mt-2 max-w-[280px] sm:max-w-[360px] lg:mt-6 lg:max-w-none">
               <Graphic step={active} />
             </div>
-            <ol className="mt-2 flex justify-center gap-2" aria-label="Progress">
+            <ol className="mt-2 grid grid-cols-4 gap-1.5" aria-label="Progress">
               {STEPS.map((step, i) => (
-                <li key={step.title} aria-current={i === active ? "step" : undefined}
-                  className={`h-1 rounded-full transition-[width,background-color] duration-300 ${i === active ? "w-8 bg-accent" : "w-3 bg-line-strong"}`}>
+                <li key={step.title} aria-current={i === active ? "step" : undefined} className="h-[3px] overflow-hidden bg-line">
+                  <span aria-hidden="true" className={`block h-full origin-left bg-accent transition-transform duration-500 ${i <= active ? "scale-x-100" : "scale-x-0"}`} />
                   <span className="sr-only">{step.title}</span>
                 </li>
               ))}
             </ol>
-          </div>
+          </figure>
         </div>
         <div className="lg:col-span-4 lg:col-start-9">
           {STEPS.map((step, i) => (
             <article key={step.title} data-step={i} ref={(node) => { refs.current[i] = node; }}
               className="flex min-h-[60vh] flex-col justify-end pb-[14vh] pt-10 lg:min-h-[68vh] lg:justify-center lg:py-10">
-              <h3 className={`text-2xl font-semibold tracking-tight transition-colors duration-300 ${i === active ? "text-ink" : "text-muted"}`}>
+              <p className={`display lining text-[3rem] leading-none transition-colors duration-300 ${i === active ? "text-accent" : "text-line-strong"}`} aria-hidden="true">
+                {i + 1}
+              </p>
+              <h3 className={`display mt-3 text-[1.8rem] leading-[1.12] transition-colors duration-300 ${i === active ? "text-ink" : "text-muted"}`}>
                 {step.title}
               </h3>
-              <p className="mt-4 max-w-[40ch] leading-relaxed text-ink-2">{step.body}</p>
+              <p className="mt-4 max-w-[40ch] text-[16px] leading-[1.7] text-ink-2">{step.body}</p>
             </article>
           ))}
         </div>

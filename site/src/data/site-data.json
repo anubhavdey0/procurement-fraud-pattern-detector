@@ -6476,6 +6476,92 @@
     "lead_firm_precision": 0.0,
     "firm_base_rate": 0.025
    }
+  ],
+  "held_out": [
+   {
+    "case": "switzerland_ticino",
+    "chosen": "Coefficient of variation",
+    "chosen_auc": 0.8176795580110497,
+    "chosen_low": 0.708958847055909,
+    "chosen_high": 0.9136912408317446,
+    "weights_auc": 0.773622326108514,
+    "composite_auc": 0.8608868111630542,
+    "fixed_lift": 1.1925362243302409,
+    "tuned_lift": 1.1279558011049724,
+    "tuned_rule": "CV < 0.09, RD > 0.2",
+    "tuned_flagged": 125,
+    "tuned_share": 0.5681818181818182
+   },
+   {
+    "case": "switzerland_gr_sg",
+    "chosen": "Coefficient of variation",
+    "chosen_auc": 0.5259515408046981,
+    "chosen_low": 0.5028992333609564,
+    "chosen_high": 0.5497385664496391,
+    "weights_auc": 0.48616266959051135,
+    "composite_auc": 0.425477069852559,
+    "fixed_lift": 0.935434960728976,
+    "tuned_lift": 1.0121548822382775,
+    "tuned_rule": "CV < 0.085, RD > 0.2",
+    "tuned_flagged": 2055,
+    "tuned_share": 0.539087093389297
+   },
+   {
+    "case": "japan",
+    "chosen": "Coefficient of variation",
+    "chosen_auc": 0.7388179524428473,
+    "chosen_low": 0.6922109151674032,
+    "chosen_high": 0.7823290512171268,
+    "weights_auc": 0.7351309563252373,
+    "composite_auc": 0.6564339781328847,
+    "fixed_lift": 1.478626844480503,
+    "tuned_lift": 1.147046383758635,
+    "tuned_rule": "CV < 0.09, RD > 0.2",
+    "tuned_flagged": 865,
+    "tuned_share": 0.8009259259259259
+   },
+   {
+    "case": "brazil",
+    "chosen": "Coefficient of variation",
+    "chosen_auc": 0.8998161764705882,
+    "chosen_low": 0.8335473281125455,
+    "chosen_high": 0.9560274188311688,
+    "weights_auc": 0.8405330882352942,
+    "composite_auc": 0.7950367647058824,
+    "fixed_lift": 2.5735294117647056,
+    "tuned_lift": 1.875,
+    "tuned_rule": "CV < 0.045, RD > 0",
+    "tuned_flagged": 5,
+    "tuned_share": 0.05
+   },
+   {
+    "case": "italy",
+    "chosen": "Coefficient of variation",
+    "chosen_auc": 0.6300440300440301,
+    "chosen_low": 0.563149859734008,
+    "chosen_high": 0.692239081111285,
+    "weights_auc": 0.6095312095312095,
+    "composite_auc": 0.5664853664853665,
+    "fixed_lift": 0.972027972027972,
+    "tuned_lift": 0.9963286713286712,
+    "tuned_rule": "CV < 0.085, RD > 0.5",
+    "tuned_flagged": 80,
+    "tuned_share": 0.28776978417266186
+   },
+   {
+    "case": "usa",
+    "chosen": "Coefficient of variation",
+    "chosen_auc": 0.45681144550843594,
+    "chosen_low": 0.4159947006154905,
+    "chosen_high": 0.49991633382113965,
+    "weights_auc": 0.46238030095759236,
+    "composite_auc": 0.4621608527131783,
+    "fixed_lift": 0.9479501228037032,
+    "tuned_lift": 0.9863675543256363,
+    "tuned_rule": "CV < 0.085, RD > 0.2",
+    "tuned_flagged": 658,
+    "tuned_share": 0.7376681614349776
+   }
   ]
  },
  "demo": {

@@ -1,29 +1,45 @@
-import { EyeSlash, FileX, ListChecks, LockKey } from "@phosphor-icons/react";
+import { useInView } from "motion/react";
 import { useEffect, useId, useRef, useState } from "react";
+import type { CSSProperties } from "react";
 import { Reveal, Section } from "./ui";
 
 const PROMISES = [
   {
-    icon: EyeSlash,
     title: "Publish a name",
-    body: "Firms, tenders and buyers appear as labels. The key that maps them back stays on the analyst's machine.",
+    body: "Firms, tenders and buyers appear as labels. The key that maps them back stays on the analyst’s machine.",
   },
   {
-    icon: FileX,
     title: "Save a report with a real name in it",
     body: "The finished page is searched for every real identifier. One match, and nothing is written.",
   },
   {
-    icon: ListChecks,
     title: "Call a pattern a finding",
     body: "Every lead lists the ordinary explanations to rule out first: a small local market, a stale estimate, a rule that piles bids at a floor.",
   },
   {
-    icon: LockKey,
     title: "Redistribute the data",
     body: "Raw files hold the names of firms and of individual contractors. They are downloaded by the user and checked against a checksum.",
   },
 ];
+
+/** One refusal: the thing it will not do, struck through once it is read. */
+function Refusal({ index, title, body }: { index: number; title: string; body: string }) {
+  const ref = useRef<HTMLLIElement>(null);
+  const seen = useInView(ref, { once: true, amount: 0.8 });
+  return (
+    <li ref={ref} className="grid grid-cols-[36px_1fr] border-t border-line py-6 first:border-t-0 first:pt-0 md:grid-cols-[48px_1fr]">
+      <span className="tabular pt-2 font-mono text-[12px] text-accent">0{index + 1}</span>
+      <div>
+        <h3 className="display text-[1.55rem] leading-[1.2] text-ink md:text-[1.75rem]">
+          <span className="strike" style={{ "--strike": seen ? "100%" : "0%", transitionDelay: `${index * 0.12}s` } as CSSProperties}>
+            {title}
+          </span>
+        </h3>
+        <p className="mt-2.5 max-w-[52ch] text-[15.5px] leading-[1.7] text-ink-2">{body}</p>
+      </div>
+    </li>
+  );
+}
 
 /** The same folding the tool applies before matching: case, punctuation, "M/s". */
 function normalise(name: string): string {
@@ -77,10 +93,13 @@ function LabelDemo() {
   }, [name, ready]);
 
   return (
-    <div className="rounded-2xl border border-line bg-surface p-6 sm:p-8">
-      <h3 className="text-lg font-semibold tracking-tight text-ink">How a name becomes a label</h3>
-      <div className="mt-6 grid gap-2">
-        <label htmlFor={inputId} className="text-[14px] font-medium text-ink">
+    <div className="bg-sunk p-6 sm:p-8">
+      <p className="tabular font-mono text-[12px] text-muted">
+        <span className="mr-2.5 text-accent">Fig. 7</span>Try it
+      </p>
+      <h3 className="display mt-2 text-[1.75rem] leading-tight text-ink">How a name becomes a label</h3>
+      <div className="mt-7 grid gap-2">
+        <label htmlFor={inputId} className="font-mono text-[12px] text-ink-2">
           Type any name
         </label>
         <input
@@ -92,18 +111,23 @@ function LabelDemo() {
           aria-describedby={helpId}
           autoComplete="off"
           spellCheck={false}
-          className="w-full rounded-[10px] border border-line-strong bg-bg px-4 py-3 text-[16px] text-ink placeholder:text-muted focus-visible:border-accent"
+          className="w-full border-0 border-b border-ink bg-transparent px-0 py-2.5 text-[18px] text-ink outline-none transition-colors duration-200 placeholder:text-muted focus-visible:border-accent focus-visible:outline-none focus-visible:shadow-[0_1px_0_0_var(--accent)]"
         />
         <p id={helpId} className="text-[13.5px] leading-relaxed text-ink-2">
           Nothing you type leaves this page. Try the same name in capitals, or without the “M/s”.
         </p>
       </div>
-      <div className="mt-6 border-t border-line pt-6" aria-live="polite">
-        <p className="text-[13px] text-muted">Appears in every report as</p>
-        <p className="tabular mt-1 min-h-[2.75rem] font-mono text-4xl font-medium tracking-tight text-ink" translate="no">
-          {supported ? (label ?? "FIRM-.....") : "unavailable"}
+      <div className="mt-8" aria-live="polite">
+        <p className="font-mono text-[12px] text-muted">Appears in every report as</p>
+        <p className="mt-3">
+          <span
+            translate="no"
+            className="tabular inline-block border-2 border-accent px-3.5 py-1.5 font-mono text-[1.9rem] font-medium leading-none tracking-tight text-accent outline outline-1 outline-offset-[3px] outline-accent/50"
+          >
+            {supported ? (label ?? "FIRM-.....") : "unavailable"}
+          </span>
         </p>
-        <p className="mt-3 text-[13.5px] leading-relaxed text-ink-2">
+        <p className="mt-5 text-[13.5px] leading-relaxed text-ink-2">
           {supported
             ? "Spelling variants of one name get one label. The key was made for this visit and will be thrown away, so the same name gets a different label next time and the label cannot be reversed."
             : "This browser does not expose the cryptography needed for the demo. The tool itself uses the same keyed hash."}
@@ -115,20 +139,14 @@ function LabelDemo() {
 
 export function Safeguards() {
   return (
-    <Section id="safeguards" title="What it will not do"
+    <Section id="safeguards" number="05" kicker="Safeguards" title="What it will not do"
       lead="A screen that attached company names to the word fraud would be reckless, and wrong most of the time. These limits are built into the code, and tested.">
-      <div className="grid gap-10 lg:grid-cols-12 grid-cols-1">
-        <ul className="grid content-start gap-x-10 gap-y-9 sm:grid-cols-2 lg:col-span-7 grid-cols-1">
-          {PROMISES.map(({ icon: Icon, title, body }, i) => (
-            <li key={title}>
-              <Reveal delay={i * 0.05}>
-                <Icon size={26} weight="light" aria-hidden="true" className="text-accent" />
-                <h3 className="mt-4 text-[17px] font-semibold tracking-tight text-ink">{title}</h3>
-                <p className="mt-2 max-w-[38ch] text-[15px] leading-relaxed text-ink-2">{body}</p>
-              </Reveal>
-            </li>
+      <div className="grid grid-cols-1 gap-x-12 gap-y-12 lg:grid-cols-12">
+        <ol className="lg:col-span-7">
+          {PROMISES.map((promise, i) => (
+            <Refusal key={promise.title} index={i} {...promise} />
           ))}
-        </ul>
+        </ol>
         <Reveal delay={0.1} className="lg:col-span-5">
           <LabelDemo />
         </Reveal>
